@@ -25,7 +25,9 @@ const Header = () => {
       <h1 className="title">KJY</h1>
       <div className="menu-wrapper flex-center">
         {menuList.map((menu) => (
-          <div className="menu-el">{menu.title}</div>
+          <div className="menu-el" key={menu.title}>
+            {menu.title}
+          </div>
         ))}
       </div>
     </StyledHeader>
