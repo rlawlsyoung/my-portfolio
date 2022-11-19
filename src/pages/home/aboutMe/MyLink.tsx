@@ -9,23 +9,26 @@ const MyLink: React.FC<{
   };
 }> = ({ link }) => {
   return (
-    <StyledMyLink className="flex-center">
-      {link.icon}
-      <a href={link.link} target="_blank" className="link">
-        {link.title}
-      </a>
+    <StyledMyLink className="flex-center" href={link.link} target="_blank">
+      <button className="btn flex-center">
+        {link.icon}
+        <p className="text">{link.title}</p>
+      </button>
     </StyledMyLink>
   );
 };
 
-const StyledMyLink = styled.div`
+const StyledMyLink = styled.a`
+  width: 100%;
   margin: 5px;
-  .link {
-    margin-left: 5px;
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: underline;
+  .btn {
+    width: 100%;
+    .text {
+      margin-left: 5px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
   }
 `;
 
