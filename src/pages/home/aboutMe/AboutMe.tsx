@@ -1,19 +1,14 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import MyLink from "./MyLink";
+import ContactList from "./ContactList";
 import me from "../../../assets/me.jpg";
 import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import styled from "styled-components";
 
 const AboutMe: React.FC = () => {
-  interface link {
-    icon: JSX.Element;
-    title: string;
-    link: string;
-  }
-
-  const Links: link[] = [
+  const Links = [
     {
       icon: <AiFillGithub size="32" />,
       title: "GitHub",
@@ -28,6 +23,17 @@ const AboutMe: React.FC = () => {
       icon: <FaFacebook size="32" />,
       title: "FaceBook",
       link: "https://www.facebook.com/profile.php?id=100004956165568",
+    },
+  ];
+
+  const contactLists = [
+    {
+      title: "📞 전화번호",
+      text: "010-9985-8498",
+    },
+    {
+      title: "📧 E-Mail",
+      text: "jinyoung01099@gmail.com",
     },
   ];
 
@@ -63,13 +69,11 @@ const AboutMe: React.FC = () => {
               및 개발 지식들을 정리하여 작성합니다.
             </li>
           </ul>
-          <p className="title">📠 연락처</p>
+          <p className="sub-title">📠 연락처</p>
           <ul className="lists">
-            <li className="list">
-              <p className="list-title">📞 전화번호</p> : 010-9985-8498
-            </li>
-            <li className="list">dd</li>
-            <li className="list">dd</li>
+            {contactLists.map((contact) => (
+              <ContactList contact={contact} key={contact.title} />
+            ))}
           </ul>
         </div>
       </div>
@@ -107,18 +111,19 @@ const StyledAboutMe = styled.div`
         font-weight: 700;
       }
 
+      .sub-title {
+        margin: 30px 0;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
       .lists {
-        margin-bottom: 40px;
         .list {
           display: flex;
           margin-bottom: 20px;
           font-size: 18px;
           font-weight: 500;
           line-height: 24px;
-
-          .list-title {
-            font-weight: 800;
-          }
         }
       }
     }
