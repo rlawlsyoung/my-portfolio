@@ -5,6 +5,7 @@ import ContactList from "./ContactList";
 import me from "../../../assets/me.jpg";
 import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const AboutMe: React.FC = () => {
@@ -41,7 +42,7 @@ const AboutMe: React.FC = () => {
     <StyledAboutMe className="flex-center">
       <Title text="자기소개" />
       <div className="container">
-        <div className="profile-wrapper flex-center">
+        <div className="profile-wrapper">
           <img src={me} alt="김진영 사진" className="my-photo" />
           {Links.map((link) => (
             <MyLink link={link} key={link.title} />
@@ -83,7 +84,6 @@ const AboutMe: React.FC = () => {
 
 const StyledAboutMe = styled.div`
   flex-direction: column;
-
   margin: 5vw;
 
   .container {
@@ -124,6 +124,37 @@ const StyledAboutMe = styled.div`
           font-size: 18px;
           font-weight: 500;
           line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media ${responsive.tablet} {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      /* margin: 2vw; */
+
+      .profile-wrapper {
+        width: 80vw;
+
+        .my-photo {
+        }
+      }
+
+      .info-wrapper {
+        width: 80vw;
+        padding-left: 0;
+        margin-top: 40px;
+        .title {
+        }
+
+        .sub-title {
+        }
+
+        .lists {
+          .list {
+          }
         }
       }
     }

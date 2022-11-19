@@ -54,11 +54,11 @@ const StyledHome = styled.div`
   @media ${responsive.tablet} {
     .top {
       .text {
-        font-size: 6.5vw;
+        font-size: 6vw;
       }
 
       .small-text {
-        font-size: 3vw;
+        font-size: 2.75vw;
       }
     }
   }

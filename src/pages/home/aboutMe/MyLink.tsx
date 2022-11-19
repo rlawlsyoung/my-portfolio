@@ -20,7 +20,7 @@ const MyLink: React.FC<{
 
 const StyledMyLink = styled.a`
   width: 100%;
-  margin: 5px;
+  margin-bottom: 10px;
   .btn {
     width: 100%;
     .text {
