@@ -1,4 +1,5 @@
 const mainGray = "#858585";
+const lightGray = "#f8f9fa";
 
 const responsive = {
   mobile: "screen and (max-width: 600px)",
@@ -6,4 +7,4 @@ const responsive = {
   desktop: "screen and (max-width: 1200px)",
 };
 
-export { mainGray, responsive };
+export { mainGray, lightGray, responsive };
