@@ -1,4 +1,5 @@
 import AboutMe from "./aboutMe/AboutMe";
+import Skills from "./skills/Skills";
 import bg from "../../assets/bg.jpg";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
@@ -15,6 +16,7 @@ const Home = () => {
         </p>
       </div>
       <AboutMe />
+      <Skills />
     </StyledHome>
   );
 };
@@ -34,6 +36,7 @@ const StyledHome = styled.div`
     display: flex;
     flex-direction: column;
     background: url(${bg}) no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     color: white;

@@ -49,13 +49,11 @@ const AboutMe: React.FC = () => {
           ))}
         </div>
         <div className="info-wrapper">
-          <p className="title">👨‍💻 김진영</p>
+          <p className="title">👨‍💻 나는 어떤 사람인가?</p>
           <ul className="lists">
             <li className="list">
-              내 서비스를 사용하는 클라이언트를 위해 어떻게 해야 편의성과
-              <br />
-              접근성을 향상시킬 수 있는지 클라이언트 입장 에서 항상 고민하고
-              생각하는 개발자 입니다.
+              어떻게 해야 편의성과 접근성을 향상시킬 수 있는지 클라이언트 입장
+              에서 항상 고민하고 생각하는 개발자 입니다.
             </li>
             <li className="list">
               새로운 기술 스택을 배우는 것에 대한 두려움이 없고, 항상 변화를
@@ -70,7 +68,7 @@ const AboutMe: React.FC = () => {
               및 개발 지식들을 정리하여 작성합니다.
             </li>
           </ul>
-          <p className="sub-title">📠 연락처</p>
+          <p className="title">📠 연락처</p>
           <ul className="lists">
             {contactLists.map((contact) => (
               <ContactList contact={contact} key={contact.title} />
@@ -106,7 +104,10 @@ const StyledAboutMe = styled.div`
       padding-left: 5vw;
 
       .title {
+        padding: 7.5px;
+        border-radius: 5px;
         margin-bottom: 30px;
+        background-color: #fbf3db;
         font-size: 32px;
         font-weight: 700;
       }

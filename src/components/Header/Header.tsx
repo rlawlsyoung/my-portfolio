@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { FaReact } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Header = () => {
   const menuList = [
     { title: "자기소개" },
-    { title: "스킬" },
+    { title: "기술 스택" },
     { title: "포트폴리오" },
   ];
 
@@ -18,6 +17,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
+    setScrollPosition(window.scrollY);
   }, []);
 
   return (
@@ -75,7 +75,8 @@ const StyledHeader = styled.div<{ scrollPosition: number }>`
 
     .menu-el {
       margin: 0 10px;
-      font-size: 16px;
+      font-size: 12px;
+      white-space: nowrap;
     }
   }
 `;
