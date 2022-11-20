@@ -36,6 +36,7 @@ const StyledHome = styled.div`
     display: flex;
     flex-direction: column;
     background: url(${bg}) no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     color: white;

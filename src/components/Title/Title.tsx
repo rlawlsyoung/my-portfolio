@@ -1,5 +1,5 @@
 import React from "react";
-import { mainGray } from "../../styles/theme";
+import { mainRed } from "../../styles/theme";
 import styled from "styled-components";
 
 const Title: React.FC<{ text: string }> = ({ text }) => {
@@ -20,7 +20,7 @@ const StyledTitle = styled.h2`
     width: 100%;
     height: 5px;
     margin-top: 5px;
-    background-color: ${mainGray};
+    background-color: ${mainRed};
   }
 `;
 

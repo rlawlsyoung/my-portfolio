@@ -8,11 +8,6 @@ import sass from "../../../assets/sass.svg";
 import mui from "../../../assets/mui.svg";
 import styledComponents from "../../../assets/styledcomponents.svg";
 
-import git from "../../../assets/git.svg";
-import github from "../../../assets/github.svg";
-import slack from "../../../assets/slack.svg";
-import notion from "../../../assets/notion.svg";
-
 export const techStacks = [
   { icon: html, name: "HTML5" },
   { icon: css, name: "CSS" },

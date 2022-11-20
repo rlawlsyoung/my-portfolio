@@ -1,5 +1,5 @@
 import React from "react";
-import { mainGray, lightGray } from "../../../styles/theme";
+import { mainGray, lightGray, mainRed, lightRed } from "../../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{
@@ -31,6 +31,7 @@ const StyledSkillBox = styled.div`
 
   &:hover {
     transform: scale(1.05);
+    transition: 0.3s;
   }
 `;
 
