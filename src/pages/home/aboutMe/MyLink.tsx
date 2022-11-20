@@ -1,5 +1,5 @@
 import React from "react";
-import { lightRed } from "../../../styles/theme";
+import { lightRed, mainRed } from "../../../styles/theme";
 import styled from "styled-components";
 
 const MyLink: React.FC<{
@@ -25,27 +25,14 @@ const StyledMyLink = styled.a`
   background-color: ${lightRed};
   color: black;
 
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    box-shadow: inset 0px 0px 0px #6098ff;
-    display: block;
-    -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-  }
-
-  &:hover::before {
-    box-shadow: inset 300px 0px 0px #6098ff;
+  &:hover {
+    background-color: #dddddb;
+    /* color: white; */
+    transition: 0.3s;
   }
 
   .text {
-    margin-left: 5px;
+    margin-left: 6px;
     font-size: 18px;
     font-weight: 600;
   }
