@@ -44,12 +44,13 @@ const AboutMe: React.FC = () => {
       <div className="container">
         <div className="profile-wrapper">
           <img src={me} alt="김진영 사진" className="my-photo" />
+          <p className="name flex-center">김진영 (Kim Jin Young)</p>
           {Links.map((link) => (
             <MyLink link={link} key={link.title} />
           ))}
         </div>
         <div className="info-wrapper">
-          <p className="title">👨‍💻 나는 어떤 사람인가?</p>
+          <p className="title">👨‍💻 저는 이런 개발자입니다!</p>
           <ul className="lists">
             <li className="list">
               어떻게 해야 편의성과 접근성을 향상시킬 수 있는지 클라이언트 입장
@@ -94,7 +95,12 @@ const StyledAboutMe = styled.div`
 
       .my-photo {
         width: 100%;
-        margin-bottom: 20px;
+      }
+
+      .name {
+        margin: 20px 0;
+        font-size: 28px;
+        font-weight: 700;
       }
     }
 
@@ -119,6 +125,7 @@ const StyledAboutMe = styled.div`
       }
 
       .lists {
+        margin-bottom: 50px;
         .list {
           display: flex;
           margin-bottom: 20px;
@@ -134,7 +141,6 @@ const StyledAboutMe = styled.div`
     .container {
       flex-direction: column;
       align-items: center;
-      /* margin: 2vw; */
 
       .profile-wrapper {
         width: 80vw;
@@ -147,16 +153,6 @@ const StyledAboutMe = styled.div`
         width: 80vw;
         padding-left: 0;
         margin-top: 40px;
-        .title {
-        }
-
-        .sub-title {
-        }
-
-        .lists {
-          .list {
-          }
-        }
       }
     }
   }
