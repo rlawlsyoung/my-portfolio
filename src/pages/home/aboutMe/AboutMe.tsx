@@ -129,7 +129,7 @@ const StyledAboutMe = styled.div`
       }
 
       .lists {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         .list {
           display: flex;
           margin-bottom: 20px;
