@@ -65,6 +65,11 @@ const StyledHeader = styled.div<{ scrollPosition: number }>`
     margin: 0 30px;
     font-size: 20px;
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.075);
+      transition: 0.3s;
+    }
   }
 
   @media ${responsive.mobile} {

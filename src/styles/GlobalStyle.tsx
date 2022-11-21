@@ -14,8 +14,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin:0 auto;
     font-family: "Pretendard", sans-serif;          
-
   }
+
 `;
 
 export default GlobalStyle;

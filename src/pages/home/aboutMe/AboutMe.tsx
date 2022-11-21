@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import MyLink from "./MyLink";
-import ContactList from "./ContactList";
+import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
 import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -27,7 +27,7 @@ const AboutMe: React.FC = () => {
     },
   ];
 
-  const contactLists = [
+  const infos = [
     {
       title: "📞 전화번호",
       text: "010-9985-8498",
@@ -35,6 +35,10 @@ const AboutMe: React.FC = () => {
     {
       title: "📧 E-Mail",
       text: "jinyoung01099@gmail.com",
+    },
+    {
+      title: "🏠 주소",
+      text: "경기도 안양시 동안구",
     },
   ];
 
@@ -44,12 +48,13 @@ const AboutMe: React.FC = () => {
       <div className="container">
         <div className="profile-wrapper">
           <img src={me} alt="김진영 사진" className="my-photo" />
+          <p className="name flex-center">김진영 (Kim Jin Young)</p>
           {Links.map((link) => (
             <MyLink link={link} key={link.title} />
           ))}
         </div>
         <div className="info-wrapper">
-          <p className="title">👨‍💻 나는 어떤 사람인가?</p>
+          <p className="title">👨‍💻 저는 이런 개발자입니다!</p>
           <ul className="lists">
             <li className="list">
               어떻게 해야 편의성과 접근성을 향상시킬 수 있는지 클라이언트 입장
@@ -68,10 +73,10 @@ const AboutMe: React.FC = () => {
               및 개발 지식들을 정리하여 작성합니다.
             </li>
           </ul>
-          <p className="title">📠 연락처</p>
+          <p className="title">🙎‍♂️ 개인 정보</p>
           <ul className="lists">
-            {contactLists.map((contact) => (
-              <ContactList contact={contact} key={contact.title} />
+            {infos.map((info) => (
+              <InfoList info={info} key={info.title} />
             ))}
           </ul>
         </div>
@@ -94,7 +99,12 @@ const StyledAboutMe = styled.div`
 
       .my-photo {
         width: 100%;
-        margin-bottom: 20px;
+      }
+
+      .name {
+        margin: 20px 0;
+        font-size: 28px;
+        font-weight: 700;
       }
     }
 
@@ -119,6 +129,7 @@ const StyledAboutMe = styled.div`
       }
 
       .lists {
+        margin-bottom: 50px;
         .list {
           display: flex;
           margin-bottom: 20px;
@@ -134,7 +145,6 @@ const StyledAboutMe = styled.div`
     .container {
       flex-direction: column;
       align-items: center;
-      /* margin: 2vw; */
 
       .profile-wrapper {
         width: 80vw;
@@ -147,16 +157,6 @@ const StyledAboutMe = styled.div`
         width: 80vw;
         padding-left: 0;
         margin-top: 40px;
-        .title {
-        }
-
-        .sub-title {
-        }
-
-        .lists {
-          .list {
-          }
-        }
       }
     }
   }

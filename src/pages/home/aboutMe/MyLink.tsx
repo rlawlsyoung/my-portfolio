@@ -1,4 +1,5 @@
 import React from "react";
+import { lightRed, mainRed } from "../../../styles/theme";
 import styled from "styled-components";
 
 const MyLink: React.FC<{
@@ -10,25 +11,29 @@ const MyLink: React.FC<{
 }> = ({ link }) => {
   return (
     <StyledMyLink className="flex-center" href={link.link} target="_blank">
-      <button className="btn flex-center">
-        {link.icon}
-        <p className="text">{link.title}</p>
-      </button>
+      {link.icon}
+      <p className="text">{link.title}</p>
     </StyledMyLink>
   );
 };
 
 const StyledMyLink = styled.a`
   width: 100%;
+  height: 45px;
+  border-radius: 5px;
   margin-bottom: 10px;
-  .btn {
-    width: 100%;
-    .text {
-      margin-left: 5px;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: underline;
-    }
+  background-color: ${lightRed};
+  color: black;
+
+  &:hover {
+    background-color: #dddddb;
+    transition: 0.3s;
+  }
+
+  .text {
+    margin-left: 6px;
+    font-size: 18px;
+    font-weight: 600;
   }
 `;
 

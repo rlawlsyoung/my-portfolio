@@ -9,10 +9,10 @@ const Router = () => {
     <BrowserRouter>
       <GlobalStyle />
       <RecoilRoot>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Header />
       </RecoilRoot>
     </BrowserRouter>
   );
