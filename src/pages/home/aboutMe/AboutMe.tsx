@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import MyLink from "./MyLink";
-import ContactList from "./ContactList";
+import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
 import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -27,7 +27,7 @@ const AboutMe: React.FC = () => {
     },
   ];
 
-  const contactLists = [
+  const infos = [
     {
       title: "📞 전화번호",
       text: "010-9985-8498",
@@ -35,6 +35,10 @@ const AboutMe: React.FC = () => {
     {
       title: "📧 E-Mail",
       text: "jinyoung01099@gmail.com",
+    },
+    {
+      title: "🏠 주소",
+      text: "경기도 안양시 동안구",
     },
   ];
 
@@ -69,10 +73,10 @@ const AboutMe: React.FC = () => {
               및 개발 지식들을 정리하여 작성합니다.
             </li>
           </ul>
-          <p className="title">📠 연락처</p>
+          <p className="title">🙎‍♂️ 개인 정보</p>
           <ul className="lists">
-            {contactLists.map((contact) => (
-              <ContactList contact={contact} key={contact.title} />
+            {infos.map((info) => (
+              <InfoList info={info} key={info.title} />
             ))}
           </ul>
         </div>

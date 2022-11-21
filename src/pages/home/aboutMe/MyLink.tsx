@@ -27,7 +27,6 @@ const StyledMyLink = styled.a`
 
   &:hover {
     background-color: #dddddb;
-    /* color: white; */
     transition: 0.3s;
   }
 
