@@ -1,7 +1,7 @@
-import { ReactTypical } from "@deadcoder0904/react-typical";
 import Typewriter from "typewriter-effect";
 import AboutMe from "./aboutMe/AboutMe";
 import Skills from "./skills/Skills";
+import Portfolio from "./portfolio/Portfolio";
 import bg from "../../assets/bg.jpg";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
@@ -28,6 +28,7 @@ const Home = () => {
       </div>
       <AboutMe />
       <Skills />
+      <Portfolio />
     </StyledHome>
   );
 };
