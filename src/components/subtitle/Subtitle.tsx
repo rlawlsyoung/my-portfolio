@@ -6,6 +6,7 @@ const Subtitle: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const StyledSubtitle = styled.h2`
+  width: 100%;
   padding: 7.5px;
   border-radius: 5px;
   margin-bottom: 30px;
