@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../../../components/Title/Title";
+import Title from "../../../components/title/Title";
 import SkillBox from "./SkillBox";
 import { techStacks } from "./mySkills";
 import styled from "styled-components";

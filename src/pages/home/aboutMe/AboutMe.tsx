@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../../../components/Title/Title";
+import Title from "../../../components/title/Title";
 import Subtitle from "../../../components/subtitle/Subtitle";
 import MyLink from "./MyLink";
 import InfoList from "./InfoList";
