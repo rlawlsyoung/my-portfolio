@@ -8,7 +8,8 @@ const Portfolio: React.FC = () => {
   return (
     <StyledPortfolio className="flex-center">
       <Title text="포트폴리오" />
-      <div className="project-container flex-center">
+      <div className="project-filter">dd</div>
+      <div className="project-container">
         <ProjectBox />
         <ProjectBox />
         <ProjectBox />
