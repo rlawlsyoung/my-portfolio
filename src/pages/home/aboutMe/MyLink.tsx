@@ -1,5 +1,5 @@
 import React from "react";
-import { lightRed, mainRed } from "../../../styles/theme";
+import { lightRed, hoveredLightRed } from "../../../styles/theme";
 import styled from "styled-components";
 
 const MyLink: React.FC<{
@@ -26,7 +26,7 @@ const StyledMyLink = styled.a`
   color: black;
 
   &:hover {
-    background-color: #dddddb;
+    background-color: ${hoveredLightRed};
     transition: 0.3s;
   }
 
