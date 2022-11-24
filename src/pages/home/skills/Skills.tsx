@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
       <Title text="기술 스택" />
       <div className="skills-container flex-center">
         {techStacks.map((techStack) => (
-          <SkillBox techStack={techStack} />
+          <SkillBox techStack={techStack} key={techStack.name} />
         ))}
       </div>
     </StyledSkills>
