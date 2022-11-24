@@ -1,34 +1,28 @@
 import React from "react";
 import Tag from "./Tag";
+import portfolioDatasType from "./portfolioDatas";
 import { mainGray } from "../../../styles/theme";
 import styled from "styled-components";
 
-const ProjectBox: React.FC = () => {
+const ProjectBox: React.FC<{ portfolioData: portfolioDatasType }> = ({
+  portfolioData,
+}) => {
   return (
     <StyledProjectBox>
       <img
-        src="https://velog.velcdn.com/images/jinyoung985/post/c9c41a3c-d588-4093-aada-a54bb42945d9/image.gif"
-        alt="FLOrida 프로젝트"
+        src={portfolioData.mainImg}
+        alt={portfolioData.title}
         className="project-img"
       />
       <div className="project-info">
-        <h3 className="project-title">🎶 FLOrida</h3>
-        <p className="project-subtitle">팀 프로젝트 (6인)</p>
+        <h3 className="project-title">{portfolioData.title}</h3>
+        <p className="project-subtitle">{portfolioData.subTitle}</p>
         <div className="tags">
-          {/* <p className="techs">주요 기술: </p> */}
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="TypeScript" />
-          <Tag text="React.js" />
+          {portfolioData.mainTechs.map((tech) => (
+            <Tag text={tech} key={tech} />
+          ))}
         </div>
-        <p className="project-introduction">
-          FLO 공식 홈페이지를 클론 했습니다. 주요 기능으로는 로그인 및 회원가입,
-          음악 재생, 보관함에 음악 저장, 이용권 구매 등이 있습니다.
-        </p>
+        <p className="project-introduction">{portfolioData.introduction}</p>
       </div>
     </StyledProjectBox>
   );
@@ -66,7 +60,7 @@ const StyledProjectBox = styled.div`
     }
 
     .project-introduction {
-      margin-top: 3px;
+      margin-top: 5px;
       font-size: 14px;
     }
   }

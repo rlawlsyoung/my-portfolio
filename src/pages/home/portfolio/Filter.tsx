@@ -19,6 +19,7 @@ const Filter: React.FC<{
               : "filter flex-center"
           }
           onClick={handleOnClick}
+          key={filterList}
         >
           {filterList}
         </div>

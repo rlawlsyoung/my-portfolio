@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import Title from "../../../components/title/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
+import { portfolioDatas } from "./portfolioDatas";
 import styled from "styled-components";
 
 const Portfolio: React.FC = () => {
@@ -16,9 +17,9 @@ const Portfolio: React.FC = () => {
       <Title text="포트폴리오" />
       <Filter filter={filter} handleOnClick={handleOnClick} />
       <div className="project-container">
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
+        {portfolioDatas.map((portfolioData) => (
+          <ProjectBox portfolioData={portfolioData} key={portfolioData.title} />
+        ))}
       </div>
     </StyledPortfolio>
   );
