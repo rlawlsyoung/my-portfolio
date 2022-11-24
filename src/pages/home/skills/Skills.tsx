@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../../../components/title/Title";
 import SkillBox from "./SkillBox";
 import { techStacks } from "./mySkills";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Skills: React.FC = () => {
@@ -24,6 +25,10 @@ const StyledSkills = styled.div`
   .skills-container {
     flex-wrap: wrap;
     margin: 0 5vw;
+  }
+
+  @media ${responsive.tablet} {
+    margin-bottom: 90px;
   }
 `;
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Subtitle: React.FC<{ text: string }> = ({ text }) => {
@@ -13,6 +14,10 @@ const StyledSubtitle = styled.h2`
   background-color: #fbf3db;
   font-size: 32px;
   font-weight: 700;
+
+  @media ${responsive.mobile} {
+    font-size: 5.5vw;
+  }
 `;
 
 export default Subtitle;

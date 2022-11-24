@@ -104,7 +104,7 @@ const StyledAboutMe = styled.div`
 
       .name {
         margin: 20px 0;
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
       }
     }
@@ -121,7 +121,6 @@ const StyledAboutMe = styled.div`
           margin-bottom: 20px;
           font-size: 18px;
           font-weight: 500;
-          line-height: 24px;
         }
       }
     }
@@ -135,7 +134,8 @@ const StyledAboutMe = styled.div`
       .profile-wrapper {
         width: 80vw;
 
-        .my-photo {
+        .name {
+          font-size: 20px;
         }
       }
 
@@ -143,6 +143,26 @@ const StyledAboutMe = styled.div`
         width: 80vw;
         padding-left: 0;
         margin-top: 40px;
+
+        .lists {
+          .list {
+            /* font-size: 2.35vw; */
+            /* line-height: 3.65vw; */
+          }
+        }
+      }
+    }
+  }
+
+  @media ${responsive.mobile} {
+    .container {
+      .info-wrapper {
+        .lists {
+          .list {
+            font-size: 3.75vw;
+            line-height: 5vw;
+          }
+        }
       }
     }
   }

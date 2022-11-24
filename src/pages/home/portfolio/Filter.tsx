@@ -1,5 +1,10 @@
 import React from "react";
-import { mainRed, lightRed, hoveredLightRed } from "../../../styles/theme";
+import {
+  mainRed,
+  lightRed,
+  hoveredLightRed,
+  responsive,
+} from "../../../styles/theme";
 import styled from "styled-components";
 
 const Filter: React.FC<{
@@ -57,6 +62,14 @@ const StyledFilter = styled.div`
   .selected {
     background-color: ${hoveredLightRed};
     color: ${mainRed};
+  }
+
+  @media ${responsive.mobile} {
+    margin-bottom: 15px;
+    .filter {
+      padding: 2vw 3vw;
+      font-size: 3vw;
+    }
   }
 `;
 

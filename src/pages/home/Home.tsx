@@ -21,8 +21,8 @@ const Home = () => {
               );
           }}
         />
-        <p className="small-text color-bg flex-center">
-          꾸준히 개발 지식을 쌓는 것을 좋아하고 내가 만든 서비스에 애정을 쏟는
+        <p className="small-text color-bg">
+          꾸준히 개발 지식을 쌓는 것을 좋아하고 내 서비스에 애정을 쏟는
           개발자입니다.
         </p>
       </div>

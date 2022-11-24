@@ -1,5 +1,5 @@
 import React from "react";
-import { mainGray, lightGray, mainRed, lightRed } from "../../../styles/theme";
+import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{
@@ -33,6 +33,20 @@ const StyledSkillBox = styled.div`
     transform: scale(1.05);
     transition: 0.3s;
   }
+
+  @media ${responsive.tablet} {
+    margin: 3vw;
+
+    .icon {
+      width: 10vw;
+      height: 10vw;
+    }
+
+    .tech-name {
+      margin: 0 4vw;
+      font-size: 3vw;
+    }
+  } ;
 `;
 
 export default SkillBox;
