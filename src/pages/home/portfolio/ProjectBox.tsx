@@ -1,7 +1,7 @@
 import React from "react";
 import Tag from "./Tag";
 import portfolioDatasType from "./portfolioDatas";
-import { mainGray, lightGray } from "../../../styles/theme";
+import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{ portfolioData: portfolioDatasType }> = ({
@@ -45,9 +45,9 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
     border-radius: 5px 5px 0 0;
     background-color: ${lightGray};
     .project-img {
-      width: ${(props) => props.isMobile || "100%"};
+      width: ${(props) => !props.isMobile && "100%"};
       height: 19vw;
-      border-radius: ${(props) => props.isMobile || "5px 5px 0 0;"};
+      border-radius: ${(props) => !props.isMobile && "5px 5px 0 0;"};
     }
   }
 
@@ -72,6 +72,26 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
       margin-top: 5px;
       font-size: 14px;
       line-height: 18px;
+    }
+  }
+
+  @media ${responsive.tablet} {
+    width: 100%;
+    .img-container {
+      .project-img {
+        height: 38vw;
+      }
+    }
+
+    .project-info {
+      margin: 10px;
+
+      .project-title {
+        font-size: 18px;
+      }
+      .project-subtitle {
+        font-size: 15px;
+      }
     }
   }
 `;

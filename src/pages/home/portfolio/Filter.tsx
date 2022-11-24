@@ -34,7 +34,7 @@ const StyledFilter = styled.div`
   background-color: ${lightRed};
 
   .filter {
-    padding: 15px 25px;
+    padding: 15px 20px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
