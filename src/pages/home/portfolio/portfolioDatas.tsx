@@ -2,6 +2,7 @@ interface portfolioDatasType {
   mainImg: string;
   isMobile: boolean;
   title: string;
+  tags: string[];
   subTitle: string;
   mainTechs: string[];
   introduction: JSX.Element;
@@ -12,6 +13,7 @@ const portfolioDatas: portfolioDatasType[] = [
       "https://velog.velcdn.com/images/jinyoung985/post/922ec876-8a20-44da-8849-7e67e8ae982e/image.gif",
     isMobile: false,
     title: "📋 포트폴리오",
+    tags: ["전체", "개인 프로젝트"],
     subTitle: "개인 프로젝트",
     mainTechs: ["TypeScript", "React.js", "styled-components"],
     introduction: (
@@ -26,7 +28,8 @@ const portfolioDatas: portfolioDatasType[] = [
       "https://velog.velcdn.com/images/jinyoung985/post/6008bcc8-5574-43b9-93e8-a17390446e8a/image.gif",
     isMobile: false,
     title: "📊 차트 페이지와 게시판 만들기",
-    subTitle: "개인 프로젝트",
+    tags: ["전체", "개인 프로젝트", "인턴십"],
+    subTitle: "인턴십 개인 프로젝트",
     mainTechs: ["JavaScript", "React.js", "Recoil", "styled-components"],
     introduction: (
       <>
@@ -41,6 +44,7 @@ const portfolioDatas: portfolioDatasType[] = [
       "https://velog.velcdn.com/images/jinyoung985/post/832d2f12-819f-4282-8da1-f79f1a26ca72/image.gif",
     isMobile: false,
     title: "🍫 ROECY’ CHOCOLATE",
+    tags: ["전체", "팀 프로젝트"],
     subTitle: "팀 프로젝트 (6인)",
     mainTechs: ["JavaScript", "React.js", "sass"],
     introduction: (
@@ -56,6 +60,7 @@ const portfolioDatas: portfolioDatasType[] = [
       "https://velog.velcdn.com/images/jinyoung985/post/c9c41a3c-d588-4093-aada-a54bb42945d9/image.gif",
     isMobile: false,
     title: "🎶 FLOrida",
+    tags: ["전체", "팀 프로젝트"],
     subTitle: "팀 프로젝트 (6인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
     introduction: (
@@ -70,7 +75,8 @@ const portfolioDatas: portfolioDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/a977ed31-c05e-41ec-a101-6720d0ac7be0/image.gif",
     isMobile: true,
-    title: "⌨ 플레이키보드 웹 스토어 만들기",
+    title: "⌨ 플레이키보드 웹 스토어",
+    tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (5인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
     introduction: (
@@ -84,7 +90,8 @@ const portfolioDatas: portfolioDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/470975b1-745f-4839-bdfc-0607d8ce265e/image.gif",
     isMobile: false,
-    title: "📈 감지 센서 관리 프로그램 만들기",
+    title: "📈 감지 센서 관리 프로그램",
+    tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (5인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
     introduction: (
@@ -100,7 +107,8 @@ const portfolioDatas: portfolioDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/3b468dca-33de-4276-b284-d9afc34d5d0d/image.gif",
     isMobile: true,
-    title: "🎙️ 오디오 녹음 프로그램 만들기",
+    title: "🎙️ 오디오 녹음 프로그램",
+    tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (3인)",
     mainTechs: ["JavaScript", "React.js", "styled-components", "Firebase"],
     introduction: (

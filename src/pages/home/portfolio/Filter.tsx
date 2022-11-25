@@ -36,6 +36,7 @@ const Filter: React.FC<{
 const StyledFilter = styled.div`
   display: flex;
   border-radius: 5px;
+  margin-bottom: 15px;
   background-color: ${lightRed};
 
   .filter {
@@ -65,7 +66,6 @@ const StyledFilter = styled.div`
   }
 
   @media ${responsive.mobile} {
-    margin-bottom: 15px;
     .filter {
       padding: 2vw 3vw;
       font-size: 3vw;
