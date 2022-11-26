@@ -25,10 +25,10 @@ const StyledPortfolioDialog = styled(Dialog)`
   .portfolio-container {
     display: flex;
     flex-direction: column;
-    width: 1080px;
+    width: 960px;
     height: 85vh;
-    padding: 20px 20px;
-    font-size: 20px;
+    padding: 20px;
+    overflow-x: hidden;
 
     .portfolio-post {
       width: 100%;
@@ -38,10 +38,10 @@ const StyledPortfolioDialog = styled(Dialog)`
 
   @media ${responsive.desktop} {
     .portfolio-container {
-      width: 90vw;
+      width: 80vw;
 
       .portfolio-post {
-        width: 90vw;
+        width: 100%;
         height: 100%;
       }
     }
