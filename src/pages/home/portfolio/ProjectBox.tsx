@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 import Tag from "./Tag";
 import portfolioDatasType from "./portfolioDatas";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
@@ -6,8 +6,16 @@ import styled from "styled-components";
 
 const ProjectBox: React.FC<{
   portfolioData: portfolioDatasType;
-  turnOnDialog: () => void;
-}> = ({ portfolioData, turnOnDialog }) => {
+  setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
+  setSelectedPortfolio: React.Dispatch<
+    React.SetStateAction<portfolioDatasType>
+  >;
+}> = ({ portfolioData, setIsDialogOn, setSelectedPortfolio }) => {
+  const turnOnDialog = useCallback(() => {
+    setIsDialogOn(true);
+    setSelectedPortfolio(portfolioData);
+  }, []);
+
   return (
     <StyledProjectBox isMobile={portfolioData.isMobile} onClick={turnOnDialog}>
       <div className="img-container flex-center">

@@ -10,10 +10,9 @@ const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState("전체");
   const [portfolios, setPortfolios] = useState(portfolioDatas);
   const [isDialogOn, setIsDialogOn] = useState(false);
-  const [selectedPortfolio, setSelectedPortfolio] = useState({});
+  const [selectedPortfolio, setSelectedPortfolio] = useState(portfolioDatas[0]);
 
   const turnOffDialog = useCallback(() => setIsDialogOn(false), []);
-  const turnOnDialog = useCallback(() => setIsDialogOn(true), []);
   const handleOnClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target instanceof Element) setFilter(e.target.id);
   }, []);
@@ -35,11 +34,16 @@ const Portfolio: React.FC = () => {
           <ProjectBox
             portfolioData={portfolioData}
             key={portfolioData.title}
-            turnOnDialog={turnOnDialog}
+            setIsDialogOn={setIsDialogOn}
+            setSelectedPortfolio={setSelectedPortfolio}
           />
         ))}
       </div>
-      <PortfolioDialog isDialogOn={isDialogOn} turnOffDialog={turnOffDialog} />
+      <PortfolioDialog
+        isDialogOn={isDialogOn}
+        turnOffDialog={turnOffDialog}
+        selectedPortfolio={selectedPortfolio}
+      />
     </StyledPortfolio>
   );
 };

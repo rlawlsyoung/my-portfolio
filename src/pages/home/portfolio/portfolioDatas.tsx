@@ -6,6 +6,7 @@ interface portfolioDatasType {
   subTitle: string;
   mainTechs: string[];
   introduction: JSX.Element;
+  url: string;
 }
 const portfolioDatas: portfolioDatasType[] = [
   {
@@ -22,6 +23,7 @@ const portfolioDatas: portfolioDatasType[] = [
         자기소개, 기술 스택, 프로젝트 등에 대해 소개합니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/series/Portfolio",
   },
   {
     mainImg:
@@ -38,6 +40,7 @@ const portfolioDatas: portfolioDatasType[] = [
         작성 및 삭제 등이 있습니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-차트-페이지와-게시판-만들기",
   },
   {
     mainImg:
@@ -54,6 +57,7 @@ const portfolioDatas: portfolioDatasType[] = [
         있습니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-ROECY-Chocolate",
   },
   {
     mainImg:
@@ -70,6 +74,7 @@ const portfolioDatas: portfolioDatasType[] = [
         저장, 이용권 구매 등이 있습니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-FLOrida-music",
   },
   {
     mainImg:
@@ -85,6 +90,7 @@ const portfolioDatas: portfolioDatasType[] = [
         <br /> 주요 기능은 카테고리 별 상품 분류, 가상 키보드 체험입니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-플레이키보드-웹-스토어-만들기",
   },
   {
     mainImg:
@@ -102,6 +108,7 @@ const portfolioDatas: portfolioDatasType[] = [
         순서 변경, 그래프 확대 및 축소가 있습니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-감지-센서-관리-프로그램-만들기",
   },
   {
     mainImg:
@@ -119,6 +126,7 @@ const portfolioDatas: portfolioDatasType[] = [
         등이 있습니다.
       </>
     ),
+    url: "https://velog.io/@jinyoung985/Portfolio-오디오-녹음-재생-프로그램-만들기",
   },
 ];
 

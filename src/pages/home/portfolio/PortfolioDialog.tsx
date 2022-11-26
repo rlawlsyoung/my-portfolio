@@ -1,17 +1,21 @@
-import React, { useState } from "react";
 import Dialog from "@mui/material/Dialog";
+import portfolioDatasType from "./portfolioDatas";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const PortfolioDialog: React.FC<{
   isDialogOn: boolean;
   turnOffDialog: () => void;
-}> = ({ isDialogOn, turnOffDialog }) => {
-  console.log(turnOffDialog);
-
+  selectedPortfolio: portfolioDatasType;
+}> = ({ isDialogOn, turnOffDialog, selectedPortfolio }) => {
   return (
-    <StyledPortfolioDialog open={isDialogOn} onClose={turnOffDialog}>
+    <StyledPortfolioDialog
+      open={isDialogOn}
+      onClose={turnOffDialog}
+      maxWidth={false}
+    >
       <div className="portfolio-container">
-        <h2>제목제목</h2>
+        <iframe src={selectedPortfolio.url} className="portfolio-post"></iframe>
       </div>
     </StyledPortfolioDialog>
   );
@@ -21,13 +25,25 @@ const StyledPortfolioDialog = styled(Dialog)`
   .portfolio-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 40vw;
-    height: 420px;
-    padding: 20px;
+    width: 1080px;
+    height: 85vh;
+    padding: 20px 20px;
+    font-size: 20px;
 
-    h2 {
-      width: 80vw;
+    .portfolio-post {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media ${responsive.desktop} {
+    .portfolio-container {
+      width: 90vw;
+
+      .portfolio-post {
+        width: 90vw;
+        height: 100%;
+      }
     }
   }
 `;
