@@ -34,7 +34,7 @@ const Header = () => {
   );
 };
 
-const StyledHeader = styled.div<{ scrollPosition: number }>`
+const StyledHeader = styled.header<{ scrollPosition: number }>`
   .flex-center {
     display: flex;
     align-items: center;
