@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Tag from "./Tag";
 import portfolioDatasType from "./portfolioDatas";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
-const ProjectBox: React.FC<{ portfolioData: portfolioDatasType }> = ({
-  portfolioData,
-}) => {
+const ProjectBox: React.FC<{
+  portfolioData: portfolioDatasType;
+  turnOnDialog: () => void;
+}> = ({ portfolioData, turnOnDialog }) => {
   return (
-    <StyledProjectBox isMobile={portfolioData.isMobile}>
+    <StyledProjectBox isMobile={portfolioData.isMobile} onClick={turnOnDialog}>
       <div className="img-container flex-center">
         <img
           src={portfolioData.mainImg}

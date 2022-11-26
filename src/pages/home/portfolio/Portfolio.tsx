@@ -2,13 +2,18 @@ import React, { useState, useCallback, useEffect } from "react";
 import Title from "../../../components/title/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
+import PortfolioDialog from "./PortfolioDialog";
 import { portfolioDatas } from "./portfolioDatas";
 import styled from "styled-components";
 
 const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState("전체");
   const [portfolios, setPortfolios] = useState(portfolioDatas);
+  const [isDialogOn, setIsDialogOn] = useState(false);
+  const [selectedPortfolio, setSelectedPortfolio] = useState({});
 
+  const turnOffDialog = useCallback(() => setIsDialogOn(false), []);
+  const turnOnDialog = useCallback(() => setIsDialogOn(true), []);
   const handleOnClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target instanceof Element) setFilter(e.target.id);
   }, []);
@@ -27,9 +32,14 @@ const Portfolio: React.FC = () => {
       <Filter filter={filter} handleOnClick={handleOnClick} />
       <div className="project-container">
         {portfolios.map((portfolioData) => (
-          <ProjectBox portfolioData={portfolioData} key={portfolioData.title} />
+          <ProjectBox
+            portfolioData={portfolioData}
+            key={portfolioData.title}
+            turnOnDialog={turnOnDialog}
+          />
         ))}
       </div>
+      <PortfolioDialog isDialogOn={isDialogOn} turnOffDialog={turnOffDialog} />
     </StyledPortfolio>
   );
 };

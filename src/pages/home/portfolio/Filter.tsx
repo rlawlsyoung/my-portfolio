@@ -35,8 +35,8 @@ const Filter: React.FC<{
 
 const StyledFilter = styled.div`
   display: flex;
+  margin-bottom: 30px;
   border-radius: 5px;
-  margin-bottom: 15px;
   background-color: ${lightRed};
 
   .filter {
