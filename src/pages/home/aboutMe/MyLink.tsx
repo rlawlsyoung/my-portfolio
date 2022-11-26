@@ -1,5 +1,5 @@
 import React from "react";
-import { lightRed, hoveredLightRed, responsive } from "../../../styles/theme";
+import { lightRed, mainRed } from "../../../styles/theme";
 import styled from "styled-components";
 
 const MyLink: React.FC<{
@@ -26,7 +26,7 @@ const StyledMyLink = styled.a`
   color: black;
 
   &:hover {
-    background-color: ${hoveredLightRed};
+    background-color: #dddddb;
     transition: 0.3s;
   }
 
@@ -35,12 +35,6 @@ const StyledMyLink = styled.a`
     font-size: 18px;
     font-weight: 600;
   }
-
-  @media ${responsive.mobile} {
-    .text {
-      font-size: 14px;
-    }
-  } ;
 `;
 
 export default MyLink;

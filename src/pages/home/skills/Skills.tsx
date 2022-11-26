@@ -1,8 +1,7 @@
 import React from "react";
-import Title from "../../../components/title/Title";
+import Title from "../../../components/Title/Title";
 import SkillBox from "./SkillBox";
 import { techStacks } from "./mySkills";
-import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Skills: React.FC = () => {
@@ -11,7 +10,7 @@ const Skills: React.FC = () => {
       <Title text="기술 스택" />
       <div className="skills-container flex-center">
         {techStacks.map((techStack) => (
-          <SkillBox techStack={techStack} key={techStack.name} />
+          <SkillBox techStack={techStack} />
         ))}
       </div>
     </StyledSkills>
@@ -25,10 +24,6 @@ const StyledSkills = styled.div`
   .skills-container {
     flex-wrap: wrap;
     margin: 0 5vw;
-  }
-
-  @media ${responsive.tablet} {
-    margin-bottom: 90px;
   }
 `;
 
