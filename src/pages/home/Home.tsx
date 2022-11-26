@@ -1,7 +1,7 @@
-import { ReactTypical } from "@deadcoder0904/react-typical";
 import Typewriter from "typewriter-effect";
 import AboutMe from "./aboutMe/AboutMe";
 import Skills from "./skills/Skills";
+import Portfolio from "./portfolio/Portfolio";
 import bg from "../../assets/bg.jpg";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
@@ -21,13 +21,14 @@ const Home = () => {
               );
           }}
         />
-        <p className="small-text color-bg flex-center">
-          꾸준히 개발 지식을 쌓는 것을 좋아하고 내가 만든 서비스에 애정을 쏟는
+        <p className="small-text color-bg">
+          꾸준히 개발 지식을 쌓는 것을 좋아하고 내 서비스에 애정을 쏟는
           개발자입니다.
         </p>
       </div>
       <AboutMe />
       <Skills />
+      <Portfolio />
     </StyledHome>
   );
 };
