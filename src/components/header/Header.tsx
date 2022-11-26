@@ -47,6 +47,7 @@ const StyledHeader = styled.div<{ scrollPosition: number }>`
   top: 0;
   right: 0;
   left: 0;
+  width: 100vw;
   padding: 20px 0;
   box-shadow: ${(props) => props.scrollPosition && "0.5px 3px 5px -2px gray"};
   background-color: ${(props) =>
@@ -74,12 +75,12 @@ const StyledHeader = styled.div<{ scrollPosition: number }>`
 
   @media ${responsive.mobile} {
     .title {
-      margin: 0 10px;
+      margin: 0 2vw;
       font-size: 30px;
     }
 
     .menu-el {
-      margin: 0 10px;
+      margin: 0 2vw;
       font-size: 12px;
       white-space: nowrap;
     }

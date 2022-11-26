@@ -1,5 +1,6 @@
 import React from "react";
-import Title from "../../../components/Title/Title";
+import Title from "../../../components/title/Title";
+import Subtitle from "../../../components/subtitle/Subtitle";
 import MyLink from "./MyLink";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
@@ -54,7 +55,7 @@ const AboutMe: React.FC = () => {
           ))}
         </div>
         <div className="info-wrapper">
-          <p className="title">👨‍💻 저는 이런 개발자입니다!</p>
+          <Subtitle text="👨‍💻 저는 이런 개발자입니다!" />
           <ul className="lists">
             <li className="list">
               어떻게 해야 편의성과 접근성을 향상시킬 수 있는지 클라이언트 입장
@@ -73,7 +74,7 @@ const AboutMe: React.FC = () => {
               및 개발 지식들을 정리하여 작성합니다.
             </li>
           </ul>
-          <p className="title">🙎‍♂️ 개인 정보</p>
+          <Subtitle text="🙎‍♂️ 개인 정보   " />
           <ul className="lists">
             {infos.map((info) => (
               <InfoList info={info} key={info.title} />
@@ -103,7 +104,7 @@ const StyledAboutMe = styled.div`
 
       .name {
         margin: 20px 0;
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
       }
     }
@@ -113,21 +114,6 @@ const StyledAboutMe = styled.div`
       width: 65vw;
       padding-left: 5vw;
 
-      .title {
-        padding: 7.5px;
-        border-radius: 5px;
-        margin-bottom: 30px;
-        background-color: #fbf3db;
-        font-size: 32px;
-        font-weight: 700;
-      }
-
-      .sub-title {
-        margin: 30px 0;
-        font-size: 32px;
-        font-weight: 700;
-      }
-
       .lists {
         margin-bottom: 60px;
         .list {
@@ -135,7 +121,6 @@ const StyledAboutMe = styled.div`
           margin-bottom: 20px;
           font-size: 18px;
           font-weight: 500;
-          line-height: 24px;
         }
       }
     }
@@ -149,7 +134,8 @@ const StyledAboutMe = styled.div`
       .profile-wrapper {
         width: 80vw;
 
-        .my-photo {
+        .name {
+          font-size: 20px;
         }
       }
 
@@ -157,6 +143,26 @@ const StyledAboutMe = styled.div`
         width: 80vw;
         padding-left: 0;
         margin-top: 40px;
+
+        .lists {
+          .list {
+            /* font-size: 2.35vw; */
+            /* line-height: 3.65vw; */
+          }
+        }
+      }
+    }
+  }
+
+  @media ${responsive.mobile} {
+    .container {
+      .info-wrapper {
+        .lists {
+          .list {
+            font-size: 3.75vw;
+            line-height: 5vw;
+          }
+        }
       }
     }
   }
