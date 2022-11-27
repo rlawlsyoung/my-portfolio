@@ -51,6 +51,8 @@ const Portfolio: React.FC = () => {
 const StyledPortfolio = styled.div`
   flex-direction: column;
   margin: 5vw;
+  padding-top: 120px;
+  margin-top: -100px;
 
   .project-container {
     display: flex;

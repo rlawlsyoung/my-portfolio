@@ -89,6 +89,8 @@ const AboutMe: React.FC = () => {
 const StyledAboutMe = styled.div`
   flex-direction: column;
   margin: 5vw;
+  padding-top: 100px;
+  margin-top: calc(5vw - 100px);
 
   .container {
     display: flex;
