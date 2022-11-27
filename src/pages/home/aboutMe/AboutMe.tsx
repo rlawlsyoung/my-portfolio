@@ -44,7 +44,7 @@ const AboutMe: React.FC = () => {
   ];
 
   return (
-    <StyledAboutMe className="flex-center">
+    <StyledAboutMe className="flex-center" id="자기소개">
       <Title text="자기소개" />
       <div className="container">
         <div className="profile-wrapper">

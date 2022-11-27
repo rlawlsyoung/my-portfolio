@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
@@ -24,11 +25,15 @@ const Header = () => {
     <StyledHeader scrollPosition={scrollPosition}>
       <h1 className="title">KJY</h1>
       <div className="menu-wrapper flex-center">
-        {menuList.map((menu) => (
-          <div className="menu-el" key={menu.title}>
-            {menu.title}
-          </div>
-        ))}
+        {menuList.map((menu) => {
+          return (
+            <Link to={menu.title} spy={false} smooth={true}>
+              <div className="menu-el" key={menu.title}>
+                {menu.title}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </StyledHeader>
   );

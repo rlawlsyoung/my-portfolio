@@ -26,7 +26,7 @@ const Portfolio: React.FC = () => {
   }, [filter]);
 
   return (
-    <StyledPortfolio className="flex-center">
+    <StyledPortfolio className="flex-center" id="포트폴리오">
       <Title text="포트폴리오" />
       <Filter filter={filter} handleOnClick={handleOnClick} />
       <div className="project-container">
