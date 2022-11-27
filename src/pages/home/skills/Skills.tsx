@@ -21,8 +21,8 @@ const Skills: React.FC = () => {
 const StyledSkills = styled.div`
   flex-direction: column;
   margin: 5vw;
-  padding-top: 120px;
-  margin-top: -100px;
+  padding-top: 100px;
+  margin-top: -50px;
 
   .skills-container {
     flex-wrap: wrap;

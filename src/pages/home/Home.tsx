@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const Home = () => {
   return (
-    <StyledHome>
+    <StyledHome id="메인">
       <div className="top flex-center">
         <Typewriter
           onInit={(typewriter) => {
