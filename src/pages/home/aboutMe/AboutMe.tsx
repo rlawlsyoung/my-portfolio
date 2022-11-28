@@ -21,11 +21,6 @@ const AboutMe: React.FC = () => {
       title: "개인 블로그",
       link: "https://velog.io/@jinyoung985",
     },
-    {
-      icon: <FaFacebook size="32" />,
-      title: "FaceBook",
-      link: "https://www.facebook.com/profile.php?id=100004956165568",
-    },
   ];
 
   const infos = [
@@ -44,7 +39,7 @@ const AboutMe: React.FC = () => {
   ];
 
   return (
-    <StyledAboutMe className="flex-center">
+    <StyledAboutMe className="flex-center" id="자기소개">
       <Title text="자기소개" />
       <div className="container">
         <div className="profile-wrapper">
@@ -89,6 +84,8 @@ const AboutMe: React.FC = () => {
 const StyledAboutMe = styled.div`
   flex-direction: column;
   margin: 5vw;
+  padding-top: 100px;
+  margin-top: -50px;
 
   .container {
     display: flex;
@@ -103,7 +100,7 @@ const StyledAboutMe = styled.div`
       }
 
       .name {
-        margin: 20px 0;
+        margin: 10px 0;
         font-size: 22px;
         font-weight: 700;
       }

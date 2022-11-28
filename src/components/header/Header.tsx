@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
@@ -12,7 +13,8 @@ const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const updateScroll = () => {
-    window.scrollY < 20 && setScrollPosition(window.scrollY);
+    window.scrollY < 5 && setScrollPosition(window.scrollY);
+    window.scrollY > 3940 && setScrollPosition(window.scrollY);
   };
 
   useEffect(() => {
@@ -22,13 +24,19 @@ const Header = () => {
 
   return (
     <StyledHeader scrollPosition={scrollPosition}>
-      <h1 className="title">KJY</h1>
+      <Link to="메인" spy={false} smooth={true} duration={500}>
+        <h1 className="title">KJY</h1>
+      </Link>
       <div className="menu-wrapper flex-center">
-        {menuList.map((menu) => (
-          <div className="menu-el" key={menu.title}>
-            {menu.title}
-          </div>
-        ))}
+        {menuList.map((menu) => {
+          return (
+            <Link to={menu.title} spy={false} smooth={true} duration={500}>
+              <div className="menu-el" key={menu.title}>
+                {menu.title}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </StyledHeader>
   );
@@ -60,6 +68,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
     margin: 0 30px;
     font-family: "BhuTuka Expanded One";
     font-size: 38px;
+    cursor: pointer;
   }
 
   .menu-el {
