@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import Title from "../../../components/title/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
@@ -26,30 +27,34 @@ const Portfolio: React.FC = () => {
   }, [filter]);
 
   return (
-    <StyledPortfolio className="flex-center" id="포트폴리오">
-      <Title text="포트폴리오" />
-      <Filter filter={filter} handleOnClick={handleOnClick} />
-      <div className="project-container">
-        {portfolios.map((portfolioData) => (
-          <ProjectBox
-            portfolioData={portfolioData}
-            key={portfolioData.title}
-            setIsDialogOn={setIsDialogOn}
-            setSelectedPortfolio={setSelectedPortfolio}
-          />
-        ))}
-      </div>
-      <PortfolioDialog
-        isDialogOn={isDialogOn}
-        turnOffDialog={turnOffDialog}
-        selectedPortfolio={selectedPortfolio}
-      />
+    <StyledPortfolio id="포트폴리오">
+      <Fade>
+        <Title text="포트폴리오" />
+        <Filter filter={filter} handleOnClick={handleOnClick} />
+        <div className="project-container">
+          {portfolios.map((portfolioData) => (
+            <ProjectBox
+              portfolioData={portfolioData}
+              key={portfolioData.title}
+              setIsDialogOn={setIsDialogOn}
+              setSelectedPortfolio={setSelectedPortfolio}
+            />
+          ))}
+        </div>
+        <PortfolioDialog
+          isDialogOn={isDialogOn}
+          turnOffDialog={turnOffDialog}
+          selectedPortfolio={selectedPortfolio}
+        />
+      </Fade>
     </StyledPortfolio>
   );
 };
 
 const StyledPortfolio = styled.div`
+  display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 5vw;
   padding-top: 120px;
   margin-top: -50px;

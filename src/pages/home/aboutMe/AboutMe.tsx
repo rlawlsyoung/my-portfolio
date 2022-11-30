@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import Title from "../../../components/title/Title";
 import Subtitle from "../../../components/subtitle/Subtitle";
 import MyLink from "./MyLink";
@@ -50,32 +51,34 @@ const AboutMe: React.FC = () => {
 
   return (
     <StyledAboutMe id="자기소개">
-      <Title text="자기소개" />
-      <div className="container">
-        <div className="profile-wrapper">
-          <img src={me} alt="김진영 사진" className="my-photo" />
-          <p className="name flex-center">김진영 (Kim Jin Young)</p>
-          {links.map((link) => (
-            <MyLink link={link} key={link.title} />
-          ))}
-        </div>
-        <div className="info-wrapper">
-          <Subtitle text="👨‍💻 저는 이런 개발자입니다!" />
-          <ul className="lists">
-            {myAdvantages.map((adv) => (
-              <li className="list" key={adv}>
-                {adv}
-              </li>
+      <Fade>
+        <Title text="자기소개" />
+        <div className="container">
+          <div className="profile-wrapper">
+            <img src={me} alt="김진영 사진" className="my-photo" />
+            <p className="name flex-center">김진영 (Kim Jin Young)</p>
+            {links.map((link) => (
+              <MyLink link={link} key={link.title} />
             ))}
-          </ul>
-          <Subtitle text="🙎‍♂️ 개인 정보   " />
-          <ul className="lists">
-            {infos.map((info) => (
-              <InfoList info={info} key={info.title} />
-            ))}
-          </ul>
+          </div>
+          <div className="info-wrapper">
+            <Subtitle text="👨‍💻 저는 이런 개발자입니다!" />
+            <ul className="lists">
+              {myAdvantages.map((adv) => (
+                <li className="list" key={adv}>
+                  {adv}
+                </li>
+              ))}
+            </ul>
+            <Subtitle text="🙎‍♂️ 개인 정보   " />
+            <ul className="lists">
+              {infos.map((info) => (
+                <InfoList info={info} key={info.title} />
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      </Fade>
     </StyledAboutMe>
   );
 };
