@@ -11,7 +11,7 @@ interface portfolioDatasType {
 const portfolioDatas: portfolioDatasType[] = [
   {
     mainImg:
-      "https://velog.velcdn.com/images/jinyoung985/post/922ec876-8a20-44da-8849-7e67e8ae982e/image.gif",
+      "https://velog.velcdn.com/images/jinyoung985/post/66e7588b-4192-49dd-8ecd-4048573cd66d/image.gif",
     isMobile: false,
     title: "📋 포트폴리오",
     tags: ["전체", "개인 프로젝트"],

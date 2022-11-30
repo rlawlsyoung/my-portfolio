@@ -9,7 +9,7 @@ import styled from "styled-components";
 const Skills: React.FC = () => {
   return (
     <StyledSkills id="기술 스택">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.5}>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="기술 스택" />
         <div className="skills-container flex-center">
           {techStacks.map((techStack) => (
