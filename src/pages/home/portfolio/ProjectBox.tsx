@@ -46,11 +46,13 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   margin: 2.5%;
   border: 1px solid ${mainGray};
   border-radius: 5px;
+  box-shadow: 0 2px 2px -2px ${mainGray};
   font-weight: 500;
   cursor: pointer;
 
   .img-container {
     width: 100%;
+    border-bottom: 1px solid #e4e4e4;
     border-radius: 5px 5px 0 0;
     background-color: ${lightGray};
     .project-img {
