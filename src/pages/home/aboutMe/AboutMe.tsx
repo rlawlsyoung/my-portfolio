@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
   ];
 
   return (
-    <StyledAboutMe className="flex-center" id="자기소개">
+    <StyledAboutMe id="자기소개">
       <Title text="자기소개" />
       <div className="container">
         <div className="profile-wrapper">
@@ -81,9 +81,13 @@ const AboutMe: React.FC = () => {
 };
 
 const StyledAboutMe = styled.div`
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  height: 100vh;
   margin: 5vw;
-  padding-top: 100px;
+  margin-bottom: 0;
+  padding-top: 120px;
   margin-top: -50px;
 
   .container {
@@ -92,7 +96,7 @@ const StyledAboutMe = styled.div`
     .profile-wrapper {
       flex-direction: column;
       align-items: flex-start;
-      width: 25vw;
+      width: 350px;
 
       .my-photo {
         width: 100%;
@@ -107,7 +111,7 @@ const StyledAboutMe = styled.div`
 
     .info-wrapper {
       align-items: flex-start;
-      width: 65vw;
+      width: calc(85vw - 350px);
       padding-left: 5vw;
 
       .lists {

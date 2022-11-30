@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const Skills: React.FC = () => {
   return (
-    <StyledSkills className="flex-center" id="기술 스택">
+    <StyledSkills id="기술 스택">
       <Title text="기술 스택" />
       <div className="skills-container flex-center">
         {techStacks.map((techStack) => (
@@ -19,9 +19,13 @@ const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.div`
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  height: 100vh;
   margin: 5vw;
-  padding-top: 100px;
+  margin-bottom: 0;
+  padding-top: 120px;
   margin-top: -50px;
 
   .skills-container {
