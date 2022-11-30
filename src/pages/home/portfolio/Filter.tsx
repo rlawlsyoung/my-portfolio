@@ -56,7 +56,7 @@ const StyledFilter = styled.div`
     &:hover {
       background-color: ${hoveredLightRed};
       color: ${mainRed};
-      transition: 0.2s;
+      transition: 0.25s;
     }
   }
 
@@ -67,7 +67,7 @@ const StyledFilter = styled.div`
 
   @media ${responsive.mobile} {
     .filter {
-      padding: 2vw 3vw;
+      padding: 12.5px 3vw;
       font-size: 3vw;
     }
   }
