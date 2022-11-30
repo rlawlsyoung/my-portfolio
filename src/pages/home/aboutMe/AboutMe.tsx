@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <StyledAboutMe id="자기소개">
-      <Fade>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="자기소개" />
         <div className="container">
           <div className="profile-wrapper">
@@ -87,7 +87,7 @@ const StyledAboutMe = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 5vw;
   margin-bottom: 0;
   padding-top: 120px;

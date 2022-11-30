@@ -28,7 +28,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <StyledPortfolio id="포트폴리오">
-      <Fade>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="포트폴리오" />
         <Filter filter={filter} handleOnClick={handleOnClick} />
         <div className="project-container">
@@ -62,7 +62,7 @@ const StyledPortfolio = styled.div`
   .project-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90vw;
   }
 `;
 

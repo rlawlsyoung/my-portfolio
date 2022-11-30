@@ -9,7 +9,7 @@ import styled from "styled-components";
 const Skills: React.FC = () => {
   return (
     <StyledSkills id="기술 스택">
-      <Fade>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.5}>
         <Title text="기술 스택" />
         <div className="skills-container flex-center">
           {techStacks.map((techStack) => (
@@ -25,7 +25,7 @@ const StyledSkills = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 5vw;
   margin-bottom: 0;
   padding-top: 120px;
@@ -38,6 +38,7 @@ const StyledSkills = styled.div`
 
   @media ${responsive.tablet} {
     margin-bottom: 90px;
+    min-height: 0;
   }
 `;
 
