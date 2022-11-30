@@ -12,7 +12,7 @@ const Title: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const StyledTitle = styled.h2`
-  margin-bottom: 5vw;
+  margin-bottom: 35px;
   font-size: 38px;
   font-weight: 700;
 
