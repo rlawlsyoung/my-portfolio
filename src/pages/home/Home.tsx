@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import AboutMe from "./aboutMe/AboutMe";
 import Skills from "./skills/Skills";
@@ -15,17 +14,18 @@ const Home = () => {
         <p className="text color-bg">프론트엔드 개발자, 김진영입니다.</p>
 
         <p className="small-text color-bg">
+          저는{" "}
           <Typewriter
             words={[
               "꾸준히 개발 지식을 쌓는 것을 좋아하는",
-              "내가 만든 서비스에 애정을 쏟는",
+              "제가 만든 서비스에 애정을 쏟는",
               "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
             ]}
             loop={true}
             cursor
             typeSpeed={70}
             deleteSpeed={50}
-            delaySpeed={3500}
+            delaySpeed={3000}
           />
           개발자입니다.
         </p>
@@ -76,6 +76,10 @@ const StyledHome = styled.div`
   }
 
   @media ${responsive.tablet} {
+    .styles-module_blinkingCursor__yugAC {
+      margin-left: -4px;
+      margin-right: 4px;
+    }
     .top {
       .text {
         font-size: 6vw;

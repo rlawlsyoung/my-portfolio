@@ -24,16 +24,20 @@ const Header = () => {
 
   return (
     <StyledHeader scrollPosition={scrollPosition}>
-      <Link to="메인" spy={false} smooth={true} duration={500}>
+      <Link to="메인" spy={true} smooth={true} duration={500}>
         <h1 className="title">KJY</h1>
       </Link>
       <div className="menu-wrapper flex-center">
         {menuList.map((menu) => {
           return (
-            <Link to={menu.title} spy={false} smooth={true} duration={500}>
-              <div className="menu-el" key={menu.title}>
-                {menu.title}
-              </div>
+            <Link
+              to={menu.title}
+              spy={false}
+              smooth={true}
+              duration={500}
+              key={menu.title}
+            >
+              <div className="menu-el">{menu.title}</div>
             </Link>
           );
         })}
@@ -56,7 +60,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   right: 0;
   left: 0;
   width: 100vw;
-  padding: 20px 0;
+  padding: 17.5px 0;
   box-shadow: ${(props) => props.scrollPosition && "0.5px 3px 5px -2px gray"};
   background-color: ${(props) =>
     props.scrollPosition ? "white" : "transparents"};
