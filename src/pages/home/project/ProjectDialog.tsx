@@ -1,5 +1,5 @@
 import Dialog from "@mui/material/Dialog";
-import { portfolioDatasType } from "./portfolioDatas";
+import { projectDatasType } from "./ProjectDatas";
 import {
   responsive,
   mainGray,
@@ -9,32 +9,32 @@ import {
 } from "../../../styles/theme";
 import styled from "styled-components";
 
-const PortfolioDialog: React.FC<{
+const ProjectDialog: React.FC<{
   isDialogOn: boolean;
   turnOffDialog: () => void;
-  selectedPortfolio: portfolioDatasType;
-}> = ({ isDialogOn, turnOffDialog, selectedPortfolio }) => {
+  selectedProject: projectDatasType;
+}> = ({ isDialogOn, turnOffDialog, selectedProject }) => {
   return (
-    <StyledPortfolioDialog
+    <StyledProjectDialog
       open={isDialogOn}
       onClose={turnOffDialog}
       maxWidth={false}
     >
-      <div className="portfolio-container">
-        <iframe src={selectedPortfolio.url} className="portfolio-post"></iframe>
+      <div className="project-container">
+        <iframe src={selectedProject.url} className="project-post"></iframe>
         <div className="pop-up">
           포트폴리오를 새 창에서 보고싶다면?{" "}
-          <a href={selectedPortfolio.url} target="_blank" className="link">
+          <a href={selectedProject.url} target="_blank" className="link">
             새 창에서 띄우기
           </a>
         </div>
       </div>
-    </StyledPortfolioDialog>
+    </StyledProjectDialog>
   );
 };
 
-const StyledPortfolioDialog = styled(Dialog)`
-  .portfolio-container {
+const StyledProjectDialog = styled(Dialog)`
+  .project-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -43,7 +43,7 @@ const StyledPortfolioDialog = styled(Dialog)`
     padding: 20px;
     overflow-x: hidden;
 
-    .portfolio-post {
+    .project-post {
       width: 100%;
       height: 100%;
     }
@@ -71,10 +71,10 @@ const StyledPortfolioDialog = styled(Dialog)`
   }
 
   @media ${responsive.desktop} {
-    .portfolio-container {
+    .project-container {
       width: 80vw;
     }
   }
 `;
 
-export default PortfolioDialog;
+export default ProjectDialog;

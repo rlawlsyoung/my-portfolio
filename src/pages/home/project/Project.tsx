@@ -3,15 +3,15 @@ import { Fade } from "react-awesome-reveal";
 import Title from "../../../components/title/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
-import PortfolioDialog from "./PortfolioDialog";
-import { portfolioDatas } from "./portfolioDatas";
+import ProjectDialog from "./ProjectDialog";
+import { projectDatas } from "./ProjectDatas";
 import styled from "styled-components";
 
-const Portfolio: React.FC = () => {
+const Project: React.FC = () => {
   const [filter, setFilter] = useState("전체");
-  const [portfolios, setPortfolios] = useState(portfolioDatas);
+  const [projects, setProjects] = useState(projectDatas);
   const [isDialogOn, setIsDialogOn] = useState(false);
-  const [selectedPortfolio, setSelectedPortfolio] = useState(portfolioDatas[0]);
+  const [selectedProject, setSelectedProject] = useState(projectDatas[0]);
 
   const turnOffDialog = useCallback(() => setIsDialogOn(false), []);
   const handleOnClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -19,39 +19,39 @@ const Portfolio: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setPortfolios(
-      portfolioDatas.filter((portfolio) => {
-        return portfolio.tags.includes(filter);
+    setProjects(
+      projectDatas.filter((project) => {
+        return project.tags.includes(filter);
       })
     );
   }, [filter]);
 
   return (
-    <StyledPortfolio id="포트폴리오">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
-        <Title text="포트폴리오" />
+    <StyledProject id="프로젝트">
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
+        <Title text="프로젝트" />
         <Filter filter={filter} handleOnClick={handleOnClick} />
         <div className="project-container">
-          {portfolios.map((portfolioData) => (
+          {projects.map((projectData) => (
             <ProjectBox
-              portfolioData={portfolioData}
-              key={portfolioData.title}
+              projectData={projectData}
+              key={projectData.title}
               setIsDialogOn={setIsDialogOn}
-              setSelectedPortfolio={setSelectedPortfolio}
+              setSelectedProject={setSelectedProject}
             />
           ))}
         </div>
-        <PortfolioDialog
+        <ProjectDialog
           isDialogOn={isDialogOn}
           turnOffDialog={turnOffDialog}
-          selectedPortfolio={selectedPortfolio}
+          selectedProject={selectedProject}
         />
       </Fade>
-    </StyledPortfolio>
+    </StyledProject>
   );
 };
 
-const StyledPortfolio = styled.div`
+const StyledProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,4 +66,4 @@ const StyledPortfolio = styled.div`
   }
 `;
 
-export default Portfolio;
+export default Project;

@@ -1,40 +1,38 @@
 import React, { useCallback } from "react";
 import Tag from "./Tag";
-import { portfolioDatasType } from "./portfolioDatas";
+import { projectDatasType } from "./ProjectDatas";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{
-  portfolioData: portfolioDatasType;
+  projectData: projectDatasType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
-  setSelectedPortfolio: React.Dispatch<
-    React.SetStateAction<portfolioDatasType>
-  >;
-}> = ({ portfolioData, setIsDialogOn, setSelectedPortfolio }) => {
+  setSelectedProject: React.Dispatch<React.SetStateAction<projectDatasType>>;
+}> = ({ projectData, setIsDialogOn, setSelectedProject }) => {
   const turnOnDialog = useCallback(() => {
     setIsDialogOn(true);
-    setSelectedPortfolio(portfolioData);
+    setSelectedProject(projectData);
   }, []);
 
   return (
-    <StyledProjectBox isMobile={portfolioData.isMobile} onClick={turnOnDialog}>
+    <StyledProjectBox isMobile={projectData.isMobile} onClick={turnOnDialog}>
       <div className="img-container flex-center">
         <img
-          src={portfolioData.mainImg}
-          alt={portfolioData.title}
+          src={projectData.mainImg}
+          alt={projectData.title}
           className="project-img"
         />
       </div>
 
       <div className="project-info">
-        <h3 className="project-title">{portfolioData.title}</h3>
-        <p className="project-subtitle">{portfolioData.subTitle}</p>
+        <h3 className="project-title">{projectData.title}</h3>
+        <p className="project-subtitle">{projectData.subTitle}</p>
         <div className="tags">
-          {portfolioData.mainTechs.map((tech) => (
+          {projectData.mainTechs.map((tech) => (
             <Tag text={tech} key={tech} />
           ))}
         </div>
-        <p className="project-introduction">{portfolioData.introduction}</p>
+        <p className="project-introduction">{projectData.introduction}</p>
       </div>
     </StyledProjectBox>
   );
