@@ -2,14 +2,14 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import Title from "../../../components/title/Title";
 import SkillBox from "./SkillBox";
-import { techStacks } from "./mySkills";
+import { techStacks } from "./techStacks";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Skills: React.FC = () => {
   return (
     <StyledSkills id="기술 스택">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
         <Title text="기술 스택" />
         <div className="skills-container flex-center">
           {techStacks.map((techStack) => (

@@ -1,9 +1,10 @@
 import React from "react";
+import { techStacksType } from "./techStacks";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{
-  techStack: { icon: string; name: string };
+  techStack: techStacksType;
 }> = ({ techStack }) => {
   return (
     <StyledSkillBox className="flex-center">

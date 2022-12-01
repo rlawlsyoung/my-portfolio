@@ -7,7 +7,7 @@ const Header = () => {
   const menuList = [
     { title: "자기소개" },
     { title: "기술 스택" },
-    { title: "포트폴리오" },
+    { title: "프로젝트" },
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);

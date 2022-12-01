@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <StyledAboutMe id="자기소개">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
         <Title text="자기소개" />
         <div className="container">
           <div className="profile-wrapper">
@@ -70,7 +70,7 @@ const AboutMe: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <Subtitle text="🙎‍♂️ 개인 정보   " />
+            <Subtitle text="🙎‍♂️ 개인 정보" />
             <ul className="lists">
               {infos.map((info) => (
                 <InfoList info={info} key={info.title} />
@@ -146,13 +146,6 @@ const StyledAboutMe = styled.div`
         width: 80vw;
         padding-left: 0;
         margin-top: 40px;
-
-        .lists {
-          .list {
-            /* font-size: 2.35vw; */
-            /* line-height: 3.65vw; */
-          }
-        }
       }
     }
   }
