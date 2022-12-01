@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import Tag from "./Tag";
-import portfolioDatasType from "./portfolioDatas";
+import { portfolioDatasType } from "./portfolioDatas";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 

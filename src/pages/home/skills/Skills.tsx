@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import Title from "../../../components/title/Title";
 import SkillBox from "./SkillBox";
-import { techStacks } from "./mySkills";
+import { techStacks } from "./techStacks";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 

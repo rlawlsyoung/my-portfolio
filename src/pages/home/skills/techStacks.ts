@@ -8,7 +8,12 @@ import sass from "../../../assets/sass.svg";
 import mui from "../../../assets/mui.svg";
 import styledComponents from "../../../assets/styledcomponents.svg";
 
-export const techStacks = [
+export interface techStacksType {
+  icon: string;
+  name: string;
+}
+
+export const techStacks: techStacksType[] = [
   { icon: html, name: "HTML5" },
   { icon: css, name: "CSS" },
   { icon: javascript, name: "JavaScript" },

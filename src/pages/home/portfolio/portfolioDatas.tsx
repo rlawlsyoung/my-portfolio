@@ -1,4 +1,4 @@
-interface portfolioDatasType {
+export interface portfolioDatasType {
   mainImg: string;
   isMobile: boolean;
   title: string;
@@ -8,7 +8,8 @@ interface portfolioDatasType {
   introduction: JSX.Element;
   url: string;
 }
-const portfolioDatas: portfolioDatasType[] = [
+
+export const portfolioDatas: portfolioDatasType[] = [
   {
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/66e7588b-4192-49dd-8ecd-4048573cd66d/image.gif",
@@ -129,6 +130,3 @@ const portfolioDatas: portfolioDatasType[] = [
     url: "https://velog.io/@jinyoung985/Portfolio-오디오-녹음-재생-프로그램-만들기",
   },
 ];
-
-export { portfolioDatas };
-export default portfolioDatasType;

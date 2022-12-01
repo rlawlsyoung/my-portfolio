@@ -1,5 +1,5 @@
 import Dialog from "@mui/material/Dialog";
-import portfolioDatasType from "./portfolioDatas";
+import { portfolioDatasType } from "./portfolioDatas";
 import {
   responsive,
   mainGray,
@@ -8,7 +8,6 @@ import {
   hoveredLightRed,
 } from "../../../styles/theme";
 import styled from "styled-components";
-import { light } from "@mui/material/styles/createPalette";
 
 const PortfolioDialog: React.FC<{
   isDialogOn: boolean;
@@ -50,12 +49,15 @@ const StyledPortfolioDialog = styled(Dialog)`
     }
 
     .pop-up {
+      display: flex;
+      align-items: center;
       padding-top: 20px;
       color: ${mainGray};
       font-weight: 700;
 
       .link {
         padding: 5px 8px;
+        margin-left: 5px;
         border-radius: 3px;
         background-color: ${lightRed};
         color: ${mainRed};
