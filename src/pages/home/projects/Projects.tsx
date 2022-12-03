@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
 
   return (
     <StyledProjects id="Projects">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="Projects" />
         <Filter filter={filter} handleOnClick={handleOnClick} />
         <div className="projects-container">
@@ -57,7 +57,7 @@ const StyledProjects = styled.div`
   align-items: center;
   margin: 5vw;
   padding-top: 120px;
-  margin-top: -50px;
+  margin-top: -70px;
 
   .projects-container {
     display: flex;

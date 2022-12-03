@@ -6,12 +6,12 @@ const InfoList: React.FC<{
 }> = ({ info }) => {
   return (
     <StyledInfoList className="list">
-      <p className="list-title">{info.title}</p> : {info.text}
+      <li className="list-title">{info.title}</li> : {info.text}
     </StyledInfoList>
   );
 };
 
-const StyledInfoList = styled.li`
+const StyledInfoList = styled.div`
   .list-title {
     font-weight: 800;
   }

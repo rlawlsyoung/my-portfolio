@@ -60,8 +60,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   right: 0;
   left: 0;
   height: 80px;
-  width: 100vw;
-  padding: 17.5px 0;
+  width: 100%;
   background-color: ${(props) =>
     props.scrollPosition ? "white" : "transparents"};
   color: ${(props) => (props.scrollPosition ? "black" : "white")};

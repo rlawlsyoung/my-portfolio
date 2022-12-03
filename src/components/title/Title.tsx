@@ -12,15 +12,15 @@ const Title: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const StyledTitle = styled.h2`
-  margin-bottom: 35px;
-  font-size: 38px;
+  width: 300px;
+  font-size: 46px;
   font-weight: 700;
 
   .bar {
-    width: 100%;
-    height: 5px;
+    max-width: 250px;
+    height: 3.5px;
     margin-top: 5px;
-    background-color: ${mainRed};
+    background-color: black;
   }
 
   @media ${responsive.mobile} {

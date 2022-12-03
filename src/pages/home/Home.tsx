@@ -2,6 +2,7 @@ import bg from "../../assets/bg.jpg";
 import { Link } from "react-scroll";
 import { SlArrowDown } from "react-icons/sl";
 import styled from "styled-components";
+import { responsive } from "../../styles/theme";
 
 const Home = () => {
   return (
@@ -29,6 +30,12 @@ const StyledHome = styled.div`
     left: calc(50vw - 36px);
     transform: scaleX(1.5);
     cursor: pointer;
+  }
+
+  @media ${responsive.tablet} {
+    .arrow {
+      bottom: 75px;
+    }
   }
 `;
 

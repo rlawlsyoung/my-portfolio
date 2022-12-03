@@ -24,7 +24,7 @@ export const projectDatas: projectDatasType[] = [
         자기소개, 기술 스택, 프로젝트 등에 대해 소개합니다.
       </>
     ),
-    url: "https://velog.io/@jinyoung985/series/Portfolio-포트폴리오-사이트",
+    url: "https://velog.io/@jinyoung985/Portfolio-포트폴리오-사이트",
   },
   {
     mainImg:

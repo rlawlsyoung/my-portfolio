@@ -9,12 +9,13 @@ import styled from "styled-components";
 const Skills: React.FC = () => {
   return (
     <StyledSkills id="Skills">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="Skills" />
-        <div className="skills-container flex-center">
-          {techStacks.map((techStack) => (
+        <div className="skills-container">
+          dd
+          {/* {techStacks.map((techStack) => (
             <SkillBox techStack={techStack} key={techStack.name} />
-          ))}
+          ))} */}
         </div>
       </Fade>
     </StyledSkills>
@@ -23,17 +24,15 @@ const Skills: React.FC = () => {
 
 const StyledSkills = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
-  margin: 5vw;
   margin-bottom: 0;
   padding-top: 120px;
-  margin-top: -50px;
+  margin-top: -70px;
 
   .skills-container {
     flex-wrap: wrap;
-    margin: 0 5vw;
+    width: 900px;
   }
 
   @media ${responsive.tablet} {
