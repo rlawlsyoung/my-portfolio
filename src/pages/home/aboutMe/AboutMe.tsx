@@ -50,9 +50,9 @@ const AboutMe: React.FC = () => {
   ];
 
   return (
-    <StyledAboutMe id="자기소개">
+    <StyledAboutMe id="About Me">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
-        <Title text="자기소개" />
+        <Title text="About Me" />
         <div className="container">
           <div className="profile-wrapper">
             <img src={me} alt="김진영 사진" className="my-photo" />

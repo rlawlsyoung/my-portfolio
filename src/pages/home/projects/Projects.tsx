@@ -7,7 +7,7 @@ import ProjectDialog from "./ProjectDialog";
 import { projectDatas } from "./ProjectDatas";
 import styled from "styled-components";
 
-const Project: React.FC = () => {
+const Projects: React.FC = () => {
   const [filter, setFilter] = useState("전체");
   const [projects, setProjects] = useState(projectDatas);
   const [isDialogOn, setIsDialogOn] = useState(false);
@@ -27,11 +27,11 @@ const Project: React.FC = () => {
   }, [filter]);
 
   return (
-    <StyledProject id="프로젝트">
+    <StyledProjects id="프로젝트">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
         <Title text="프로젝트" />
         <Filter filter={filter} handleOnClick={handleOnClick} />
-        <div className="project-container">
+        <div className="projects-container">
           {projects.map((projectData) => (
             <ProjectBox
               projectData={projectData}
@@ -47,11 +47,11 @@ const Project: React.FC = () => {
           selectedProject={selectedProject}
         />
       </Fade>
-    </StyledProject>
+    </StyledProjects>
   );
 };
 
-const StyledProject = styled.div`
+const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,11 +59,11 @@ const StyledProject = styled.div`
   padding-top: 120px;
   margin-top: -50px;
 
-  .project-container {
+  .projects-container {
     display: flex;
     flex-wrap: wrap;
     width: 90vw;
   }
 `;
 
-export default Project;
+export default Projects;

@@ -5,9 +5,10 @@ import styled from "styled-components";
 
 const Header = () => {
   const menuList = [
-    { title: "자기소개" },
-    { title: "기술 스택" },
-    { title: "프로젝트" },
+    { title: "About Me" },
+    { title: "Education" },
+    { title: "Skills" },
+    { title: "Projects" },
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -24,23 +25,27 @@ const Header = () => {
 
   return (
     <StyledHeader scrollPosition={scrollPosition}>
-      <Link to="메인" spy={true} smooth={true} duration={500}>
-        <h1 className="title">KJY</h1>
-      </Link>
-      <div className="menu-wrapper flex-center">
-        {menuList.map((menu) => {
-          return (
-            <Link
-              to={menu.title}
-              spy={false}
-              smooth={true}
-              duration={500}
-              key={menu.title}
-            >
-              <div className="menu-el">{menu.title}</div>
-            </Link>
-          );
-        })}
+      <div className="header-container">
+        <Link to="메인" spy={true} smooth={true} duration={500}>
+          <h1 className="title">
+            金辰營 <p className="kr-name">김진영</p>
+          </h1>
+        </Link>
+        <div className="menu-wrapper flex-center">
+          {menuList.map((menu) => {
+            return (
+              <Link
+                to={menu.title}
+                spy={false}
+                smooth={true}
+                duration={500}
+                key={menu.title}
+              >
+                <div className="menu-el">{menu.title}</div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </StyledHeader>
   );
@@ -54,48 +59,68 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  height: 80px;
   width: 100vw;
   padding: 17.5px 0;
-  box-shadow: ${(props) => props.scrollPosition && "0.5px 3px 5px -2px gray"};
   background-color: ${(props) =>
     props.scrollPosition ? "white" : "transparents"};
   color: ${(props) => (props.scrollPosition ? "black" : "white")};
   font-weight: 600;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s;
 
-  .title {
-    margin: 0 30px;
-    font-family: "BhuTuka Expanded One";
-    font-size: 38px;
-    cursor: pointer;
-  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
 
-  .menu-el {
-    margin: 0 30px;
-    font-size: 20px;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.075);
-      transition: 0.3s;
-    }
-  }
-
-  @media ${responsive.mobile} {
     .title {
-      margin: 0 2vw;
-      font-size: 30px;
+      display: flex;
+      position: absolute;
+      top: 30px;
+      font-size: 72px;
+      white-space: nowrap;
+      cursor: pointer;
+
+      .kr-name {
+        margin-left: 5px;
+        font-size: 18px;
+      }
     }
 
-    .menu-el {
-      margin: 0 2vw;
-      font-size: 12px;
-      white-space: nowrap;
+    .menu-wrapper {
+      .menu-el {
+        margin: 0 30px;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.075);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  @media ${responsive.desktop} {
+    .header-container {
+      width: 100vw;
+    }
+  }
+
+  @media ${responsive.tablet} {
+    .header-container {
+      .menu-wrapper {
+        .menu-el {
+          margin: 0 2vw;
+          font-size: 2vw;
+          white-space: nowrap;
+        }
+      }
     }
   }
 `;
