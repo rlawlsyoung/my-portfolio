@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <StyledHeader scrollPosition={scrollPosition}>
       <div className="header-container">
-        <Link to="메인" spy={true} smooth={true} duration={500}>
+        <Link to="Home" spy={true} smooth={true} duration={500}>
           <h1 className="title">
             金辰營 <p className="kr-name">김진영</p>
           </h1>
@@ -52,11 +52,6 @@ const Header = () => {
 };
 
 const StyledHeader = styled.header<{ scrollPosition: number }>`
-  .flex-center {
-    display: flex;
-    align-items: center;
-  }
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,9 +111,15 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   @media ${responsive.tablet} {
     .header-container {
       .menu-wrapper {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: black;
+        background-color: white;
         .menu-el {
-          margin: 0 2vw;
-          font-size: 2vw;
+          margin: 20px 2vw;
+          font-size: 18px;
           white-space: nowrap;
         }
       }

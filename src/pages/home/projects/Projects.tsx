@@ -27,9 +27,9 @@ const Projects: React.FC = () => {
   }, [filter]);
 
   return (
-    <StyledProjects id="프로젝트">
+    <StyledProjects id="Projects">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
-        <Title text="프로젝트" />
+        <Title text="Projects" />
         <Filter filter={filter} handleOnClick={handleOnClick} />
         <div className="projects-container">
           {projects.map((projectData) => (
