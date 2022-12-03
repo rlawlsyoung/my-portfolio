@@ -82,6 +82,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
       display: flex;
       position: absolute;
       top: 30px;
+      margin-left: 30px;
       font-size: 72px;
       white-space: nowrap;
       cursor: pointer;

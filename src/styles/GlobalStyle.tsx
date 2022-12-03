@@ -49,6 +49,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: "KoPubWorldBatang", sans-serif; 
   }
 
+  .flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 `;
 
 export default GlobalStyle;
