@@ -5,19 +5,22 @@ import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import Title from "../../../components/title/Title";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
+import github from "../../../assets/github.png";
+import velog from "../../../assets/velog.png";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
+import MyLink from "./MyLink";
 
 const AboutMe: React.FC = () => {
   const links = [
     {
-      icon: <AiFillGithub size="32" />,
+      icon: github,
       title: "GitHub",
       link: "https://github.com/rlawlsyoung",
     },
     {
-      icon: <AiFillHome size="32" />,
-      title: "개인 블로그",
+      icon: velog,
+      title: "velog",
       link: "https://velog.io/@jinyoung985",
     },
   ];
@@ -54,13 +57,10 @@ const AboutMe: React.FC = () => {
         <div className="about-me-container">
           <img src={me} alt="김진영 사진" className="my-photo" />
           <p className="name">김진영 (金辰營)</p>
-          <div className="adv">
+          <p className="position">Front-End Developer</p>
+          <p className="adv">
             <Typewriter
-              words={[
-                "꾸준히 개발 지식을 쌓는 것을 좋아하는",
-                "제가 만든 서비스에 애정을 쏟는",
-                "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
-              ]}
+              words={myAdvantages}
               loop={true}
               cursor
               typeSpeed={70}
@@ -68,11 +68,15 @@ const AboutMe: React.FC = () => {
               delaySpeed={3000}
             />
             개발자입니다.
-          </div>
-
+          </p>
           {infos.map((info) => (
             <InfoList info={info} key={info.title} />
           ))}
+          <div className="link-wrapper">
+            {links.map((link) => (
+              <MyLink link={link} key={link.title} />
+            ))}
+          </div>
         </div>
       </Fade>
     </StyledAboutMe>
@@ -99,8 +103,13 @@ const StyledAboutMe = styled.div`
     }
 
     .name {
-      margin-bottom: 30px;
       font-size: 32px;
+      font-weight: 700;
+    }
+
+    .position {
+      margin: 5px 0 30px 0;
+      font-size: 18px;
       font-weight: 700;
     }
 
@@ -121,36 +130,17 @@ const StyledAboutMe = styled.div`
       font-size: 18px;
       font-weight: 500;
     }
+
+    .link-wrapper {
+      display: flex;
+      margin-top: 10px;
+    }
   }
 
   @media ${responsive.tablet} {
-    .container {
-      flex-direction: column;
-      align-items: center;
-
-      .profile-wrapper {
-        width: 80vw;
-
-        .name {
-          font-size: 20px;
-        }
-      }
-
-      .info-wrapper {
-        width: 80vw;
-        padding-left: 0;
-        margin-top: 40px;
-      }
-    }
   }
 
   @media ${responsive.mobile} {
-    .lists {
-      .list {
-        font-size: 3.75vw;
-        line-height: 5vw;
-      }
-    }
   }
 `;
 
