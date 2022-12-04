@@ -10,7 +10,7 @@ const MyLink: React.FC<{
 }> = ({ link }) => {
   return (
     <StyledMyLink href={link.link} target="_blank">
-      <img src={link.icon} alt={link.title} className="icon" />
+      <img src={link.icon} alt={link.title} className="icon expansion" />
     </StyledMyLink>
   );
 };
@@ -20,11 +20,6 @@ const StyledMyLink = styled.a`
   flex-direction: column;
   justify-content: center;
   margin-right: 20px;
-
-  &:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
 
   .icon {
     width: 60px;

@@ -15,12 +15,13 @@ const Header = () => {
 
   const updateScroll = () => {
     window.scrollY < 5 && setScrollPosition(window.scrollY);
-    window.scrollY > 3940 && setScrollPosition(window.scrollY);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
-    setScrollPosition(window.scrollY);
+    window.onbeforeunload = function pushRefresh() {
+      window.scrollTo(0, 0);
+    };
   }, []);
 
   return (
@@ -41,7 +42,7 @@ const Header = () => {
                 duration={500}
                 key={menu.title}
               >
-                <div className="menu-el">{menu.title}</div>
+                <div className="menu-el expansion">{menu.title}</div>
               </Link>
             );
           })}
@@ -92,11 +93,6 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
         margin: 0 30px;
         font-size: 20px;
         cursor: pointer;
-
-        &:hover {
-          transform: scale(1.075);
-          transition: 0.3s;
-        }
       }
     }
   }

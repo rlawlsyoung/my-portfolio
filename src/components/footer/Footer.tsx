@@ -1,4 +1,5 @@
 import React from "react";
+import bg from "../../assets/bg.jpg";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
@@ -16,8 +17,10 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  background-color: black;
+  height: 175px;
+  background: url(${bg}) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
   .thanks {
     margin-bottom: 30px;
@@ -26,7 +29,6 @@ const StyledFooter = styled.footer`
   }
 
   p {
-    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 16px;
     font-weight: 600;

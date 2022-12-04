@@ -55,6 +55,13 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
   }
 
+  .expansion{
+    &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+        }
+  }
+
 `;
 
 export default GlobalStyle;
