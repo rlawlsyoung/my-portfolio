@@ -12,14 +12,12 @@ const SkillBox: React.FC<{
   const [isOpened, setIsOpened] = useState(false);
 
   const handleButtonClick = useCallback(() => {
-    if (parentRef.current === null || childRef.current === null) {
-      return;
-    } else if (parentRef.current.clientHeight > 0) {
-      parentRef.current.style.height = "0";
-      parentRef.current.style.marginTop = "0";
+    if (parentRef.current!.clientHeight === 0) {
+      parentRef.current!.style.height = `${childRef.current!.clientHeight}px`;
+      parentRef.current!.style.marginTop = "15px";
     } else {
-      parentRef.current.style.height = `${childRef.current.clientHeight}px`;
-      parentRef.current.style.marginTop = "15px";
+      parentRef.current!.style.height = "0";
+      parentRef.current!.style.marginTop = "0";
     }
     setIsOpened(!isOpened);
   }, [isOpened]);
@@ -83,6 +81,7 @@ const StyledSkillBox = styled.div`
     .text {
       background-color: ${lightGray};
       font-size: 18px;
+      line-height: 20px;
     }
   }
 `;

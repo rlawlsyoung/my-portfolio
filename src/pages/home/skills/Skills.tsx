@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
         <Title text="Skills" />
         <div className="skills-container">
           {techStacks.map((techStack) => (
-            <SkillBox title={techStack.name} contents={contents} />
+            <SkillBox title={techStack.name} contents={techStack.text} />
           ))}
         </div>
       </Fade>
