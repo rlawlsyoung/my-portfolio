@@ -21,6 +21,7 @@ const StyledHome = styled.div`
   background: url(${bg}) no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
   height: 100vh;
   color: white;
 

@@ -52,30 +52,27 @@ const AboutMe: React.FC = () => {
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="About Me" />
         <div className="about-me-container">
-          {" "}
           <img src={me} alt="김진영 사진" className="my-photo" />
           <p className="name">김진영 (金辰營)</p>
-          <div className="info-wrapper">
-            <div className="adv">
-              <Typewriter
-                words={[
-                  "꾸준히 개발 지식을 쌓는 것을 좋아하는",
-                  "제가 만든 서비스에 애정을 쏟는",
-                  "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
-                ]}
-                loop={true}
-                cursor
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={3000}
-              />
-              개발자입니다.
-            </div>
-
-            {infos.map((info) => (
-              <InfoList info={info} key={info.title} />
-            ))}
+          <div className="adv">
+            <Typewriter
+              words={[
+                "꾸준히 개발 지식을 쌓는 것을 좋아하는",
+                "제가 만든 서비스에 애정을 쏟는",
+                "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
+              ]}
+              loop={true}
+              cursor
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={3000}
+            />
+            개발자입니다.
           </div>
+
+          {infos.map((info) => (
+            <InfoList info={info} key={info.title} />
+          ))}
         </div>
       </Fade>
     </StyledAboutMe>
@@ -107,26 +104,22 @@ const StyledAboutMe = styled.div`
       font-weight: 700;
     }
 
-    .info-wrapper {
-      align-items: flex-start;
+    .adv {
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 500;
 
-      .adv {
-        margin-bottom: 30px;
-        font-size: 18px;
-        font-weight: 500;
-
-        .styles-module_blinkingCursor__yugAC {
-          margin-left: -5px;
-          margin-right: 5px;
-        }
+      .styles-module_blinkingCursor__yugAC {
+        margin-left: -5px;
+        margin-right: 5px;
       }
+    }
 
-      .list {
-        display: flex;
-        margin-bottom: 20px;
-        font-size: 18px;
-        font-weight: 500;
-      }
+    .list {
+      display: flex;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 500;
     }
   }
 
