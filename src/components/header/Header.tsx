@@ -4,12 +4,7 @@ import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Header = () => {
-  const menuList = [
-    { title: "About Me" },
-    { title: "Education" },
-    { title: "Skills" },
-    { title: "Projects" },
-  ];
+  const menuList = ["About Me", "Skills", "Projects", "Education"];
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -36,13 +31,13 @@ const Header = () => {
           {menuList.map((menu) => {
             return (
               <Link
-                to={menu.title}
+                to={menu}
                 spy={false}
                 smooth={true}
                 duration={500}
-                key={menu.title}
+                key={menu}
               >
-                <div className="menu-el expansion">{menu.title}</div>
+                <div className="menu-el expansion">{menu}</div>
               </Link>
             );
           })}

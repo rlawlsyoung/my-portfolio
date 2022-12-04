@@ -7,15 +7,16 @@ import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Skills: React.FC = () => {
+  const contents = "내용";
+
   return (
     <StyledSkills id="Skills">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="Skills" />
         <div className="skills-container">
-          dd
-          {/* {techStacks.map((techStack) => (
-            <SkillBox techStack={techStack} key={techStack.name} />
-          ))} */}
+          {techStacks.map((techStack) => (
+            <SkillBox title={techStack.name} contents={contents} />
+          ))}
         </div>
       </Fade>
     </StyledSkills>

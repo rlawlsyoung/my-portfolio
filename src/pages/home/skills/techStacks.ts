@@ -14,12 +14,12 @@ export interface techStacksType {
 }
 
 export const techStacks: techStacksType[] = [
-  { icon: html, name: "HTML5" },
-  { icon: css, name: "CSS" },
   { icon: javascript, name: "JavaScript" },
   { icon: typescript, name: "TypeScript" },
   { icon: react, name: "React.js" },
   { icon: recoil, name: "Recoil" },
+  { icon: html, name: "HTML5" },
+  { icon: css, name: "CSS" },
   { icon: sass, name: "Sass" },
   { icon: mui, name: "MUI" },
   { icon: styledComponents, name: "styled-components" },
