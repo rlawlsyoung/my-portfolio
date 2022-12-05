@@ -28,7 +28,7 @@ const StyledSkills = styled.div`
   justify-content: center;
   min-height: 100vh;
   margin-bottom: 0;
-  padding-top: 120px;
+  padding-top: 150px;
   margin-top: -70px;
 
   .skills-container {

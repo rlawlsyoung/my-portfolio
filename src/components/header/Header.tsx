@@ -4,7 +4,7 @@ import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Header = () => {
-  const menuList = ["About Me", "Skills", "Projects", "Education"];
+  const menuList = ["About Me", "Skills", "Projects", "Timeline"];
 
   const [scrollPosition, setScrollPosition] = useState(0);
 

@@ -10,11 +10,11 @@ export const techStacks: techStacksType[] = [
   },
   {
     name: "TypeScript",
-    text: "TypeScript를 사용하는 이유에 대해 제대로 이해하고 있으며 계속해서 연습 및 공부 중에 있습니다. 이 포트폴리오를 TypeScript로 제작하였습니다.",
+    text: "TypeScript를 사용하는 이유를 이해하고 있으며 계속해서 연습 및 공부 중에 있습니다. 현재 보고계시는 이 포트폴리오도 TypeScript로 제작하였습니다.",
   },
   {
     name: "React",
-    text: "React를 통해 다양한 팀 프로젝트, 인턴십 과제 등을 진행하였습니다. 컴포넌트의 재사용성, SPA, 선언적 개발이 가능한 점 등을 고려하여 사용하게 되었습니다.",
+    text: "React를 통해 다양한 팀 및 개인 프로젝트, 인턴십 과제 등을 진행하였습니다. 컴포넌트의 재사용성, SPA, 선언적 개발이 가능한 점 등을 고려하여 사용하게 되었습니다.",
   },
   {
     name: "Recoil",
@@ -31,7 +31,7 @@ export const techStacks: techStacksType[] = [
 
   {
     name: "styled-components",
-    text: "다양한 프로젝트에서 사용해보았으며 props를 통한 조건부 스타일링,  CSS의 컴포넌트화, 네스팅 등의 장점을 고려하여 사용하게 되었습니다.",
+    text: "다양한 프로젝트에서 사용해보았으며 props를 통한 조건부 스타일링,  CSS의 컴포넌트화, 네스팅 등의 장점을 생각하여 사용하게 되었습니다.",
   },
   {
     name: "MUI",
