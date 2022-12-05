@@ -5,18 +5,16 @@ import styled from "styled-components";
 const Title: React.FC<{ text: string }> = ({ text }) => {
   return (
     <StyledTitle>
-      <h2>{text}</h2>
+      {text}
       <div className="bar" />
     </StyledTitle>
   );
 };
 
 const StyledTitle = styled.h2`
-  h2 {
-    width: 300px;
-    font-size: 46px;
-    font-weight: 700;
-  }
+  width: 300px;
+  font-size: 46px;
+  font-weight: 700;
 
   .bar {
     max-width: 250px;

@@ -10,7 +10,7 @@ export const techStacks: techStacksType[] = [
   },
   {
     name: "TypeScript",
-    text: "TypeScript를 사용하는 이유를 이해하고 있으며 계속해서 연습 및 공부 중에 있습니다. 현재 보고계시는 이 포트폴리오도 TypeScript로 제작하였습니다.",
+    text: "TypeScript를 사용하는 이유를 이해하고 있으며 계속해서 연습 및 공부 중에 있습니다. 현재 보고 계시는 이 포트폴리오도 TypeScript로 제작하였습니다.",
   },
   {
     name: "React",

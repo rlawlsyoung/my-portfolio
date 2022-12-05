@@ -31,7 +31,7 @@ const AboutMe: React.FC = () => {
       text: "010-9985-8498",
     },
     {
-      title: "E-Mail",
+      title: "Email",
       text: "jinyoung01099@gmail.com",
     },
     {
@@ -86,10 +86,10 @@ const AboutMe: React.FC = () => {
 const StyledAboutMe = styled.div`
   display: flex;
   justify-content: center;
-  min-height: 100vh;
   margin-bottom: 0;
-  padding-top: 150px;
+  padding-top: 160px;
   margin-top: -70px;
+  margin-bottom: 125px;
 
   .about-me-container {
     display: flex;
@@ -97,13 +97,14 @@ const StyledAboutMe = styled.div`
     width: 900px;
 
     .my-photo {
-      width: 200px;
-      border-radius: 100px;
-      margin-bottom: 30px;
+      width: 220px;
+      height: 220px;
+      border-radius: 100%;
+      margin-bottom: 35px;
     }
 
     .name {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
     }
 
@@ -114,7 +115,7 @@ const StyledAboutMe = styled.div`
     }
 
     .adv {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       font-size: 18px;
       font-weight: 500;
 
@@ -133,7 +134,7 @@ const StyledAboutMe = styled.div`
 
     .link-wrapper {
       display: flex;
-      margin-top: 10px;
+      margin-top: 15px;
     }
   }
 

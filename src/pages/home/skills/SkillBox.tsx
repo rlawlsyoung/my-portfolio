@@ -60,10 +60,9 @@ const StyledSkillBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 32px;
     font-size: 24px;
     font-weight: 700;
-
-    height: 32px;
 
     .button {
       border: none;
@@ -79,7 +78,6 @@ const StyledSkillBox = styled.div`
     transition: height 0.35s ease, margin-top 0.35s ease;
 
     .text {
-      background-color: ${lightGray};
       font-size: 18px;
       line-height: 20px;
     }

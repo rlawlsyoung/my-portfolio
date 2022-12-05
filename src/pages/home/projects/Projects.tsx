@@ -30,16 +30,16 @@ const Projects: React.FC = () => {
     <StyledProjects id="Projects">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="Projects" />
-        <div className="projects-container">
+        <div className="projects-container flex-center">
           <Filter filter={filter} handleOnClick={handleOnClick} />
-          {/* {projects.map((projectData) => (
+          {projects.map((projectData) => (
             <ProjectBox
               projectData={projectData}
               key={projectData.title}
               setIsDialogOn={setIsDialogOn}
               setSelectedProject={setSelectedProject}
             />
-          ))} */}
+          ))}
         </div>
         <ProjectDialog
           isDialogOn={isDialogOn}
@@ -53,14 +53,14 @@ const Projects: React.FC = () => {
 
 const StyledProjects = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 5vw;
-  padding-top: 150px;
+  padding-top: 160px;
   margin-top: -70px;
+  margin-bottom: 125px;
 
   .projects-container {
-    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 900px;
   }

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  mainRed,
-  lightRed,
-  hoveredLightRed,
-  responsive,
-} from "../../../styles/theme";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Filter: React.FC<{
@@ -16,17 +11,16 @@ const Filter: React.FC<{
   return (
     <StyledFilter>
       {filterLists.map((filterList) => (
-        <div
-          id={filterList}
-          className={
-            filter === filterList
-              ? "filter flex-center selected"
-              : "filter flex-center"
-          }
-          onClick={handleOnClick}
-          key={filterList}
-        >
-          {filterList}
+        <div className="filter flex-center" key={filterList}>
+          <div
+            className={
+              filter === filterList ? "selected-underline" : "underline"
+            }
+            id={filterList}
+            onClick={handleOnClick}
+          >
+            {filterList}
+          </div>
         </div>
       ))}
     </StyledFilter>
@@ -37,32 +31,49 @@ const StyledFilter = styled.div`
   display: flex;
   margin-bottom: 30px;
   border-radius: 5px;
-  background-color: ${lightRed};
 
   .filter {
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: 600;
+    padding: 0 20px 15px 20px;
+    font-size: 24px;
+    font-weight: 700;
     cursor: pointer;
 
-    &:first-of-type {
-      border-radius: 5px 0 0 5px;
+    .underline {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0px;
+        height: 2px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.2s;
+        opacity: 0;
+        background-color: black;
+      }
+
+      &:hover:after {
+        width: 100%;
+        opacity: 1;
+      }
     }
 
-    &:last-of-type {
-      border-radius: 0 5px 5px 0;
+    .selected-underline {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        margin: 5px 0 0;
+        background-color: black;
+      }
     }
-
-    &:hover {
-      background-color: ${hoveredLightRed};
-      color: ${mainRed};
-      transition: 0.25s;
-    }
-  }
-
-  .selected {
-    background-color: ${hoveredLightRed};
-    color: ${mainRed};
   }
 
   @media ${responsive.mobile} {
