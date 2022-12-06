@@ -11,20 +11,20 @@ import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 import MyLink from "./MyLink";
 
-const AboutMe: React.FC = () => {
-  const links = [
-    {
-      icon: github,
-      title: "GitHub",
-      link: "https://github.com/rlawlsyoung",
-    },
-    {
-      icon: velog,
-      title: "velog",
-      link: "https://velog.io/@jinyoung985",
-    },
-  ];
+export const links = [
+  {
+    icon: github,
+    title: "GitHub",
+    link: "https://github.com/rlawlsyoung",
+  },
+  {
+    icon: velog,
+    title: "velog",
+    link: "https://velog.io/@jinyoung985",
+  },
+];
 
+const AboutMe: React.FC = () => {
   const infos = [
     {
       title: "전화번호",

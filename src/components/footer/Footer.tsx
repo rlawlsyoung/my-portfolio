@@ -1,24 +1,11 @@
 import React from "react";
 import MyLink from "../../pages/home/aboutMe/MyLink";
+import { links } from "../../pages/home/aboutMe/AboutMe";
 import bg from "../../assets/bg.jpg";
-import github from "../../assets/github.png";
-import velog from "../../assets/velog.png";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Footer: React.FC = () => {
-  const links = [
-    {
-      icon: github,
-      title: "GitHub",
-      link: "https://github.com/rlawlsyoung",
-    },
-    {
-      icon: velog,
-      title: "velog",
-      link: "https://velog.io/@jinyoung985",
-    },
-  ];
   return (
     <StyledFooter>
       <div className="link-wrapper">
