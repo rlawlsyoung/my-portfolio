@@ -38,7 +38,7 @@ const StyledProjectDialog = styled(Dialog)`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 1140px;
+    width: 1200px;
     height: 88vh;
     padding: 20px;
     overflow-x: hidden;

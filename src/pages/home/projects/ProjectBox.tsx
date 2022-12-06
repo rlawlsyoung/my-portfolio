@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-import Tag from "./Tag";
 import { projectDatasType } from "./ProjectDatas";
 import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
@@ -27,11 +26,7 @@ const ProjectBox: React.FC<{
       <div className="project-info">
         <h3 className="project-title">{projectData.title}</h3>
         <p className="project-subtitle">{projectData.subTitle}</p>
-        <div className="tags">
-          {projectData.mainTechs.map((tech) => (
-            <Tag text={tech} key={tech} />
-          ))}
-        </div>
+
         <p className="project-introduction">{projectData.introduction}</p>
       </div>
     </StyledProjectBox>
@@ -40,10 +35,10 @@ const ProjectBox: React.FC<{
 
 const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   flex-direction: column;
-  width: 45%;
-  margin: 2.5%;
-  border: 1px solid ${mainGray};
-  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   box-shadow: 0 2px 2px -2px ${mainGray};
   font-weight: 500;
   cursor: pointer;
@@ -51,24 +46,22 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   .img-container {
     width: 100%;
     border-bottom: 1px solid #e4e4e4;
-    border-radius: 5px 5px 0 0;
     background-color: ${lightGray};
     .project-img {
       width: ${(props) => !props.isMobile && "100%"};
-      height: 19vw;
-      border-radius: ${(props) => !props.isMobile && "5px 5px 0 0;"};
+      height: 430px;
     }
   }
 
   .project-info {
-    margin: 10px;
+    margin: 20px 10px;
 
     .project-title {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
     }
     .project-subtitle {
-      margin: 7.5px 0;
+      margin: 10px 0;
       color: ${mainGray};
       font-weight: 600;
     }
@@ -79,16 +72,14 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
 
     .project-introduction {
       margin-top: 5px;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
   @media ${responsive.tablet} {
-    width: 100%;
-    .img-container {
+    /* .img-container {
       .project-img {
-        height: 38vw;
       }
     }
 
@@ -101,7 +92,7 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
       .project-subtitle {
         font-size: 15px;
       }
-    }
+    } */
   }
 `;
 

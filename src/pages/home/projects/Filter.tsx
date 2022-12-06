@@ -29,12 +29,12 @@ const Filter: React.FC<{
 
 const StyledFilter = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   border-radius: 5px;
 
   .filter {
     padding: 0 20px 15px 20px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     cursor: pointer;
 
