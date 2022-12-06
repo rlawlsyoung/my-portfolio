@@ -1,4 +1,4 @@
-const mainGray = "#858585";
+const deepGray = "#858585";
 const lightGray = "#f8f8f8";
 const mainRed = "#eb5778";
 const lightRed = "#ededeb";
@@ -10,4 +10,4 @@ const responsive = {
   desktop: "screen and (max-width: 1200px)",
 };
 
-export { mainGray, lightGray, mainRed, lightRed, hoveredLightRed, responsive };
+export { deepGray, lightGray, mainRed, lightRed, hoveredLightRed, responsive };

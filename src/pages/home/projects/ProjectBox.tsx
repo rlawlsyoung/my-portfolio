@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { projectDatasType } from "./ProjectDatas";
-import { mainGray, lightGray, responsive } from "../../../styles/theme";
+import { deepGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{
@@ -39,7 +39,6 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   margin-bottom: 30px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  box-shadow: 0 2px 2px -2px ${mainGray};
   font-weight: 500;
   cursor: pointer;
 
@@ -62,7 +61,7 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
     }
     .project-subtitle {
       margin: 10px 0;
-      color: ${mainGray};
+      color: ${deepGray};
       font-weight: 600;
     }
     .tags {

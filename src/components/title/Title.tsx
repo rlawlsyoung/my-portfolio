@@ -17,7 +17,7 @@ const StyledTitle = styled.h2`
   font-weight: 700;
 
   .bar {
-    max-width: 250px;
+    width: 250px;
     height: 3.5px;
     margin-top: 5px;
     background-color: black;

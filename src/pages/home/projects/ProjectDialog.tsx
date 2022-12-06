@@ -2,7 +2,7 @@ import Dialog from "@mui/material/Dialog";
 import { projectDatasType } from "./ProjectDatas";
 import {
   responsive,
-  mainGray,
+  deepGray,
   mainRed,
   lightRed,
   hoveredLightRed,
@@ -52,7 +52,7 @@ const StyledProjectDialog = styled(Dialog)`
       display: flex;
       align-items: center;
       padding-top: 20px;
-      color: ${mainGray};
+      color: ${deepGray};
       font-weight: 700;
 
       .link {
