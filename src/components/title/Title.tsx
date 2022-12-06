@@ -1,5 +1,5 @@
 import React from "react";
-import { mainRed, responsive } from "../../styles/theme";
+import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Title: React.FC<{ text: string }> = ({ text }) => {
@@ -23,8 +23,17 @@ const StyledTitle = styled.h2`
     background-color: black;
   }
 
+  @media ${responsive.desktop} {
+    width: auto;
+
+    .bar {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+
   @media ${responsive.mobile} {
-    font-size: 8vw;
+    font-size: 36px;
   }
 `;
 

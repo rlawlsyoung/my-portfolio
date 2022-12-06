@@ -38,6 +38,16 @@ const StyledSkills = styled.div`
     width: 900px;
   }
 
+  @media ${responsive.desktop} {
+    flex-direction: column;
+    align-items: center;
+
+    .skills-container {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
   @media ${responsive.tablet} {
     margin-bottom: 90px;
     min-height: 0;

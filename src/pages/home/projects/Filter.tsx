@@ -63,6 +63,7 @@ const StyledFilter = styled.div`
 
     .selected-underline {
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -79,7 +80,7 @@ const StyledFilter = styled.div`
   @media ${responsive.mobile} {
     .filter {
       padding: 12.5px 3vw;
-      font-size: 3vw;
+      font-size: 14px;
     }
   }
 `;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { responsive } from "../../styles/theme";
+import { deepGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Header = () => {
@@ -105,8 +105,9 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
         bottom: 0;
         right: 0;
         left: 0;
-        color: black;
+        box-shadow: 0 -4.5px 5px -5px ${deepGray};
         background-color: white;
+        color: black;
         .menu-el {
           margin: 20px 2vw;
           font-size: 18px;

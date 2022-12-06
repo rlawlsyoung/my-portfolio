@@ -5,6 +5,7 @@ import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";
 import { projectDatas } from "./ProjectDatas";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Projects: React.FC = () => {
@@ -63,6 +64,15 @@ const StyledProjects = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     width: 900px;
+  }
+
+  @media ${responsive.desktop} {
+    flex-direction: column;
+    align-items: center;
+
+    .projects-container {
+      width: 100%;
+    }
   }
 `;
 

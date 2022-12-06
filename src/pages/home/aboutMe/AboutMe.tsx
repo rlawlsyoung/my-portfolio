@@ -95,6 +95,7 @@ const StyledAboutMe = styled.div`
     display: flex;
     flex-direction: column;
     width: 900px;
+    font-size: 18px;
 
     .my-photo {
       width: 220px;
@@ -110,13 +111,11 @@ const StyledAboutMe = styled.div`
 
     .position {
       margin: 5px 0 30px 0;
-      font-size: 18px;
       font-weight: 700;
     }
 
     .adv {
       margin-bottom: 35px;
-      font-size: 18px;
       font-weight: 500;
 
       .styles-module_blinkingCursor__yugAC {
@@ -128,7 +127,6 @@ const StyledAboutMe = styled.div`
     .list {
       display: flex;
       margin-bottom: 20px;
-      font-size: 18px;
       font-weight: 500;
     }
 
@@ -138,10 +136,31 @@ const StyledAboutMe = styled.div`
     }
   }
 
+  @media ${responsive.desktop} {
+    flex-direction: column;
+    align-items: center;
+
+    .about-me-container {
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
   @media ${responsive.tablet} {
   }
 
   @media ${responsive.mobile} {
+    .about-me-container {
+      font-size: 14px;
+
+      .name {
+        font-size: 26px;
+      }
+      .position {
+        font-size: 16px;
+      }
+    }
   }
 `;
 
