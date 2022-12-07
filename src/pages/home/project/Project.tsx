@@ -5,10 +5,9 @@ import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";
 import { projectDatas } from "./ProjectDatas";
-import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
-const Projects: React.FC = () => {
+const Project: React.FC = () => {
   const [filter, setFilter] = useState("전체");
   const [projects, setProjects] = useState(projectDatas);
   const [isDialogOn, setIsDialogOn] = useState(false);
@@ -28,17 +27,16 @@ const Projects: React.FC = () => {
   }, [filter]);
 
   return (
-    <StyledProjects id="Projects">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
-        <Title text="Projects" />
-        <div className="projects-container flex-center">
-          <Filter filter={filter} handleOnClick={handleOnClick} />
+    <StyledProject id="프로젝트">
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
+        <Title text="프로젝트" />
+        <Filter filter={filter} handleOnClick={handleOnClick} />
+        <div className="project-container">
           {projects.map((projectData) => (
             <ProjectBox
               projectData={projectData}
               key={projectData.title}
               setIsDialogOn={setIsDialogOn}
-              selectedProject={selectedProject}
               setSelectedProject={setSelectedProject}
             />
           ))}
@@ -49,36 +47,23 @@ const Projects: React.FC = () => {
           selectedProject={selectedProject}
         />
       </Fade>
-    </StyledProjects>
+    </StyledProject>
   );
 };
 
-const StyledProjects = styled.div`
+const StyledProject = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 5vw;
-  padding-top: 160px;
-  margin-top: -70px;
-  margin-bottom: 125px;
+  padding-top: 120px;
+  margin-top: -50px;
 
-  .projects-container {
-    flex-direction: column;
+  .project-container {
+    display: flex;
     flex-wrap: wrap;
-    width: 900px;
-  }
-
-  @media ${responsive.desktop} {
-    flex-direction: column;
-    align-items: center;
-
-    .projects-container {
-      width: 100%;
-    }
-  }
-
-  @media ${responsive.tablet} {
-    margin-bottom: 40px;
+    width: 90vw;
   }
 `;
 
-export default Projects;
+export default Project;

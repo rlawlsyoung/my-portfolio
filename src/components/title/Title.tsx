@@ -1,5 +1,5 @@
 import React from "react";
-import { responsive } from "../../styles/theme";
+import { mainRed, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Title: React.FC<{ text: string }> = ({ text }) => {
@@ -12,28 +12,19 @@ const Title: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const StyledTitle = styled.h2`
-  width: 300px;
-  font-size: 46px;
+  margin-bottom: 35px;
+  font-size: 38px;
   font-weight: 700;
 
   .bar {
-    width: 250px;
-    height: 3.5px;
+    width: 100%;
+    height: 5px;
     margin-top: 5px;
-    background-color: black;
-  }
-
-  @media ${responsive.desktop} {
-    width: auto;
-
-    .bar {
-      width: auto;
-      margin-bottom: 30px;
-    }
+    background-color: ${mainRed};
   }
 
   @media ${responsive.mobile} {
-    font-size: 36px;
+    font-size: 8vw;
   }
 `;
 

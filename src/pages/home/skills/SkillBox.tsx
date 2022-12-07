@@ -1,101 +1,53 @@
-import React, { useCallback, useState, useRef } from "react";
-import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { lightGray, responsive } from "../../../styles/theme";
+import React from "react";
+import { techStacksType } from "./techStacks";
+import { mainGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{
-  title: string;
-  contents: string;
-}> = ({ title, contents }) => {
-  const parentRef = useRef<HTMLDivElement>(null);
-  const childRef = useRef<HTMLDivElement>(null);
-  const [isOpened, setIsOpened] = useState(false);
-
-  const handleButtonClick = useCallback(() => {
-    if (parentRef.current!.clientHeight === 0) {
-      parentRef.current!.style.height = `${childRef.current!.clientHeight}px`;
-      parentRef.current!.style.marginTop = "15px";
-    } else {
-      parentRef.current!.style.height = "0";
-      parentRef.current!.style.marginTop = "0";
-    }
-    setIsOpened(!isOpened);
-  }, [isOpened]);
-
-  const parentRefHeight = parentRef.current?.style.height ?? "0px";
-  const buttonIcon =
-    parentRefHeight === "0px" ? (
-      <SlArrowDown size={24} />
-    ) : (
-      <SlArrowUp size={24} />
-    );
-
+  techStack: techStacksType;
+}> = ({ techStack }) => {
   return (
-    <StyledSkillBox onClick={handleButtonClick}>
-      <div className="header">
-        <p className="title">{title}</p>
-        <button className="button">{buttonIcon}</button>
-      </div>
-      <div className="text-wrapper" ref={parentRef}>
-        <p className="text" ref={childRef}>
-          {contents}
-        </p>
-      </div>
+    <StyledSkillBox className="flex-center">
+      <img src={techStack.icon} alt="TypeScript" className="icon" />
+      <p className="tech-name">{techStack.name}</p>
     </StyledSkillBox>
   );
 };
 
 const StyledSkillBox = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  padding: 25px;
-  margin-bottom: 15px;
-  border: 1px solid black;
+  margin: 20px;
   background-color: ${lightGray};
-  cursor: pointer;
+  box-shadow: 3px 3px 3px ${mainGray};
 
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 32px;
-    font-size: 24px;
-    font-weight: 700;
-
-    .button {
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
+  .icon {
+    height: 100px;
+    width: 100px;
   }
 
-  .text-wrapper {
-    height: 0;
-    width: 100%;
-    overflow: hidden;
-    transition: height 0.35s ease, margin-top 0.35s ease;
+  .tech-name {
+    margin: 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
 
-    .text {
-      font-size: 18px;
-      line-height: 20px;
-    }
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
   }
 
   @media ${responsive.tablet} {
-    padding: 15px;
+    margin: 3vw;
 
-    .header {
-      font-size: 20px;
+    .icon {
+      width: 10vw;
+      height: 10vw;
     }
 
-    .text-wrapper {
-      .text {
-        font-size: 14px;
-      }
+    .tech-name {
+      margin: 0 4vw;
+      font-size: 3vw;
     }
-  }
+  } ;
 `;
 
 export default SkillBox;

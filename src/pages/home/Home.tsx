@@ -1,41 +1,93 @@
+import { Typewriter } from "react-simple-typewriter";
+import AboutMe from "./aboutMe/AboutMe";
+import Skills from "./skills/Skills";
+import Project from "./project/Project";
 import bg from "../../assets/bg.jpg";
-import { Link } from "react-scroll";
-import { SlArrowDown } from "react-icons/sl";
-import styled from "styled-components";
 import { responsive } from "../../styles/theme";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <StyledHome id="Home">
-      <Link to="About Me" spy={true} smooth={true} duration={500}>
-        <SlArrowDown className="arrow" size={48} />
-      </Link>
+    <StyledHome id="메인">
+      <div className="top flex-center">
+        <p className="text color-bg">안녕하세요!</p>
+        <p className="text color-bg">프론트엔드 개발자, 김진영입니다.</p>
+
+        <p className="small-text color-bg">
+          저는{" "}
+          <Typewriter
+            words={[
+              "꾸준히 개발 지식을 쌓는 것을 좋아하는",
+              "제가 만든 서비스에 애정을 쏟는",
+              "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
+            ]}
+            loop={true}
+            cursor
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={3000}
+          />
+          개발자입니다.
+        </p>
+      </div>
+      <AboutMe />
+      <Skills />
+      <Project />
     </StyledHome>
   );
 };
 
 const StyledHome = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background: url(${bg}) no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  color: white;
+  .styles-module_blinkingCursor__yugAC {
+    margin-left: -5px;
+    margin-right: 5px;
+  }
 
-  .arrow {
-    position: absolute;
-    bottom: 50px;
-    left: calc(50vw - 36px);
-    transform: scaleX(1.5);
-    cursor: pointer;
+  .color-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    background: url(${bg}) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+
+    .text {
+      margin: 10px 0;
+      font-size: 54px;
+      font-weight: 700;
+    }
+
+    .small-text {
+      margin: 20px 0;
+      font-size: 26px;
+      font-weight: 700;
+    }
   }
 
   @media ${responsive.tablet} {
-    .arrow {
-      bottom: 75px;
+    .styles-module_blinkingCursor__yugAC {
+      margin-left: -4px;
+      margin-right: 4px;
+    }
+    .top {
+      .text {
+        font-size: 6vw;
+      }
+
+      .small-text {
+        font-size: 2.75vw;
+      }
     }
   }
 `;

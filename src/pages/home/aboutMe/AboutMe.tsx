@@ -1,80 +1,81 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { Typewriter } from "react-simple-typewriter";
 import Title from "../../../components/title/Title";
+import Subtitle from "../../../components/subtitle/Subtitle";
+import MyLink from "./MyLink";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
-import github from "../../../assets/github.png";
-import velog from "../../../assets/velog.png";
+import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
-import MyLink from "./MyLink";
-
-export const links = [
-  {
-    icon: github,
-    title: "GitHub",
-    link: "https://github.com/rlawlsyoung",
-  },
-  {
-    icon: velog,
-    title: "velog",
-    link: "https://velog.io/@jinyoung985",
-  },
-];
 
 const AboutMe: React.FC = () => {
+  const myAdvantages = [
+    "어떻게 해야 편의성과 접근성을 향상시킬 수 있는지 클라이언트 입장에서 항상 고민하고 생각하는 개발자 입니다.",
+    "새로운 기술 스택을 배우는 것에 대한 두려움이 없고, 항상 변화를 받아들일 준비가 되어있습니다.",
+    "프로젝트 팀장 경험을 통해 기른 협업 능력 및 리더십을 가지고 있는 개발자 입니다.",
+    "매일 성장하는 개발자가 되기 위해 꾸준히 공부하며 개발 블로그에 TIL 및 개발 지식들을 정리하여 작성합니다.",
+  ];
+
+  const links = [
+    {
+      icon: <AiFillGithub size="32" />,
+      title: "GitHub",
+      link: "https://github.com/rlawlsyoung",
+    },
+    {
+      icon: <AiFillHome size="32" />,
+      title: "개인 블로그",
+      link: "https://velog.io/@jinyoung985",
+    },
+  ];
+
   const infos = [
     {
-      title: "전화번호",
+      title: "📞 전화번호",
       text: "010-9985-8498",
     },
     {
-      title: "Email",
+      title: "📧 E-Mail",
       text: "jinyoung01099@gmail.com",
     },
     {
-      title: "생년월일",
+      title: "🎂 생년월일",
       text: "1999/08/26",
     },
     {
-      title: "주소",
+      title: "🏠 주소",
       text: "경기도 안양시 동안구",
     },
   ];
 
-  const myAdvantages = [
-    "꾸준히 개발 지식을 쌓는 것을 좋아하는",
-    "제가 만든 서비스에 애정을 쏟는",
-    "새로운 기술에 대한 두려움이 없는",
-  ];
-
   return (
-    <StyledAboutMe id="About Me">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
-        <Title text="About Me" />
-        <div className="about-me-container">
-          <img src={me} alt="김진영 사진" className="my-photo" />
-          <p className="name">김진영 (金辰營)</p>
-          <p className="position">Front-End Developer</p>
-          <p className="adv">
-            <Typewriter
-              words={myAdvantages}
-              loop={true}
-              cursor
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={3000}
-            />
-            개발자입니다.
-          </p>
-          {infos.map((info) => (
-            <InfoList info={info} key={info.title} />
-          ))}
-          <div className="link-wrapper">
+    <StyledAboutMe id="자기소개">
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
+        <Title text="자기소개" />
+        <div className="container">
+          <div className="profile-wrapper">
+            <img src={me} alt="김진영 사진" className="my-photo" />
+            <p className="name flex-center">김진영 (Kim Jin Young)</p>
             {links.map((link) => (
               <MyLink link={link} key={link.title} />
             ))}
+          </div>
+          <div className="info-wrapper">
+            <Subtitle text="👨‍💻 저는 이런 개발자입니다!" />
+            <ul className="lists">
+              {myAdvantages.map((adv) => (
+                <li className="list" key={adv}>
+                  {adv}
+                </li>
+              ))}
+            </ul>
+            <Subtitle text="🙎‍♂️ 개인 정보" />
+            <ul className="lists">
+              {infos.map((info) => (
+                <InfoList info={info} key={info.title} />
+              ))}
+            </ul>
           </div>
         </div>
       </Fade>
@@ -84,81 +85,80 @@ const AboutMe: React.FC = () => {
 
 const StyledAboutMe = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 5vw;
   margin-bottom: 0;
-  padding-top: 160px;
-  margin-top: -70px;
-  margin-bottom: 125px;
+  padding-top: 120px;
+  margin-top: -50px;
 
-  .about-me-container {
+  .container {
     display: flex;
-    flex-direction: column;
-    width: 900px;
-    font-size: 18px;
 
-    .my-photo {
-      width: 220px;
-      height: 220px;
-      border-radius: 100%;
-      margin-bottom: 35px;
-    }
+    .profile-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 350px;
 
-    .name {
-      font-size: 36px;
-      font-weight: 700;
-    }
+      .my-photo {
+        width: 100%;
+      }
 
-    .position {
-      margin: 5px 0 30px 0;
-      font-weight: 700;
-    }
-
-    .adv {
-      margin-bottom: 35px;
-      font-weight: 500;
-
-      .styles-module_blinkingCursor__yugAC {
-        margin-left: -5px;
-        margin-right: 5px;
+      .name {
+        margin: 15px 0;
+        font-size: 22px;
+        font-weight: 700;
       }
     }
 
-    .list {
-      display: flex;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
+    .info-wrapper {
+      align-items: flex-start;
+      width: calc(85vw - 350px);
+      padding-left: 5vw;
 
-    .link-wrapper {
-      display: flex;
-      margin-top: 15px;
-    }
-  }
-
-  @media ${responsive.desktop} {
-    flex-direction: column;
-    align-items: center;
-
-    .about-me-container {
-      align-items: center;
-      width: 100%;
-      padding: 20px;
+      .lists {
+        margin-bottom: 60px;
+        .list {
+          display: flex;
+          margin-bottom: 20px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
     }
   }
 
   @media ${responsive.tablet} {
-    margin-bottom: 40px;
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+      .profile-wrapper {
+        width: 80vw;
+
+        .name {
+          font-size: 20px;
+        }
+      }
+
+      .info-wrapper {
+        width: 80vw;
+        padding-left: 0;
+        margin-top: 40px;
+      }
+    }
   }
 
   @media ${responsive.mobile} {
-    .about-me-container {
-      font-size: 14px;
-
-      .name {
-        font-size: 26px;
-      }
-      .position {
-        font-size: 16px;
+    .container {
+      .info-wrapper {
+        .lists {
+          .list {
+            font-size: 3.75vw;
+            line-height: 5vw;
+          }
+        }
       }
     }
   }
