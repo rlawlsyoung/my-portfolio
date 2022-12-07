@@ -49,8 +49,8 @@ const StyledSkills = styled.div`
   }
 
   @media ${responsive.tablet} {
-    margin-bottom: 90px;
-    min-height: 0;
+    margin-bottom: 40px;
+    /* min-height: 0; */
   }
 `;
 

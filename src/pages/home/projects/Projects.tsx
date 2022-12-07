@@ -74,6 +74,10 @@ const StyledProjects = styled.div`
       width: 100%;
     }
   }
+
+  @media ${responsive.tablet} {
+    margin-bottom: 40px;
+  }
 `;
 
 export default Projects;

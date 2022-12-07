@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import Logo from "./Logo";
 import { deepGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
@@ -23,9 +24,7 @@ const Header = () => {
     <StyledHeader scrollPosition={scrollPosition}>
       <div className="header-container">
         <Link to="Home" spy={true} smooth={true} duration={500}>
-          <h1 className="title">
-            金辰營 <p className="kr-name">김진영</p>
-          </h1>
+          <Logo />
         </Link>
         <div className="menu-wrapper flex-center">
           {menuList.map((menu) => {
@@ -67,21 +66,6 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
     display: flex;
     justify-content: space-between;
     width: 1200px;
-
-    .title {
-      display: flex;
-      position: absolute;
-      top: 30px;
-      margin-left: 30px;
-      font-size: 74px;
-      white-space: nowrap;
-      cursor: pointer;
-
-      .kr-name {
-        margin-left: 5px;
-        font-size: 18px;
-      }
-    }
 
     .menu-wrapper {
       .menu-el {

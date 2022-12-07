@@ -147,6 +147,7 @@ const StyledAboutMe = styled.div`
   }
 
   @media ${responsive.tablet} {
+    margin-bottom: 40px;
   }
 
   @media ${responsive.mobile} {
