@@ -54,7 +54,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   top: 0;
   right: 0;
   left: 0;
-  height: 80px;
+  height: 64px;
   width: 100%;
   background-color: ${(props) =>
     props.scrollPosition ? "white" : "transparents"};
@@ -65,12 +65,12 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   .header-container {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 1024px;
 
     .menu-wrapper {
       .menu-el {
         margin: 0 30px;
-        font-size: 20px;
+        font-size: 16px;
         cursor: pointer;
       }
     }
@@ -94,7 +94,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
         color: black;
         .menu-el {
           margin: 20px 2vw;
-          font-size: 18px;
+          font-size: 14px;
           white-space: nowrap;
         }
       }

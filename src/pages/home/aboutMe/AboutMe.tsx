@@ -93,18 +93,18 @@ const StyledAboutMe = styled.div`
   .about-me-container {
     display: flex;
     flex-direction: column;
-    width: 900px;
-    font-size: 18px;
+    width: 768px;
+    font-size: 16px;
 
     .my-photo {
-      width: 220px;
-      height: 220px;
+      width: 180px;
+      height: 180px;
       border-radius: 100%;
       margin-bottom: 35px;
     }
 
     .name {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: 700;
     }
 

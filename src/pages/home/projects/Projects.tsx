@@ -64,7 +64,7 @@ const StyledProjects = styled.div`
   .projects-container {
     flex-direction: column;
     flex-wrap: wrap;
-    width: 900px;
+    width: 768px;
   }
 
   @media ${responsive.desktop} {

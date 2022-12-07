@@ -13,9 +13,9 @@ const Logo: React.FC = () => {
 const StyledContactList = styled.h1`
   display: flex;
   position: absolute;
-  top: 30px;
+  top: 23px;
   margin-left: 30px;
-  font-size: 74px;
+  font-size: 60px;
   white-space: nowrap;
   cursor: pointer;
 

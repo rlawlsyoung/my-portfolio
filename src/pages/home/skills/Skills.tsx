@@ -35,7 +35,7 @@ const StyledSkills = styled.div`
 
   .skills-container {
     flex-wrap: wrap;
-    width: 900px;
+    width: 768px;
   }
 
   @media ${responsive.desktop} {
