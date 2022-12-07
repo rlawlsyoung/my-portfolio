@@ -1,6 +1,6 @@
 import Dialog from "@mui/material/Dialog";
 import { projectDatasType } from "./ProjectDatas";
-import { responsive, deepGray, lightGray } from "../../../styles/theme";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectDialog: React.FC<{
@@ -42,7 +42,7 @@ const StyledProjectDialog = styled(Dialog)`
 
     .pop-up {
       position: absolute;
-      bottom: 35px;
+      bottom: 25px;
       right: 70px;
       padding: 15px;
       background-color: #e4e4e4;
@@ -61,6 +61,23 @@ const StyledProjectDialog = styled(Dialog)`
   @media ${responsive.desktop} {
     .project-container {
       width: 80vw;
+
+      .pop-up {
+        right: 50px;
+        padding: 12.5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media ${responsive.mobile} {
+    .project-container {
+      .pop-up {
+        right: 40px;
+        bottom: 40px;
+        padding: 10px;
+        font-size: 14px;
+      }
     }
   }
 `;

@@ -6,15 +6,20 @@ import styled from "styled-components";
 const ProjectBox: React.FC<{
   projectData: projectDatasType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedProject: projectDatasType;
   setSelectedProject: React.Dispatch<React.SetStateAction<projectDatasType>>;
-}> = ({ projectData, setIsDialogOn, setSelectedProject }) => {
-  const turnOnDialog = useCallback(() => {
-    setIsDialogOn(true);
+}> = ({ projectData, setIsDialogOn, selectedProject, setSelectedProject }) => {
+  const openDialog = useCallback(() => {
     setSelectedProject(projectData);
+    const openPage = () => {
+      if (window.innerWidth < 1200) window.open(selectedProject.url, "_blank");
+      else setIsDialogOn(true);
+    };
+    openPage();
   }, []);
 
   return (
-    <StyledProjectBox isMobile={projectData.isMobile} onClick={turnOnDialog}>
+    <StyledProjectBox isMobile={projectData.isMobile} onClick={openDialog}>
       <div className="img-container flex-center">
         <img
           src={projectData.mainImg}
@@ -39,8 +44,14 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   margin-bottom: 30px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  background-color: white;
   font-weight: 500;
   cursor: pointer;
+
+  &:hover {
+    filter: invert(0.0425);
+    transition: 0.4s;
+  }
 
   .img-container {
     width: 100%;

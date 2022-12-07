@@ -10,7 +10,7 @@ const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const updateScroll = () => {
-    window.scrollY < 5 && setScrollPosition(window.scrollY);
+    window.scrollY < 10 && setScrollPosition(window.scrollY);
   };
 
   useEffect(() => {

@@ -38,6 +38,7 @@ const Projects: React.FC = () => {
               projectData={projectData}
               key={projectData.title}
               setIsDialogOn={setIsDialogOn}
+              selectedProject={selectedProject}
               setSelectedProject={setSelectedProject}
             />
           ))}
