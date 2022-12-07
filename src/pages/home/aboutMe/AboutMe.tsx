@@ -85,22 +85,22 @@ const AboutMe: React.FC = () => {
 const StyledAboutMe = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
-  padding-top: 160px;
-  margin-top: -70px;
-  margin-bottom: 125px;
+  padding-top: 110px;
+  padding-right: 20px;
+  margin-top: -63px;
+  margin-bottom: 80px;
 
   .about-me-container {
     display: flex;
     flex-direction: column;
-    width: 768px;
+    width: 748px;
     font-size: 16px;
 
     .my-photo {
       width: 180px;
       height: 180px;
       border-radius: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .name {
@@ -114,7 +114,7 @@ const StyledAboutMe = styled.div`
     }
 
     .adv {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       font-weight: 500;
 
       .styles-module_blinkingCursor__yugAC {
@@ -125,29 +125,27 @@ const StyledAboutMe = styled.div`
 
     .list {
       display: flex;
-      margin-bottom: 20px;
+      margin-bottom: 17.5px;
       font-weight: 500;
     }
 
     .link-wrapper {
       display: flex;
-      margin-top: 15px;
+      margin-top: 12.5px;
     }
   }
 
   @media ${responsive.desktop} {
     flex-direction: column;
     align-items: center;
+    padding-right: 0;
+    margin-bottom: 40px;
 
     .about-me-container {
       align-items: center;
       width: 100%;
-      padding: 20px;
+      margin-top: 20px;
     }
-  }
-
-  @media ${responsive.tablet} {
-    margin-bottom: 40px;
   }
 
   @media ${responsive.mobile} {
@@ -156,9 +154,6 @@ const StyledAboutMe = styled.div`
 
       .name {
         font-size: 26px;
-      }
-      .position {
-        font-size: 16px;
       }
     }
   }

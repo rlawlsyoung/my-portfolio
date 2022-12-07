@@ -50,8 +50,8 @@ const StyledSkillBox = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
-  padding: 25px;
-  margin-bottom: 15px;
+  padding: 20px;
+  margin-bottom: 10.5px;
   border: 1px solid black;
   background-color: ${lightGray};
   cursor: pointer;
@@ -60,8 +60,8 @@ const StyledSkillBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 32px;
-    font-size: 24px;
+    height: 26px;
+    font-size: 22.5px;
     font-weight: 700;
 
     .button {
@@ -78,7 +78,7 @@ const StyledSkillBox = styled.div`
     transition: height 0.35s ease, margin-top 0.35s ease;
 
     .text {
-      font-size: 18px;
+      font-size: 14.5px;
       line-height: 20px;
     }
   }
@@ -92,7 +92,7 @@ const StyledSkillBox = styled.div`
 
     .text-wrapper {
       .text {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }

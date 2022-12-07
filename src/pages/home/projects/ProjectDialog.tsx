@@ -30,7 +30,7 @@ const StyledProjectDialog = styled(Dialog)`
     flex-direction: column;
     position: relative;
     align-items: flex-end;
-    width: 1200px;
+    width: 80vw;
     height: 88vh;
     padding: 20px;
     overflow-x: hidden;
@@ -43,29 +43,17 @@ const StyledProjectDialog = styled(Dialog)`
     .pop-up {
       position: absolute;
       bottom: 25px;
-      right: 70px;
-      padding: 15px;
+      right: 50px;
+      padding: 12.5px;
       background-color: #e4e4e4;
       opacity: 0.6;
       color: black;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 700;
 
       &:hover {
         opacity: 1;
         transition: 0.3s;
-      }
-    }
-  }
-
-  @media ${responsive.desktop} {
-    .project-container {
-      width: 80vw;
-
-      .pop-up {
-        right: 50px;
-        padding: 12.5px;
-        font-size: 16px;
       }
     }
   }
@@ -76,7 +64,7 @@ const StyledProjectDialog = styled(Dialog)`
         right: 40px;
         bottom: 40px;
         padding: 10px;
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }
