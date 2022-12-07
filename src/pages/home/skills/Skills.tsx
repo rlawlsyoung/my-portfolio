@@ -8,12 +8,16 @@ import styled from "styled-components";
 
 const Skills: React.FC = () => {
   return (
-    <StyledSkills id="기술 스택">
-      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.35}>
-        <Title text="기술 스택" />
-        <div className="skills-container flex-center">
+    <StyledSkills id="Skills">
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
+        <Title text="Skills" />
+        <div className="skills-container">
           {techStacks.map((techStack) => (
-            <SkillBox techStack={techStack} key={techStack.name} />
+            <SkillBox
+              title={techStack.name}
+              contents={techStack.text}
+              key={techStack.name}
+            />
           ))}
         </div>
       </Fade>
@@ -23,22 +27,30 @@ const Skills: React.FC = () => {
 
 const StyledSkills = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 5vw;
+  justify-content: center;
   margin-bottom: 0;
-  padding-top: 120px;
-  margin-top: -50px;
+  padding-top: 160px;
+  margin-top: -70px;
+  margin-bottom: 125px;
 
   .skills-container {
     flex-wrap: wrap;
-    margin: 0 5vw;
+    width: 900px;
+  }
+
+  @media ${responsive.desktop} {
+    flex-direction: column;
+    align-items: center;
+
+    .skills-container {
+      width: 100%;
+      padding: 20px;
+    }
   }
 
   @media ${responsive.tablet} {
-    margin-bottom: 90px;
-    min-height: 0;
+    margin-bottom: 40px;
+    /* min-height: 0; */
   }
 `;
 

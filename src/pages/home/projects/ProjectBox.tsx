@@ -1,21 +1,25 @@
 import React, { useCallback } from "react";
-import Tag from "./Tag";
 import { projectDatasType } from "./ProjectDatas";
-import { mainGray, lightGray, responsive } from "../../../styles/theme";
+import { deepGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{
   projectData: projectDatasType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedProject: projectDatasType;
   setSelectedProject: React.Dispatch<React.SetStateAction<projectDatasType>>;
-}> = ({ projectData, setIsDialogOn, setSelectedProject }) => {
-  const turnOnDialog = useCallback(() => {
-    setIsDialogOn(true);
+}> = ({ projectData, setIsDialogOn, selectedProject, setSelectedProject }) => {
+  const openDialog = useCallback(() => {
     setSelectedProject(projectData);
+    const openPage = () => {
+      if (window.innerWidth < 1200) window.open(selectedProject.url, "_blank");
+      else setIsDialogOn(true);
+    };
+    openPage();
   }, []);
 
   return (
-    <StyledProjectBox isMobile={projectData.isMobile} onClick={turnOnDialog}>
+    <StyledProjectBox isMobile={projectData.isMobile} onClick={openDialog}>
       <div className="img-container flex-center">
         <img
           src={projectData.mainImg}
@@ -27,11 +31,7 @@ const ProjectBox: React.FC<{
       <div className="project-info">
         <h3 className="project-title">{projectData.title}</h3>
         <p className="project-subtitle">{projectData.subTitle}</p>
-        <div className="tags">
-          {projectData.mainTechs.map((tech) => (
-            <Tag text={tech} key={tech} />
-          ))}
-        </div>
+
         <p className="project-introduction">{projectData.introduction}</p>
       </div>
     </StyledProjectBox>
@@ -40,66 +40,71 @@ const ProjectBox: React.FC<{
 
 const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   flex-direction: column;
-  width: 45%;
-  margin: 2.5%;
-  border: 1px solid ${mainGray};
-  border-radius: 5px;
-  box-shadow: 0 2px 2px -2px ${mainGray};
+  width: 100%;
+  margin-bottom: 30px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
   font-weight: 500;
   cursor: pointer;
+
+  &:hover {
+    filter: invert(0.0425);
+    transition: 0.4s;
+  }
 
   .img-container {
     width: 100%;
     border-bottom: 1px solid #e4e4e4;
-    border-radius: 5px 5px 0 0;
     background-color: ${lightGray};
     .project-img {
       width: ${(props) => !props.isMobile && "100%"};
-      height: 19vw;
-      border-radius: ${(props) => !props.isMobile && "5px 5px 0 0;"};
+      height: 430px;
     }
   }
 
   .project-info {
-    margin: 10px;
+    margin: 20px 10px;
 
     .project-title {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
     }
     .project-subtitle {
-      margin: 7.5px 0;
-      color: ${mainGray};
+      margin: 10px 0;
+      color: ${deepGray};
       font-weight: 600;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
     }
 
     .project-introduction {
       margin-top: 5px;
-      font-size: 14px;
-      line-height: 18px;
+      line-height: 20px;
     }
   }
 
-  @media ${responsive.tablet} {
-    width: 100%;
+  @media ${responsive.desktop} {
     .img-container {
+      width: 90vw;
       .project-img {
-        height: 38vw;
+        width: ${(props) => (props.isMobile ? "27%" : "100%")};
+        height: 100%;
       }
     }
+  }
 
+  @media ${responsive.mobile} {
     .project-info {
-      margin: 10px;
-
       .project-title {
-        font-size: 18px;
+        font-size: 20px;
       }
       .project-subtitle {
-        font-size: 15px;
+        margin: 7.5px 0;
+        font-size: 13.5px;
+      }
+
+      .project-introduction {
+        margin-top: 5px;
+        font-size: 13.5px;
       }
     }
   }

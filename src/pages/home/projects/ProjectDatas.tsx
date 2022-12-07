@@ -14,23 +14,23 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/66e7588b-4192-49dd-8ecd-4048573cd66d/image.gif",
     isMobile: false,
-    title: "📋 포트폴리오",
+    title: "포트폴리오",
     tags: ["전체", "개인 프로젝트"],
     subTitle: "개인 프로젝트",
     mainTechs: ["TypeScript", "React.js", "styled-components"],
     introduction: (
       <>
-        타입스크립트를 통해 제작한 웹 포트폴리오입니다. <br />
+        타입스크립트와 React를 통해 제작한 웹 포트폴리오입니다. <br />
         자기소개, 기술 스택, 프로젝트 등에 대해 소개합니다.
       </>
     ),
-    url: "https://velog.io/@jinyoung985/series/Portfolio-포트폴리오-사이트",
+    url: "https://velog.io/@jinyoung985/Portfolio-포트폴리오-사이트",
   },
   {
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/6008bcc8-5574-43b9-93e8-a17390446e8a/image.gif",
     isMobile: false,
-    title: "📊 차트 페이지와 게시판 만들기",
+    title: "차트 페이지와 게시판",
     tags: ["전체", "개인 프로젝트", "인턴십"],
     subTitle: "인턴십 개인 프로젝트",
     mainTechs: ["JavaScript", "React.js", "Recoil", "styled-components"],
@@ -47,7 +47,7 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/832d2f12-819f-4282-8da1-f79f1a26ca72/image.gif",
     isMobile: false,
-    title: "🍫 ROECY’ CHOCOLATE",
+    title: "ROECY’ CHOCOLATE",
     tags: ["전체", "팀 프로젝트"],
     subTitle: "팀 프로젝트 (6인)",
     mainTechs: ["JavaScript", "React.js", "sass"],
@@ -64,15 +64,16 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/c9c41a3c-d588-4093-aada-a54bb42945d9/image.gif",
     isMobile: false,
-    title: "🎶 FLOrida",
+    title: "FLOrida",
     tags: ["전체", "팀 프로젝트"],
     subTitle: "팀 프로젝트 (6인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
     introduction: (
       <>
         FLO 공식 홈페이지를 모티브로 한 프로젝트입니다.
-        <br /> 주요 기능으로는 로그인 및 회원가입, 음악 재생, 보관함에 음악
-        저장, 이용권 구매 등이 있습니다.
+        <br />
+        주요 기능으로는 로그인 및 회원가입, 음악 재생, 보관함에 음악 저장,
+        이용권 구매 등이 있습니다.
       </>
     ),
     url: "https://velog.io/@jinyoung985/Portfolio-FLOrida-music",
@@ -81,7 +82,7 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/a977ed31-c05e-41ec-a101-6720d0ac7be0/image.gif",
     isMobile: true,
-    title: "⌨ 플레이키보드 웹 스토어",
+    title: "플레이키보드 웹 스토어",
     tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (5인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
@@ -97,7 +98,7 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/470975b1-745f-4839-bdfc-0607d8ce265e/image.gif",
     isMobile: false,
-    title: "📈 감지 센서 관리 프로그램",
+    title: "감지 센서 관리 프로그램",
     tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (5인)",
     mainTechs: ["JavaScript", "React.js", "styled-components"],
@@ -115,7 +116,7 @@ export const projectDatas: projectDatasType[] = [
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/3b468dca-33de-4276-b284-d9afc34d5d0d/image.gif",
     isMobile: true,
-    title: "🎙️ 오디오 녹음 프로그램",
+    title: "오디오 녹음 프로그램",
     tags: ["전체", "팀 프로젝트", "인턴십"],
     subTitle: "인턴십 팀 프로젝트 (3인)",
     mainTechs: ["JavaScript", "React.js", "styled-components", "Firebase"],

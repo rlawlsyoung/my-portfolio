@@ -1,4 +1,6 @@
 import React from "react";
+import MyLink from "../../pages/home/aboutMe/MyLink";
+import { links } from "../../pages/home/aboutMe/AboutMe";
 import bg from "../../assets/bg.jpg";
 import { responsive } from "../../styles/theme";
 import styled from "styled-components";
@@ -6,7 +8,11 @@ import styled from "styled-components";
 const Footer: React.FC = () => {
   return (
     <StyledFooter>
-      <p className="thanks">감사합니다!</p>
+      <div className="link-wrapper">
+        {links.map((link) => (
+          <MyLink link={link} key={link.title} />
+        ))}
+      </div>
       <p>© 2022. Kim Jin Young. All rights reserved.</p>
     </StyledFooter>
   );
@@ -17,25 +23,28 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 220px;
+  height: 175px;
   background: url(${bg}) no-repeat;
   background-attachment: fixed;
   background-size: cover;
 
-  .thanks {
-    margin-bottom: 30px;
-    font-size: 42px;
-    font-weight: 700;
+  .link-wrapper {
+    display: flex;
+    margin-bottom: 20px;
   }
 
   p {
-    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 16px;
     font-weight: 600;
   }
 
+  @media ${responsive.tablet} {
+    margin-bottom: 58px;
+  }
+
   @media ${responsive.mobile} {
+    margin-bottom: 54px;
     p {
       font-size: 14px;
     }
