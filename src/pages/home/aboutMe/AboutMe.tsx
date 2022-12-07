@@ -1,7 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
-import { AiFillGithub, AiFillHome } from "react-icons/ai";
 import Title from "../../../components/title/Title";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
@@ -47,7 +46,7 @@ const AboutMe: React.FC = () => {
   const myAdvantages = [
     "꾸준히 개발 지식을 쌓는 것을 좋아하는",
     "제가 만든 서비스에 애정을 쏟는",
-    "새로운 기술을 받아들이는 것에 대한 두려움이 없는",
+    "새로운 기술에 대한 두려움이 없는",
   ];
 
   return (

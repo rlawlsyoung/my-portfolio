@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useRef } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { lightGray } from "../../../styles/theme";
+import { lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{
@@ -80,6 +80,27 @@ const StyledSkillBox = styled.div`
     .text {
       font-size: 18px;
       line-height: 20px;
+    }
+  }
+
+  @media ${responsive.desktop} {
+    padding: 15px;
+    .header {
+      font-size: 20px;
+    }
+
+    .text-wrapper {
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media ${responsive.tablet} {
+    .text-wrapper {
+      .text {
+        font-size: 14px;
+      }
     }
   }
 `;

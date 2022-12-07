@@ -34,8 +34,9 @@ const StyledFilter = styled.div`
 
   .filter {
     padding: 0 20px 15px 20px;
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 700;
+    white-space: nowrap;
     cursor: pointer;
 
     .underline {
