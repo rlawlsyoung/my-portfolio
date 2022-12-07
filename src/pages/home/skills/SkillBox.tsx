@@ -83,20 +83,13 @@ const StyledSkillBox = styled.div`
     }
   }
 
-  @media ${responsive.desktop} {
+  @media ${responsive.tablet} {
     padding: 15px;
+
     .header {
       font-size: 20px;
     }
 
-    .text-wrapper {
-      .text {
-        font-size: 16px;
-      }
-    }
-  }
-
-  @media ${responsive.tablet} {
     .text-wrapper {
       .text {
         font-size: 14px;

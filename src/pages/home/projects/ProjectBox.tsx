@@ -64,34 +64,38 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
       color: ${deepGray};
       font-weight: 600;
     }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
 
     .project-introduction {
       margin-top: 5px;
-      font-size: 16px;
       line-height: 20px;
     }
   }
 
-  @media ${responsive.tablet} {
-    /* .img-container {
+  @media ${responsive.desktop} {
+    .img-container {
+      width: 90vw;
       .project-img {
+        width: ${(props) => (props.isMobile ? "27%" : "100%")};
+        height: 100%;
       }
     }
+  }
 
+  @media ${responsive.mobile} {
     .project-info {
-      margin: 10px;
-
       .project-title {
-        font-size: 18px;
+        font-size: 20px;
       }
       .project-subtitle {
-        font-size: 15px;
+        margin: 7.5px 0;
+        font-size: 13.5px;
       }
-    } */
+
+      .project-introduction {
+        margin-top: 5px;
+        font-size: 13.5px;
+      }
+    }
   }
 `;
 

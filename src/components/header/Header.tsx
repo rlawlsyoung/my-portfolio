@@ -100,6 +100,16 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
       }
     }
   }
+
+  @media ${responsive.mobile} {
+    .header-container {
+      .menu-wrapper {
+        .menu-el {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 `;
 
 export default Header;

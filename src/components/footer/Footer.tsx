@@ -39,7 +39,12 @@ const StyledFooter = styled.footer`
     font-weight: 600;
   }
 
+  @media ${responsive.tablet} {
+    margin-bottom: 58px;
+  }
+
   @media ${responsive.mobile} {
+    margin-bottom: 54px;
     p {
       font-size: 14px;
     }

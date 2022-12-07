@@ -78,10 +78,17 @@ const StyledFilter = styled.div`
     }
   }
 
+  @media ${responsive.tablet} {
+    .filter {
+      padding: 12.5px 3vw;
+      font-size: 20px;
+    }
+  }
+
   @media ${responsive.mobile} {
     .filter {
       padding: 12.5px 3vw;
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 `;

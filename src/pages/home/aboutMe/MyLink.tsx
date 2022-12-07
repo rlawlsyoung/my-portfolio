@@ -21,6 +21,10 @@ const StyledMyLink = styled.a`
   justify-content: center;
   margin-right: 20px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   .icon {
     width: 60px;
     height: 60px;
