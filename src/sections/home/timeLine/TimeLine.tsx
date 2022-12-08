@@ -1,18 +1,21 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
+import { timelineData } from "./timelineData";
 import Title from "../../../components/Title";
 import TimeBox from "./TimeBox";
-import { timelineData } from "./timelineData";
 import styled from "styled-components";
 
 const Timeline: React.FC = () => {
   return (
     <StyledTimeline id="Timeline">
-      <Title text="Timeline" />
-      <div className="timeline-container flex-center">
-        {timelineData.map((timeData) => (
-          <TimeBox timeData={timeData} />
-        ))}
-      </div>
+      <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
+        <Title text="Timeline" />
+        <div className="timeline-container flex-center">
+          {timelineData.map((timeData) => (
+            <TimeBox timeData={timeData} />
+          ))}
+        </div>
+      </Fade>
     </StyledTimeline>
   );
 };

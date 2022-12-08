@@ -22,7 +22,7 @@ const TimeBox: React.FC<{ timeData: timelineDataType }> = ({ timeData }) => {
 const StyledTimeBox = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 12.5px;
+  margin-bottom: 15px;
 
   .icon-container {
     border: 1px solid black;
@@ -49,6 +49,10 @@ const StyledTimeBox = styled.div`
       margin: 10px 0;
       color: ${deepGray};
       font-size: 14px;
+    }
+
+    .introduce {
+      font-size: 15px;
     }
   }
 `;
