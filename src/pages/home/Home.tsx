@@ -29,7 +29,7 @@ const StyledHome = styled.div`
     position: absolute;
     bottom: 50px;
     left: calc(50vw - 36px);
-    transform: scaleX(1.5);
+    transform: scaleX(1.4);
     cursor: pointer;
   }
 

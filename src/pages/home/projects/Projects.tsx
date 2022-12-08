@@ -56,28 +56,27 @@ const Projects: React.FC = () => {
 const StyledProjects = styled.div`
   display: flex;
   justify-content: center;
-  margin: 5vw;
-  padding-top: 160px;
-  margin-top: -70px;
-  margin-bottom: 125px;
+  padding-top: 110px;
+  padding-right: 20px;
+  margin-top: -64px;
+  margin-bottom: 80px;
 
   .projects-container {
     flex-direction: column;
     flex-wrap: wrap;
-    width: 900px;
+    width: 748px;
   }
 
   @media ${responsive.desktop} {
     flex-direction: column;
     align-items: center;
+    padding-right: 0;
+    margin-bottom: 40px;
 
     .projects-container {
       width: 100%;
+      padding: 20px;
     }
-  }
-
-  @media ${responsive.tablet} {
-    margin-bottom: 40px;
   }
 `;
 

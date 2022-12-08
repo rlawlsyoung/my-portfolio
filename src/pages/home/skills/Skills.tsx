@@ -28,29 +28,26 @@ const Skills: React.FC = () => {
 const StyledSkills = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
-  padding-top: 160px;
-  margin-top: -70px;
-  margin-bottom: 125px;
+  padding-top: 110px;
+  padding-right: 20px;
+  margin-top: -64px;
+  margin-bottom: 80px;
 
   .skills-container {
     flex-wrap: wrap;
-    width: 900px;
+    width: 748px;
   }
 
   @media ${responsive.desktop} {
     flex-direction: column;
     align-items: center;
+    padding-right: 0;
+    margin-bottom: 40px;
 
     .skills-container {
       width: 100%;
       padding: 20px;
     }
-  }
-
-  @media ${responsive.tablet} {
-    margin-bottom: 40px;
-    /* min-height: 0; */
   }
 `;
 

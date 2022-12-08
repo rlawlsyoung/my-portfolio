@@ -12,7 +12,7 @@ const ProjectBox: React.FC<{
   const openDialog = useCallback(() => {
     setSelectedProject(projectData);
     const openPage = () => {
-      if (window.innerWidth < 1200) window.open(selectedProject.url, "_blank");
+      if (window.innerWidth < 1024) window.open(selectedProject.url, "_blank");
       else setIsDialogOn(true);
     };
     openPage();
@@ -57,34 +57,38 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
     width: 100%;
     border-bottom: 1px solid #e4e4e4;
     background-color: ${lightGray};
+
     .project-img {
       width: ${(props) => !props.isMobile && "100%"};
-      height: 430px;
+      height: 345px;
     }
   }
 
   .project-info {
-    margin: 20px 10px;
+    margin: 16px 8px;
 
     .project-title {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
     }
     .project-subtitle {
       margin: 10px 0;
       color: ${deepGray};
+      font-size: 14px;
       font-weight: 600;
     }
 
     .project-introduction {
       margin-top: 5px;
+      font-size: 14px;
       line-height: 20px;
     }
   }
 
   @media ${responsive.desktop} {
     .img-container {
-      width: 90vw;
+      width: 100%;
+
       .project-img {
         width: ${(props) => (props.isMobile ? "27%" : "100%")};
         height: 100%;
@@ -95,16 +99,15 @@ const StyledProjectBox = styled.div<{ isMobile: boolean }>`
   @media ${responsive.mobile} {
     .project-info {
       .project-title {
-        font-size: 20px;
+        font-size: 18px;
       }
       .project-subtitle {
         margin: 7.5px 0;
-        font-size: 13.5px;
+        font-size: 12px;
       }
 
       .project-introduction {
-        margin-top: 5px;
-        font-size: 13.5px;
+        font-size: 12px;
       }
     }
   }

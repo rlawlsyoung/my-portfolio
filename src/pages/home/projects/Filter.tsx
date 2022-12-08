@@ -34,7 +34,7 @@ const StyledFilter = styled.div`
 
   .filter {
     padding: 0 20px 15px 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     white-space: nowrap;
     cursor: pointer;
@@ -78,16 +78,22 @@ const StyledFilter = styled.div`
     }
   }
 
+  @media ${responsive.desktop} {
+    .filter {
+      margin-top: 20px;
+    }
+  }
+
   @media ${responsive.tablet} {
     .filter {
       padding: 12.5px 3vw;
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
   @media ${responsive.mobile} {
     .filter {
-      padding: 12.5px 3vw;
+      padding: 12.5px 8px;
       font-size: 15px;
     }
   }

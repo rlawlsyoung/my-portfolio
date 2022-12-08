@@ -26,8 +26,8 @@ const StyledMyLink = styled.a`
   }
 
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
   }
 `;

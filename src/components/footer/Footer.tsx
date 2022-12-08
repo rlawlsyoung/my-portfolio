@@ -35,7 +35,7 @@ const StyledFooter = styled.footer`
 
   p {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
   }
 
@@ -45,9 +45,6 @@ const StyledFooter = styled.footer`
 
   @media ${responsive.mobile} {
     margin-bottom: 54px;
-    p {
-      font-size: 14px;
-    }
   }
 `;
 

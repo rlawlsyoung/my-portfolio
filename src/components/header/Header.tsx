@@ -54,7 +54,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   top: 0;
   right: 0;
   left: 0;
-  height: 80px;
+  height: 64px;
   width: 100%;
   background-color: ${(props) =>
     props.scrollPosition ? "white" : "transparents"};
@@ -65,13 +65,15 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
   .header-container {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 1024px;
 
     .menu-wrapper {
+      margin-right: 20px;
       .menu-el {
-        margin: 0 30px;
-        font-size: 20px;
+        margin-left: 50px;
+        font-size: 16px;
         cursor: pointer;
+        white-space: nowrap;
       }
     }
   }
@@ -89,13 +91,14 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
         bottom: 0;
         right: 0;
         left: 0;
+        margin-right: 0;
         box-shadow: 0 -4.5px 5px -5px ${deepGray};
         background-color: white;
         color: black;
+
         .menu-el {
-          margin: 20px 2vw;
-          font-size: 18px;
-          white-space: nowrap;
+          margin: 20px 2.5vw;
+          font-size: 16px;
         }
       }
     }
