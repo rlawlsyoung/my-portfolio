@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Title from "../../../components/Title";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
-import github from "../../../assets/github.png";
+import github from "../../../assets/github.jpg";
 import velog from "../../../assets/velog.png";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";

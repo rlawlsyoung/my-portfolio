@@ -1,13 +1,13 @@
 import React, { useCallback } from "react";
-import { projectDatasType } from "./ProjectDatas";
+import { projectDataType } from "./ProjectData";
 import { deepGray, lightGray, responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{
-  projectData: projectDatasType;
+  projectData: projectDataType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedProject: projectDatasType;
-  setSelectedProject: React.Dispatch<React.SetStateAction<projectDatasType>>;
+  selectedProject: projectDataType;
+  setSelectedProject: React.Dispatch<React.SetStateAction<projectDataType>>;
 }> = ({ projectData, setIsDialogOn, selectedProject, setSelectedProject }) => {
   const openDialog = useCallback(() => {
     setSelectedProject(projectData);

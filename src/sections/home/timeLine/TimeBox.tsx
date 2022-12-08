@@ -1,20 +1,19 @@
 import React from "react";
 import { GiGraduateCap } from "react-icons/gi";
+import { timelineDataType } from "./timelineData";
 import { responsive, lightGray, deepGray } from "../../../styles/theme";
 import styled from "styled-components";
 
-const TimeBox: React.FC = () => {
+const TimeBox: React.FC<{ timeData: timelineDataType }> = ({ timeData }) => {
+  console.log(typeof timeData.icon);
+
   return (
     <StyledTimeBox>
-      <div className="icon-container flex-center">
-        <GiGraduateCap className="icon" />
-      </div>
+      <div className="icon-container flex-center">{timeData.icon}</div>
       <div className="text-container">
-        <p className="title">Pre-Onboarding 코스 참여</p>
-        <p className="period">2022.09 ~ 2022.10</p>
-        <p className="introduce">
-          Wanted에서 진행하는 개발자 현업 체험 프로젝트
-        </p>
+        <p className="title">{timeData.title}</p>
+        <p className="period">{timeData.period}</p>
+        <p className="introduce">{timeData.introduce}</p>
       </div>
     </StyledTimeBox>
   );

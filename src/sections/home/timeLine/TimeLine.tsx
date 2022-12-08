@@ -1,22 +1,23 @@
 import React from "react";
 import Title from "../../../components/Title";
 import TimeBox from "./TimeBox";
+import { timelineData } from "./timelineData";
 import styled from "styled-components";
 
-const TimeLine: React.FC = () => {
+const Timeline: React.FC = () => {
   return (
-    <StyledTimeLine id="Timeline">
+    <StyledTimeline id="Timeline">
       <Title text="Timeline" />
       <div className="timeline-container flex-center">
-        <TimeBox />
-        <TimeBox />
-        <TimeBox />
+        {timelineData.map((timeData) => (
+          <TimeBox timeData={timeData} />
+        ))}
       </div>
-    </StyledTimeLine>
+    </StyledTimeline>
   );
 };
 
-const StyledTimeLine = styled.div`
+const StyledTimeline = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 110px;
@@ -31,4 +32,4 @@ const StyledTimeLine = styled.div`
   }
 `;
 
-export default TimeLine;
+export default Timeline;

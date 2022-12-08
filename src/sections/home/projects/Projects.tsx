@@ -4,15 +4,15 @@ import Title from "../../../components/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";
-import { projectDatas } from "./ProjectDatas";
+import { projectData } from "./ProjectData";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState("전체");
-  const [projects, setProjects] = useState(projectDatas);
+  const [projects, setProjects] = useState(projectData);
   const [isDialogOn, setIsDialogOn] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(projectDatas[0]);
+  const [selectedProject, setSelectedProject] = useState(projectData[0]);
 
   const turnOffDialog = useCallback(() => setIsDialogOn(false), []);
   const handleOnClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     setProjects(
-      projectDatas.filter((project) => {
+      projectData.filter((project) => {
         return project.tags.includes(filter);
       })
     );

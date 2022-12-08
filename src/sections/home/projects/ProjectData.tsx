@@ -1,4 +1,4 @@
-export interface projectDatasType {
+export interface projectDataType {
   mainImg: string;
   isMobile: boolean;
   title: string;
@@ -9,7 +9,7 @@ export interface projectDatasType {
   url: string;
 }
 
-export const projectDatas: projectDatasType[] = [
+export const projectData: projectDataType[] = [
   {
     mainImg:
       "https://velog.velcdn.com/images/jinyoung985/post/66e7588b-4192-49dd-8ecd-4048573cd66d/image.gif",
