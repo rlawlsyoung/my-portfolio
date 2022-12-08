@@ -62,7 +62,6 @@ const StyledProjects = styled.div`
   margin-bottom: 80px;
 
   .projects-container {
-    flex-direction: column;
     flex-wrap: wrap;
     width: 748px;
   }

@@ -51,7 +51,7 @@ const StyledSkillBox = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  margin-bottom: 10.5px;
+  margin-bottom: 12.5px;
   border: 1px solid black;
   background-color: ${lightGray};
   cursor: pointer;

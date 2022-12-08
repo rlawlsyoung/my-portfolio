@@ -20,7 +20,7 @@ export const projectDatas: projectDatasType[] = [
     mainTechs: ["TypeScript", "React.js", "styled-components"],
     introduction: (
       <>
-        타입스크립트와 React를 통해 제작한 웹 포트폴리오입니다. <br />
+        TypeScript와 React를 통해 제작한 웹 포트폴리오입니다. <br />
         자기소개, 기술 스택, 프로젝트 등에 대해 소개합니다.
       </>
     ),

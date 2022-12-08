@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 175px;
+  height: 150px;
   background: url(${bg}) no-repeat;
   background-attachment: fixed;
   background-size: cover;
