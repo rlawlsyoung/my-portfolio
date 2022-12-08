@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
-import Title from "../../../components/title/Title";
+import Title from "../../../components/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";

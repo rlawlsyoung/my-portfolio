@@ -1,14 +1,14 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
-import Title from "../../../components/title/Title";
+import Title from "../../../components/Title";
 import InfoList from "./InfoList";
 import me from "../../../assets/me.jpg";
 import github from "../../../assets/github.png";
 import velog from "../../../assets/velog.png";
 import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
-import MyLink from "./MyLink";
+import MyLink from "../../../components/MyLink";
 
 export const links = [
   {

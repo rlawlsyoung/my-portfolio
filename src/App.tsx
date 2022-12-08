@@ -1,9 +1,10 @@
-import Header from "./components/header/Header";
-import Home from "./pages/home/Home";
-import AboutMe from "./pages/home/aboutMe/AboutMe";
-import Skills from "./pages/home/skills/Skills";
-import Projects from "./pages/home/projects/Projects";
-import Footer from "./components/footer/Footer";
+import Header from "./components/Header";
+import Home from "./sections/home/Home";
+import AboutMe from "./sections/home/aboutMe/AboutMe";
+import Skills from "./sections/home/skills/Skills";
+import Projects from "./sections/home/projects/Projects";
+import TimeLine from "./sections/home/timeLine/TimeLine";
+import Footer from "./components/Footer";
 import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <AboutMe />
       <Skills />
       <Projects />
+      <TimeLine />
       <Header />
       <Footer />
     </>
