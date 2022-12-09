@@ -3,6 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import { timelineData } from "./timelineData";
 import Title from "../../../components/Title";
 import TimeBox from "./TimeBox";
+import { responsive } from "../../../styles/theme";
 import styled from "styled-components";
 
 const Timeline: React.FC = () => {
@@ -32,6 +33,18 @@ const StyledTimeline = styled.div`
     display: flex;
     flex-direction: column;
     width: 748px;
+  }
+
+  @media ${responsive.desktop} {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+    margin-bottom: 40px;
+
+    .timeline-container {
+      width: 100vw;
+      padding: 20px;
+    }
   }
 `;
 

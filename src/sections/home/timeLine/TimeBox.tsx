@@ -55,6 +55,40 @@ const StyledTimeBox = styled.div`
       font-size: 15px;
     }
   }
+
+  @media ${responsive.mobile} {
+    .icon-container {
+      border: 1px solid black;
+
+      .icon {
+        width: 35px;
+        height: 35px;
+        margin: 12.5px;
+      }
+    }
+
+    .text-container {
+      width: 100%;
+      padding: 10px;
+      border-bottom: 1px solid black;
+      background-color: ${lightGray};
+
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .period {
+        margin: 5px 0;
+        color: ${deepGray};
+        font-size: 9.5px;
+      }
+
+      .introduce {
+        font-size: 10px;
+      }
+    }
+  }
 `;
 
 export default TimeBox;
