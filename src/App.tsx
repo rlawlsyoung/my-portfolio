@@ -3,7 +3,7 @@ import Home from "./sections/home/Home";
 import AboutMe from "./sections/home/aboutMe/AboutMe";
 import Skills from "./sections/home/skills/Skills";
 import Projects from "./sections/home/projects/Projects";
-import Timeline from "./sections/home/timeline/TimeLine";
+import Timeline from "./sections/home/timeline/Timeline";
 import Footer from "./components/Footer";
 import Mouse from "./components/Mouse";
 import GlobalStyle from "./styles/GlobalStyle";

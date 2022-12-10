@@ -23,12 +23,12 @@ const StyledHome = styled.div`
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  color: white;
 
   .arrow {
     position: absolute;
     bottom: 50px;
     left: calc(50vw - 32.4px);
+    color: white;
     transform: scaleX(1.35);
     cursor: pointer;
   }

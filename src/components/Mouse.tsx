@@ -16,10 +16,6 @@ const Mouse: React.FC = () => {
       });
     };
     window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    };
   }, []);
 
   const variants = {
@@ -42,15 +38,15 @@ const Mouse: React.FC = () => {
 
 const StyledMouse = styled.div`
   .cursor {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     mix-blend-mode: difference;
     border-radius: 50%;
-    z-index: 300000000;
+    pointer-events: none;
   }
 `;
 
