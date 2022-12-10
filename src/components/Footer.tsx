@@ -1,8 +1,8 @@
 import React from "react";
-import MyLink from "../../pages/home/aboutMe/MyLink";
-import { links } from "../../pages/home/aboutMe/AboutMe";
-import bg from "../../assets/bg.jpg";
-import { responsive } from "../../styles/theme";
+import MyLink from "./MyLink";
+import { links } from "../sections/home/aboutMe/AboutMe";
+import bg from "../assets/bg.jpg";
+import { responsive } from "../styles/theme";
 import styled from "styled-components";
 
 const Footer: React.FC = () => {
@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 175px;
+  height: 150px;
   background: url(${bg}) no-repeat;
   background-attachment: fixed;
   background-size: cover;

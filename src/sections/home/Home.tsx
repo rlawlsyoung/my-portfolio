@@ -28,8 +28,8 @@ const StyledHome = styled.div`
   .arrow {
     position: absolute;
     bottom: 50px;
-    left: calc(50vw - 36px);
-    transform: scaleX(1.4);
+    left: calc(50vw - 32.4px);
+    transform: scaleX(1.35);
     cursor: pointer;
   }
 

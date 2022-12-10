@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import Logo from "./Logo";
-import { deepGray, responsive } from "../../styles/theme";
+import { deepGray, responsive } from "../styles/theme";
 import styled from "styled-components";
 
 const Header = () => {
