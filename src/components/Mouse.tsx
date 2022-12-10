@@ -20,8 +20,8 @@ const Mouse: React.FC = () => {
 
   const variants = {
     default: {
-      x: mousePosition.x,
-      y: mousePosition.y,
+      x: mousePosition.x + 5,
+      y: mousePosition.y + 5,
     },
   };
 
