@@ -1,6 +1,6 @@
 import { GiGraduateCap, GiBriefcase } from "react-icons/gi";
 import { AiFillCode } from "react-icons/ai";
-import soldier from "../../../assets/soldier.png";
+import soldier from "../../assets/soldier.png";
 
 export interface timelineDataType {
   icon: JSX.Element | string;

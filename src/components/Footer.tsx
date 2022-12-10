@@ -1,6 +1,6 @@
 import React from "react";
 import MyLink from "./MyLink";
-import { links } from "../sections/home/aboutMe/AboutMe";
+import { links } from "../sections/aboutMe/AboutMe";
 import bg from "../assets/bg.jpg";
 import { responsive } from "../styles/theme";
 import styled from "styled-components";

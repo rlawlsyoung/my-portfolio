@@ -1,6 +1,6 @@
 import Dialog from "@mui/material/Dialog";
 import { projectDataType } from "./ProjectData";
-import { responsive } from "../../../styles/theme";
+import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const ProjectDialog: React.FC<{

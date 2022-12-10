@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { projectDataType } from "./ProjectData";
-import { deepGray, lightGray, responsive } from "../../../styles/theme";
+import { deepGray, lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const ProjectBox: React.FC<{

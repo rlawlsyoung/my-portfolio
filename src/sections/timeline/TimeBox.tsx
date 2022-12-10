@@ -1,6 +1,6 @@
 import React from "react";
 import { timelineDataType } from "./timelineData";
-import { responsive, lightGray, deepGray } from "../../../styles/theme";
+import { responsive, lightGray, deepGray } from "../../styles/theme";
 import styled from "styled-components";
 
 const TimeBox: React.FC<{ timeData: timelineDataType }> = ({ timeData }) => {
