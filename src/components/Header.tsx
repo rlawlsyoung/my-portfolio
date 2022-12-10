@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-scroll";
 import Logo from "./Logo";
 import { deepGray, responsive } from "../styles/theme";
@@ -9,9 +9,9 @@ const Header = () => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const updateScroll = () => {
-    window.scrollY < 10 && setScrollPosition(window.scrollY);
-  };
+  const updateScroll = useCallback(() => {
+    setScrollPosition(window.scrollY);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);

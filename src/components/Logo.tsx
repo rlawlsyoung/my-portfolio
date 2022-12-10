@@ -1,5 +1,4 @@
 import React from "react";
-import { responsive } from "../styles/theme";
 import styled from "styled-components";
 
 const Logo: React.FC = () => {
