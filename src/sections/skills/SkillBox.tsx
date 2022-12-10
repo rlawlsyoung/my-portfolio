@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useRef } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { lightGray, responsive } from "../../../styles/theme";
+import { lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const SkillBox: React.FC<{

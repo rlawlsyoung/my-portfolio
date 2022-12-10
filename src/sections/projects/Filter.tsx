@@ -1,5 +1,5 @@
 import React from "react";
-import { responsive } from "../../../styles/theme";
+import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Filter: React.FC<{

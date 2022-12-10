@@ -1,9 +1,9 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import Title from "../../../components/Title";
+import Title from "../../components/Title";
 import SkillBox from "./SkillBox";
 import { techStacks } from "./techStacks";
-import { responsive } from "../../../styles/theme";
+import { responsive } from "../../styles/theme";
 import styled from "styled-components";
 
 const Skills: React.FC = () => {
