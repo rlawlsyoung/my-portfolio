@@ -5,6 +5,7 @@ import Skills from "./sections/home/skills/Skills";
 import Projects from "./sections/home/projects/Projects";
 import Timeline from "./sections/home/timeline/Timeline";
 import Footer from "./components/Footer";
+import Mouse from "./components/Mouse";
 import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       <Timeline />
       <Header />
       <Footer />
+      <Mouse />
     </>
   );
 };

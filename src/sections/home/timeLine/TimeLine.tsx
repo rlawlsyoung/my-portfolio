@@ -13,7 +13,7 @@ const Timeline: React.FC = () => {
         <Title text="Timeline" />
         <div className="timeline-container flex-center">
           {timelineData.map((timeData) => (
-            <TimeBox timeData={timeData} />
+            <TimeBox timeData={timeData} key={timeData.title} />
           ))}
         </div>
       </Fade>
