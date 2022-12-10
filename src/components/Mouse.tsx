@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { responsive } from "../styles/theme";
 import styled from "styled-components";
 
 const Mouse: React.FC = () => {
@@ -10,10 +11,11 @@ const Mouse: React.FC = () => {
 
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
+      window.innerWidth > 1024 &&
+        setMousePosition({
+          x: e.clientX,
+          y: e.clientY,
+        });
     };
     window.addEventListener("mousemove", mouseMove);
   }, []);
@@ -47,6 +49,12 @@ const StyledMouse = styled.div`
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
+  }
+
+  @media ${responsive.desktop} {
+    .cursor {
+      display: none;
+    }
   }
 `;
 
