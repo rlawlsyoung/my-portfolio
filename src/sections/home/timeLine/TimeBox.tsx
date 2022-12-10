@@ -21,6 +21,8 @@ const TimeBox: React.FC<{ timeData: timelineDataType }> = ({ timeData }) => {
 
 const StyledTimeBox = styled.div`
   display: flex;
+  align-items: center;
+  height: 100%;
   width: 100%;
   margin-bottom: 15px;
 
@@ -35,8 +37,9 @@ const StyledTimeBox = styled.div`
   }
 
   .text-container {
+    height: 107px;
     width: 100%;
-    padding: 20px;
+    padding: 18px;
     border-bottom: 1px solid black;
     background-color: ${lightGray};
 
@@ -58,8 +61,6 @@ const StyledTimeBox = styled.div`
 
   @media ${responsive.mobile} {
     .icon-container {
-      border: 1px solid black;
-
       .icon {
         width: 35px;
         height: 35px;
@@ -68,19 +69,15 @@ const StyledTimeBox = styled.div`
     }
 
     .text-container {
-      width: 100%;
-      padding: 10px;
-      border-bottom: 1px solid black;
-      background-color: ${lightGray};
+      height: 62px;
+      padding: 10px 6px;
 
       .title {
-        font-size: 14px;
-        font-weight: 700;
+        font-size: 12.5px;
       }
 
       .period {
         margin: 5px 0;
-        color: ${deepGray};
         font-size: 9.5px;
       }
 
