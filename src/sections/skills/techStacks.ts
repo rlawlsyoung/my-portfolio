@@ -14,7 +14,7 @@ export const techStacks: techStacksType[] = [
   },
   {
     name: "React",
-    text: "React를 통해 다양한 팀 및 개인 프로젝트, 인턴십 과제 등을 진행하였습니다. 컴포넌트의 재사용성, SPA, 선언적 개발이 가능한 점 등을 고려하여 사용하게 되었습니다.",
+    text: "React를 통해 다양한 팀 및 개인 프로젝트, 인턴십 과제 등을 진행하였습니다. 컴포넌트의 재사용성, SPA 개발, 선언적 개발이 가능한 점 등을 고려하여 사용하게 되었습니다.",
   },
   {
     name: "Recoil",
