@@ -57,29 +57,20 @@ const StyledTimeBox = styled.div`
   }
 
   @media ${responsive.mobile} {
-    .icon-container {
-      .icon {
-        width: 35px;
-        height: 35px;
-        margin: 12.5px;
-      }
-    }
-
     .text-container {
-      height: 62px;
-      padding: 10px 6px;
+      padding: 15px 8px;
 
       .title {
-        font-size: 12.5px;
+        font-size: 13px;
       }
 
       .period {
-        margin: 5px 0;
+        margin: 8px 0;
         font-size: 9.5px;
       }
 
       .introduce {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
   }
