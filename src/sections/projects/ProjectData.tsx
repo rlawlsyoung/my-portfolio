@@ -12,7 +12,7 @@ export interface projectDataType {
 export const projectData: projectDataType[] = [
   {
     mainImg:
-      "https://velog.velcdn.com/images/jinyoung985/post/4e42b82b-40e6-4044-abb7-20d3028eed76/image.gif",
+      "https://velog.velcdn.com/images/jinyoung985/post/66e7588b-4192-49dd-8ecd-4048573cd66d/image.gif",
     isMobile: false,
     title: "포트폴리오",
     tags: ["전체", "개인 프로젝트"],
