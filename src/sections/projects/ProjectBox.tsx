@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { projectDataType } from "./ProjectData";
+import { projectDataType } from "./projectData";
 import { deepGray, lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
