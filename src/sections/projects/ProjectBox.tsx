@@ -6,16 +6,12 @@ import styled from "styled-components";
 const ProjectBox: React.FC<{
   projectData: projectDataType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedProject: projectDataType;
   setSelectedProject: React.Dispatch<React.SetStateAction<projectDataType>>;
-}> = ({ projectData, setIsDialogOn, selectedProject, setSelectedProject }) => {
+}> = ({ projectData, setIsDialogOn, setSelectedProject }) => {
   const openDialog = useCallback(() => {
     setSelectedProject(projectData);
-    const openPage = () => {
-      if (window.innerWidth < 1024) window.open(selectedProject.url, "_blank");
-      else setIsDialogOn(true);
-    };
-    openPage();
+    if (window.innerWidth < 1024) window.open(projectData.url, "_blank");
+    else setIsDialogOn(true);
   }, []);
 
   return (

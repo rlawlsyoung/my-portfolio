@@ -35,10 +35,9 @@ const Projects: React.FC = () => {
           <Filter filter={filter} handleOnClick={handleOnClick} />
           {projects.map((projectData) => (
             <ProjectBox
-              projectData={projectData}
               key={projectData.title}
+              projectData={projectData}
               setIsDialogOn={setIsDialogOn}
-              selectedProject={selectedProject}
               setSelectedProject={setSelectedProject}
             />
           ))}
