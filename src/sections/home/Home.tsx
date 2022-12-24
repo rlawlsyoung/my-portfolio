@@ -36,6 +36,7 @@ const StyledHome = styled.div`
   @media ${responsive.tablet} {
     .arrow {
       bottom: 75px;
+      left: calc(50vw - 24px);
     }
   }
 `;
