@@ -3,7 +3,11 @@ import { timelineDataType } from "./timelineData";
 import { responsive, lightGray, deepGray } from "../../styles/theme";
 import styled from "styled-components";
 
-const TimeBox: React.FC<{ timeData: timelineDataType }> = ({ timeData }) => {
+interface TimeBoxType {
+  timeData: timelineDataType;
+}
+
+const TimeBox: React.FC<TimeBoxType> = ({ timeData }) => {
   return (
     <StyledTimeBox>
       <div className="icon-container flex-center">{timeData.icon}</div>

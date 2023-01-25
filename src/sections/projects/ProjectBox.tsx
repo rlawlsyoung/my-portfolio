@@ -3,11 +3,17 @@ import { projectDataType } from "./projectData";
 import { deepGray, lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
-const ProjectBox: React.FC<{
+interface ProjectBoxType {
   projectData: projectDataType;
   setIsDialogOn: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedProject: React.Dispatch<React.SetStateAction<projectDataType>>;
-}> = ({ projectData, setIsDialogOn, setSelectedProject }) => {
+}
+
+const ProjectBox: React.FC<ProjectBoxType> = ({
+  projectData,
+  setIsDialogOn,
+  setSelectedProject,
+}) => {
   const openDialog = useCallback(() => {
     setSelectedProject(projectData);
     if (window.innerWidth < 1024) window.open(projectData.url, "_blank");

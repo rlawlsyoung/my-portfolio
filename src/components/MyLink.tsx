@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const MyLink: React.FC<{
+interface MyLinkType {
   link: {
     icon: string;
     title: string;
     link: string;
   };
-}> = ({ link }) => {
+}
+
+const MyLink: React.FC<MyLinkType> = ({ link }) => {
   return (
     <StyledMyLink href={link.link} target="_blank">
       <img src={link.icon} alt={link.title} className="icon expansion" />
