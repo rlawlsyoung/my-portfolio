@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
+import styled from "styled-components";
 import { projectDataType } from "./projectData";
 import { deepGray, lightGray, responsive } from "../../styles/theme";
-import styled from "styled-components";
 
 interface ProjectBoxType {
   projectData: projectDataType;

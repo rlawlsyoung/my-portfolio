@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-scroll";
+import styled from "styled-components";
 import Logo from "./Logo";
 import { deepGray, responsive } from "../styles/theme";
-import styled from "styled-components";
 
 const Header = () => {
   const menuList = ["About Me", "Skills", "Projects", "Timeline"];

@@ -1,7 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 import { timelineDataType } from "./timelineData";
 import { responsive, lightGray, deepGray } from "../../styles/theme";
-import styled from "styled-components";
 
 interface TimeBoxType {
   timeData: timelineDataType;

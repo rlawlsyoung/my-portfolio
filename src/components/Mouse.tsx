@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { responsive } from "../styles/theme";
 import styled from "styled-components";
+
+import { responsive } from "../styles/theme";
 
 const Mouse: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({

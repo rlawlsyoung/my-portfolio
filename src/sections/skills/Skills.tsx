@@ -1,10 +1,10 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
+import styled from "styled-components";
 import Title from "../../components/Title";
 import SkillBox from "./SkillBox";
 import { techStacks } from "./techStacks";
 import { responsive } from "../../styles/theme";
-import styled from "styled-components";
 
 const Skills: React.FC = () => {
   return (

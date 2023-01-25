@@ -1,6 +1,6 @@
 import React from "react";
-import { responsive } from "../../styles/theme";
 import styled from "styled-components";
+import { responsive } from "../../styles/theme";
 
 interface FilterType {
   filter: string;

@@ -1,10 +1,10 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { timelineData } from "./timelineData";
+import styled from "styled-components";
 import Title from "../../components/Title";
 import TimeBox from "./TimeBox";
+import { timelineData } from "./timelineData";
 import { responsive } from "../../styles/theme";
-import styled from "styled-components";
 
 const Timeline: React.FC = () => {
   return (
