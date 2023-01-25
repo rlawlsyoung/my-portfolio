@@ -1,8 +1,13 @@
 import React from "react";
-import { responsive } from "../styles/theme";
 import styled from "styled-components";
 
-const Title: React.FC<{ text: string }> = ({ text }) => {
+import { responsive } from "../styles/theme";
+
+interface TitleType {
+  text: string;
+}
+
+const Title: React.FC<TitleType> = ({ text }) => {
   return (
     <StyledTitle>
       {text}

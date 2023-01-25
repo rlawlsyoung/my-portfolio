@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const InfoList: React.FC<{
+interface InfoListType {
   info: { title: string; text: string };
-}> = ({ info }) => {
+}
+
+const InfoList: React.FC<InfoListType> = ({ info }) => {
   return (
     <StyledInfoList className="list">
       <li className="list-title">{info.title}</li> : {info.text}

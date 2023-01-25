@@ -1,12 +1,12 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+import styled from "styled-components";
 import Title from "../../components/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";
 import { projectData } from "./projectData";
 import { responsive } from "../../styles/theme";
-import styled from "styled-components";
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState("전체");

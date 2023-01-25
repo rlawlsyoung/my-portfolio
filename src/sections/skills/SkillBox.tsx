@@ -3,10 +3,12 @@ import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
 
-const SkillBox: React.FC<{
+interface SkillBoxType {
   title: string;
   contents: string;
-}> = ({ title, contents }) => {
+}
+
+const SkillBox: React.FC<SkillBoxType> = ({ title, contents }) => {
   const parentRef = useRef<HTMLDivElement>(null);
   const childRef = useRef<HTMLDivElement>(null);
   const [isOpened, setIsOpened] = useState(false);

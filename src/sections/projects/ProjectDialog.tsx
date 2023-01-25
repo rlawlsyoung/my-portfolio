@@ -1,13 +1,19 @@
 import Dialog from "@mui/material/Dialog";
+import styled from "styled-components";
 import { projectDataType } from "./projectData";
 import { responsive } from "../../styles/theme";
-import styled from "styled-components";
 
-const ProjectDialog: React.FC<{
+interface ProjectDialogType {
   isDialogOn: boolean;
   turnOffDialog: () => void;
   selectedProject: projectDataType;
-}> = ({ isDialogOn, turnOffDialog, selectedProject }) => {
+}
+
+const ProjectDialog: React.FC<ProjectDialogType> = ({
+  isDialogOn,
+  turnOffDialog,
+  selectedProject,
+}) => {
   return (
     <StyledProjectDialog
       open={isDialogOn}

@@ -1,11 +1,13 @@
 import React from "react";
-import { responsive } from "../../styles/theme";
 import styled from "styled-components";
+import { responsive } from "../../styles/theme";
 
-const Filter: React.FC<{
+interface FilterType {
   filter: string;
   handleOnClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-}> = ({ filter, handleOnClick }) => {
+}
+
+const Filter: React.FC<FilterType> = ({ filter, handleOnClick }) => {
   const filterLists = ["전체", "팀 프로젝트", "개인 프로젝트", "인턴십"];
 
   return (

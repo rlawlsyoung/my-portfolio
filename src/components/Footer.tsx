@@ -1,9 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 import MyLink from "./MyLink";
 import { links } from "../sections/aboutMe/AboutMe";
 import bg from "../assets/bg.jpg";
 import { responsive } from "../styles/theme";
-import styled from "styled-components";
 
 const Footer: React.FC = () => {
   return (
