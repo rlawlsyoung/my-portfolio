@@ -21,7 +21,7 @@ export const projectData: projectDataType[] = [
     introduction: (
       <>
         TypeScript와 React를 통해 제작한 웹 포트폴리오입니다. <br />
-        자기소개, 기술 스택, 프로젝트 등에 대해 소개합니다.
+        자기소개, 기술 스택, 프로젝트, 타임라인에 대해 소개합니다.
       </>
     ),
     url: "https://velog.io/@jinyoung985/Portfolio-포트폴리오-사이트",
@@ -57,6 +57,9 @@ export const projectData: projectDataType[] = [
         <br />
         주요 기능으로는 녹음, 녹음 파일 Firebase에 저장, Firebase에서 불러오기
         등이 있습니다.
+        <br />
+        프로젝트가 끝난 후에도 개인적으로 다른 파트의 버그 수정 및 리팩토링을
+        진행했습니다.
       </>
     ),
     url: "https://velog.io/@jinyoung985/Portfolio-오디오-녹음-재생-프로그램-만들기",
