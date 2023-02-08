@@ -23,11 +23,14 @@ const TimeBox: React.FC<TimeBoxType> = ({ timeData }) => {
 const StyledTimeBox = styled.div`
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 107px;
   width: 100%;
   margin-bottom: 15px;
 
   .icon-container {
+    height: 100%;
+    width: 107px;
+    min-width: 107px;
     border: 1px solid black;
 
     .icon {
@@ -38,7 +41,7 @@ const StyledTimeBox = styled.div`
   }
 
   .text-container {
-    height: 107px;
+    height: 100%;
     width: 100%;
     padding: 18px;
     border-bottom: 1px solid black;
