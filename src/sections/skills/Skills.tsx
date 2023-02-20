@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { firestore } from "../../firebase";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
@@ -8,7 +8,17 @@ import { techStacks } from "./techStacks";
 import { responsive } from "../../styles/theme";
 
 const Skills: React.FC = () => {
-  console.log(firestore.collection("skills"));
+  useEffect(() => {
+    const skills = firestore.collection("skills");
+    console.log(skills);
+
+    skills
+      .doc("krPZ2r1uFTTeF5Aft5nv")
+      .get()
+      .then((doc) => {
+        console.log(doc.data());
+      });
+  }, []);
 
   return (
     <StyledSkills id="Skills">
