@@ -1,18 +1,41 @@
 import React, { useState, useCallback, useEffect } from "react";
+import { firestore } from "../../firebase";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";
 import Filter from "./Filter";
 import ProjectBox from "./ProjectBox";
 import ProjectDialog from "./ProjectDialog";
-import { projectData } from "./projectData";
 import { responsive } from "../../styles/theme";
+
+export interface projectDataType {
+  mainImg: string;
+  isMobile: boolean;
+  title: string;
+  tags: string[];
+  subTitle: string;
+  mainTechs: string[];
+  introduction: string;
+  url: string;
+}
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState("전체");
-  const [projects, setProjects] = useState(projectData);
+  const [projects, setProjects] = useState<projectDataType[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<projectDataType[]>(
+    []
+  );
   const [isDialogOn, setIsDialogOn] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(projectData[0]);
+  const [selectedProject, setSelectedProject] = useState<projectDataType>({
+    mainImg: "",
+    isMobile: false,
+    title: "",
+    tags: [],
+    subTitle: "",
+    mainTechs: [],
+    introduction: "",
+    url: "",
+  });
 
   const turnOffDialog = useCallback(() => setIsDialogOn(false), []);
   const handleOnClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -20,12 +43,28 @@ const Projects: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setProjects(
-      projectData.filter((project) => {
+    setFilteredProjects(
+      projects.filter((project) => {
         return project.tags.includes(filter);
       })
     );
   }, [filter]);
+
+  useEffect(() => {
+    const projects = firestore.collection("projects");
+    projects.get().then((docs) => {
+      const projectsData: projectDataType[] = [];
+
+      docs.docs.map((doc) => {
+        console.log(doc.data());
+
+        const data: projectDataType | any = doc.data();
+        projectsData.push(data);
+      });
+      setProjects(projectsData);
+      setSelectedProject(projectsData[0]);
+    });
+  }, []);
 
   return (
     <StyledProjects id="Projects">
