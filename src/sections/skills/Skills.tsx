@@ -1,4 +1,5 @@
 import React from "react";
+import { firestore } from "../../firebase";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";
@@ -7,6 +8,8 @@ import { techStacks } from "./techStacks";
 import { responsive } from "../../styles/theme";
 
 const Skills: React.FC = () => {
+  console.log(firestore.collection("skills"));
+
   return (
     <StyledSkills id="Skills">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
