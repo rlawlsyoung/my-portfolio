@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { firestore } from "../../firebase";
-import firebase from "firebase/compat";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";

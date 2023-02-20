@@ -34,7 +34,10 @@ const ProjectBox: React.FC<ProjectBoxType> = ({
         <h3 className="project-title">{projectData.title}</h3>
         <p className="project-subtitle">{projectData.subTitle}</p>
 
-        <p className="project-introduction">{projectData.introduction}</p>
+        <p
+          className="project-introduction"
+          dangerouslySetInnerHTML={{ __html: projectData.introduction }}
+        />
       </div>
     </StyledProjectBox>
   );
