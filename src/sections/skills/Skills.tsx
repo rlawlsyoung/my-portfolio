@@ -1,23 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { firestore } from "../../firebase";
+import firebase from "firebase/compat";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";
 import SkillBox from "./SkillBox";
-import { techStacks } from "./techStacks";
 import { responsive } from "../../styles/theme";
 
+interface techStacksType {
+  name: string;
+  text: string;
+}
+
 const Skills: React.FC = () => {
+  const [techStacks, setTechStacks] = useState<techStacksType[]>([]);
+
   useEffect(() => {
     const skills = firestore.collection("skills");
-    console.log(skills);
+    skills.get().then((docs) => {
+      const techStackData: techStacksType[] = [];
 
-    skills
-      .doc("krPZ2r1uFTTeF5Aft5nv")
-      .get()
-      .then((doc) => {
-        console.log(doc.data());
+      docs.docs.map((doc) => {
+        const data: techStacksType | any = doc.data();
+        techStackData.push(data);
       });
+      setTechStacks(techStackData);
+    });
   }, []);
 
   return (
