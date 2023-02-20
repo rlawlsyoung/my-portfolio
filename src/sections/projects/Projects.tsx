@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
         <Title text="Projects" />
         <div className="projects-container flex-center">
           <Filter filter={filter} handleOnClick={handleOnClick} />
-          {projects.map((projectData) => (
+          {filteredProjects.map((projectData) => (
             <ProjectBox
               key={projectData.title}
               projectData={projectData}
