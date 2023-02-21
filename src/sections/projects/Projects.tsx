@@ -56,12 +56,11 @@ const Projects: React.FC = () => {
       const projectsData: projectDataType[] = [];
 
       docs.docs.map((doc) => {
-        console.log(doc.data());
-
         const data: projectDataType | any = doc.data();
         projectsData.push(data);
       });
       setProjects(projectsData);
+      setFilteredProjects(projectsData);
       setSelectedProject(projectsData[0]);
     });
   }, []);
