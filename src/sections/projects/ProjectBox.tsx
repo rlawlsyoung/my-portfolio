@@ -36,7 +36,7 @@ const ProjectBox: React.FC<ProjectBoxType> = ({
 
         <p
           className="project-introduction"
-          dangerouslySetInnerHTML={{ __html: projectData.introduction }}
+          dangerouslySetInnerHTML={{ __html: projectData.introduce }}
         />
       </div>
     </StyledProjectBox>

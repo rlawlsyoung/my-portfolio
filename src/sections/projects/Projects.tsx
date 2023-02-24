@@ -14,7 +14,7 @@ export interface projectDataType {
   title: string;
   tags: string[];
   subTitle: string;
-  introduction: string;
+  introduce: string;
   url: string;
 }
 
@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
     title: "",
     tags: [],
     subTitle: "",
-    introduction: "",
+    introduce: "",
     url: "",
   });
 
