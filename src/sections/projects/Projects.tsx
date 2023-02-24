@@ -51,8 +51,8 @@ const Projects: React.FC = () => {
   }, [filter]);
 
   useEffect(() => {
-    const projects = firestore.collection("projects");
-    projects.get().then((docs) => {
+    const projectsCollection = firestore.collection("projects");
+    projectsCollection.get().then((docs) => {
       const projectsData: projectDataType[] = [];
 
       docs.docs.map((doc) => {

@@ -1,15 +1,4 @@
-import { GiGraduateCap, GiBriefcase } from "react-icons/gi";
-import { AiFillCode } from "react-icons/ai";
-import soldier from "../../assets/soldier.png";
-
-export interface timelineDataType {
-  icon: string;
-  title: string;
-  period: string;
-  introduce: string;
-}
-
-export const timelineData: timelineDataType[] = [
+export const timelineData = [
   {
     icon: "https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-briefcase-15.png&r=0&g=0&b=0",
     title: "Pre-Onboarding 코스 수료",

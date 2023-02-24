@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { firestore } from "../../firebase";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";
 import TimeBox from "./TimeBox";
-import { timelineData } from "./timelineData";
 import { responsive } from "../../styles/theme";
 
+export interface timelineDataType {
+  icon: string;
+  title: string;
+  period: string;
+  introduce: string;
+}
 const Timeline: React.FC = () => {
+  const [timeline, setTimeline] = useState<timelineDataType[]>([]);
+
+  useEffect(() => {
+    const timelineCollection = firestore.collection("timeline");
+    timelineCollection.get().then((docs) => {
+      const timelineData: timelineDataType[] = [];
+
+      docs.docs.map((doc) => {
+        const data: timelineDataType | any = doc.data();
+        timelineData.push(data);
+      });
+      setTimeline(timelineData);
+    });
+  }, []);
+
   return (
     <StyledTimeline id="Timeline">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>
         <Title text="Timeline" />
         <div className="timeline-container flex-center">
-          {timelineData.map((timeData) => (
+          {timeline.map((timeData) => (
             <TimeBox timeData={timeData} key={timeData.title} />
           ))}
         </div>
