@@ -1,6 +1,6 @@
 import Dialog from "@mui/material/Dialog";
 import styled from "styled-components";
-import { projectDataType } from "./projectData";
+import { projectDataType } from "./Projects";
 import { responsive } from "../../styles/theme";
 
 interface ProjectDialogType {

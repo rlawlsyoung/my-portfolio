@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { firestore } from "../../firebase";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
 import Title from "../../components/Title";
 import SkillBox from "./SkillBox";
-import { techStacks } from "./techStacks";
 import { responsive } from "../../styles/theme";
 
+interface techStacksType {
+  name: string;
+  text: string;
+}
+
 const Skills: React.FC = () => {
+  const [techStacks, setTechStacks] = useState<techStacksType[]>([]);
+
+  useEffect(() => {
+    const skills = firestore.collection("skills");
+    skills.get().then((docs) => {
+      const techStackData: techStacksType[] = [];
+
+      docs.docs.map((doc) => {
+        const data: techStacksType | any = doc.data();
+        techStackData.push(data);
+      });
+      setTechStacks(techStackData);
+    });
+  }, []);
+
   return (
     <StyledSkills id="Skills">
       <Fade cascade={true} delay={350} triggerOnce={true} damping={0.4}>

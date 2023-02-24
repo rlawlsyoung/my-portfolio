@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import styled from "styled-components";
-import { projectDataType } from "./projectData";
+import { projectDataType } from "./Projects";
 import { deepGray, lightGray, responsive } from "../../styles/theme";
 
 interface ProjectBoxType {
@@ -34,7 +34,10 @@ const ProjectBox: React.FC<ProjectBoxType> = ({
         <h3 className="project-title">{projectData.title}</h3>
         <p className="project-subtitle">{projectData.subTitle}</p>
 
-        <p className="project-introduction">{projectData.introduction}</p>
+        <p
+          className="project-introduction"
+          dangerouslySetInnerHTML={{ __html: projectData.introduce }}
+        />
       </div>
     </StyledProjectBox>
   );

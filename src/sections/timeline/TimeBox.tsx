@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { timelineDataType } from "./timelineData";
+import { timelineDataType } from "./Timeline";
 import { responsive, lightGray, deepGray } from "../../styles/theme";
 
 interface TimeBoxType {
@@ -10,7 +10,9 @@ interface TimeBoxType {
 const TimeBox: React.FC<TimeBoxType> = ({ timeData }) => {
   return (
     <StyledTimeBox>
-      <div className="icon-container flex-center">{timeData.icon}</div>
+      <div className="icon-container flex-center">
+        <img src={timeData.icon} alt={timeData.title} className="icon" />
+      </div>
       <div className="text-container">
         <p className="title">{timeData.title}</p>
         <p className="period">{timeData.period}</p>
