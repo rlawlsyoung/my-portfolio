@@ -26,7 +26,7 @@ const Header = () => {
         <Link to="Home" spy={true} smooth={true} duration={500}>
           <Logo />
         </Link>
-        <div className="menu-wrapper flex-center">
+        <nav className="menu-wrapper flex-center">
           {menuList.map((menu) => {
             return (
               <Link
@@ -40,7 +40,7 @@ const Header = () => {
               </Link>
             );
           })}
-        </div>
+        </nav>
       </div>
     </StyledHeader>
   );

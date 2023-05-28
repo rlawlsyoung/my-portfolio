@@ -23,8 +23,8 @@ const Mouse: React.FC = () => {
 
   const variants = {
     default: {
-      x: mousePosition.x + 5,
-      y: mousePosition.y + 5,
+      x: mousePosition.x + 16,
+      y: mousePosition.y + 16,
     },
   };
 
@@ -41,8 +41,8 @@ const Mouse: React.FC = () => {
 
 const StyledMouse = styled.div`
   .cursor {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -50,6 +50,10 @@ const StyledMouse = styled.div`
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
+  }
+
+  &:div:hover ~ .cursor {
+    width: 500px;
   }
 
   @media ${responsive.desktop} {
