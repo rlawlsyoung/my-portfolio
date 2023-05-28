@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useRecoilValue } from "recoil";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import { isMouseHoveredAtom } from "../atom";
 import { responsive } from "../styles/theme";
 
 const Mouse: React.FC = () => {
+  const isMouseHovered = useRecoilValue(isMouseHoveredAtom);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -31,7 +34,7 @@ const Mouse: React.FC = () => {
   return (
     <StyledMouse>
       <motion.div
-        className="cursor"
+        className={"cursor"}
         variants={variants}
         animate="default"
       ></motion.div>
@@ -50,10 +53,6 @@ const StyledMouse = styled.div`
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
-  }
-
-  &:div:hover ~ .cursor {
-    width: 500px;
   }
 
   @media ${responsive.desktop} {

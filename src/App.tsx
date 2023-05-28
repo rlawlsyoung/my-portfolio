@@ -1,3 +1,5 @@
+import { RecoilRoot } from "recoil";
+
 import Header from "./components/Header";
 import Home from "./sections/home/Home";
 import AboutMe from "./sections/aboutMe/AboutMe";
@@ -10,7 +12,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
       <Home />
       <AboutMe />
@@ -20,7 +22,7 @@ const App = () => {
       <Header />
       <Footer />
       <Mouse />
-    </>
+    </RecoilRoot>
   );
 };
 
