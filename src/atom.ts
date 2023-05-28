@@ -1,8 +1,8 @@
 import { atom } from "recoil";
 
-const isMouseHoveredAtom = atom<boolean>({
+const cursorVariantAtom = atom<string>({
   key: "atom",
-  default: false,
+  default: "default",
 });
 
-export { isMouseHoveredAtom };
+export { cursorVariantAtom };

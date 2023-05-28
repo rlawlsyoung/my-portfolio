@@ -3,11 +3,11 @@ import { useRecoilValue } from "recoil";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-import { isMouseHoveredAtom } from "../atom";
+import { cursorVariantAtom } from "../atom";
 import { responsive } from "../styles/theme";
 
 const Mouse: React.FC = () => {
-  const isMouseHovered = useRecoilValue(isMouseHoveredAtom);
+  const cursorVariant = useRecoilValue(cursorVariantAtom);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -28,15 +28,23 @@ const Mouse: React.FC = () => {
     default: {
       x: mousePosition.x + 16,
       y: mousePosition.y + 16,
+      height: 30,
+      width: 30,
+    },
+    expanded: {
+      x: mousePosition.x + 16,
+      y: mousePosition.y + 16,
+      height: 70,
+      width: 70,
     },
   };
 
   return (
     <StyledMouse>
       <motion.div
-        className={"cursor"}
+        className="cursor"
         variants={variants}
-        animate="default"
+        animate={cursorVariant}
       ></motion.div>
     </StyledMouse>
   );
@@ -44,8 +52,6 @@ const Mouse: React.FC = () => {
 
 const StyledMouse = styled.div`
   .cursor {
-    width: 30px;
-    height: 30px;
     background-color: #fff;
     position: fixed;
     top: 0;
