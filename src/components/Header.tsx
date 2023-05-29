@@ -31,17 +31,17 @@ const Header = () => {
         <nav className="menu-wrapper flex-center">
           {menuList.map((menu) => {
             return (
-              <Link
-                to={menu}
-                spy={false}
-                smooth={true}
-                duration={500}
-                key={menu}
-              >
-                <MouseChanger>
-                  <div className="menu-el expansion">{menu}</div>
-                </MouseChanger>
-              </Link>
+              <div className="menu-el expansion">
+                <Link
+                  to={menu}
+                  spy={false}
+                  smooth={true}
+                  duration={500}
+                  key={menu}
+                >
+                  <MouseChanger>{menu}</MouseChanger>
+                </Link>
+              </div>
             );
           })}
         </nav>
@@ -73,6 +73,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
 
     .menu-wrapper {
       margin-right: 20px;
+
       .menu-el {
         margin-left: 50px;
         font-size: 16px;
