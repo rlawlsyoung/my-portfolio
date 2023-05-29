@@ -28,8 +28,6 @@ const Mouse: React.FC = () => {
     default: {
       x: mousePosition.x + 16,
       y: mousePosition.y + 16,
-      height: 30,
-      width: 30,
     },
     expanded: {
       x: mousePosition.x + 16,
@@ -56,6 +54,8 @@ const StyledMouse = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    height: 30px;
+    width: 30px;
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
