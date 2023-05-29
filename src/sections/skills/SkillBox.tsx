@@ -1,7 +1,9 @@
 import React, { useCallback, useState, useRef } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { lightGray, responsive } from "../../styles/theme";
 import styled from "styled-components";
+
+import MouseChanger from "../../components/MouseChanger";
+import { lightGray, responsive } from "../../styles/theme";
 
 interface SkillBoxType {
   title: string;
@@ -33,17 +35,19 @@ const SkillBox: React.FC<SkillBoxType> = ({ title, contents }) => {
     );
 
   return (
-    <StyledSkillBox onClick={handleButtonClick}>
-      <div className="header">
-        <p className="title">{title}</p>
-        <button className="button">{buttonIcon}</button>
-      </div>
-      <div className="text-wrapper" ref={parentRef}>
-        <p className="text" ref={childRef}>
-          {contents}
-        </p>
-      </div>
-    </StyledSkillBox>
+    <MouseChanger>
+      <StyledSkillBox onClick={handleButtonClick}>
+        <div className="header">
+          <p className="title">{title}</p>
+          <button className="button">{buttonIcon}</button>
+        </div>
+        <div className="text-wrapper" ref={parentRef}>
+          <p className="text" ref={childRef}>
+            {contents}
+          </p>
+        </div>
+      </StyledSkillBox>
+    </MouseChanger>
   );
 };
 
@@ -52,6 +56,7 @@ const StyledSkillBox = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   padding: 20px;
   margin-bottom: 12.5px;
   border: 1px solid black;

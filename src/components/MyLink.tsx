@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import MouseChanger from "./MouseChanger";
+
 interface MyLinkType {
   link: {
     icon: string;
@@ -12,7 +14,9 @@ interface MyLinkType {
 const MyLink: React.FC<MyLinkType> = ({ link }) => {
   return (
     <StyledMyLink href={link.link} target="_blank">
-      <img src={link.icon} alt={link.title} className="icon expansion" />
+      <MouseChanger>
+        <img src={link.icon} alt={link.title} className="icon expansion" />
+      </MouseChanger>
     </StyledMyLink>
   );
 };

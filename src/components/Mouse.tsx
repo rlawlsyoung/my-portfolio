@@ -34,8 +34,8 @@ const Mouse: React.FC = () => {
     expanded: {
       x: mousePosition.x + 16,
       y: mousePosition.y + 16,
-      height: 70,
-      width: 70,
+      height: 60,
+      width: 60,
     },
   };
 

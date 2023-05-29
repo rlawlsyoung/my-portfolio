@@ -23,6 +23,7 @@ const MouseChanger: React.FC<Props> = ({ children }) => {
 
 const StyledMouseChanger = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export default MouseChanger;

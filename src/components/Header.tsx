@@ -1,7 +1,9 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
+
 import Logo from "./Logo";
+import MouseChanger from "./MouseChanger";
 import { deepGray, responsive } from "../styles/theme";
 
 const Header = () => {
@@ -36,7 +38,9 @@ const Header = () => {
                 duration={500}
                 key={menu}
               >
-                <div className="menu-el expansion">{menu}</div>
+                <MouseChanger>
+                  <div className="menu-el expansion">{menu}</div>
+                </MouseChanger>
               </Link>
             );
           })}

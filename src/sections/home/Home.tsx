@@ -1,14 +1,18 @@
-import bg from "../../assets/bg.jpg";
 import { Link } from "react-scroll";
 import { SlArrowDown } from "react-icons/sl";
 import styled from "styled-components";
+
+import MouseChanger from "../../components/MouseChanger";
 import { responsive } from "../../styles/theme";
+import bg from "../../assets/bg.jpg";
 
 const Home = () => {
   return (
     <StyledHome id="Home">
       <Link to="About Me" spy={true} smooth={true} duration={500}>
-        <SlArrowDown className="arrow" size={48} />
+        <MouseChanger>
+          <SlArrowDown className="arrow" size={48} />
+        </MouseChanger>
       </Link>
     </StyledHome>
   );
