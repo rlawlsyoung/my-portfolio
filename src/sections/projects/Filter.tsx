@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+
+import MouseChanger from "../../components/MouseChanger";
 import { responsive } from "../../styles/theme";
 
 interface FilterType {
@@ -13,17 +15,19 @@ const Filter: React.FC<FilterType> = ({ filter, handleOnClick }) => {
   return (
     <StyledFilter>
       {filterLists.map((filterList) => (
-        <div className="filter flex-center" key={filterList}>
-          <div
-            className={
-              filter === filterList ? "selected-underline" : "underline"
-            }
-            id={filterList}
-            onClick={handleOnClick}
-          >
-            {filterList}
+        <MouseChanger>
+          <div className="filter flex-center" key={filterList}>
+            <div
+              className={
+                filter === filterList ? "selected-underline" : "underline"
+              }
+              id={filterList}
+              onClick={handleOnClick}
+            >
+              {filterList}
+            </div>
           </div>
-        </div>
+        </MouseChanger>
       ))}
     </StyledFilter>
   );

@@ -1,5 +1,7 @@
 import React, { useCallback } from "react";
 import styled from "styled-components";
+
+import MouseChanger from "../../components/MouseChanger";
 import { projectDataType } from "./Projects";
 import { deepGray, lightGray, responsive } from "../../styles/theme";
 
@@ -21,25 +23,27 @@ const ProjectBox: React.FC<ProjectBoxType> = ({
   }, []);
 
   return (
-    <StyledProjectBox isMobile={projectData.isMobile} onClick={openDialog}>
-      <div className="img-container flex-center">
-        <img
-          src={projectData.mainImg}
-          alt={projectData.title}
-          className="project-img"
-        />
-      </div>
+    <MouseChanger>
+      <StyledProjectBox isMobile={projectData.isMobile} onClick={openDialog}>
+        <div className="img-container flex-center">
+          <img
+            src={projectData.mainImg}
+            alt={projectData.title}
+            className="project-img"
+          />
+        </div>
 
-      <div className="project-info">
-        <h3 className="project-title">{projectData.title}</h3>
-        <p className="project-subtitle">{projectData.subTitle}</p>
+        <div className="project-info">
+          <h3 className="project-title">{projectData.title}</h3>
+          <p className="project-subtitle">{projectData.subTitle}</p>
 
-        <p
-          className="project-introduction"
-          dangerouslySetInnerHTML={{ __html: projectData.introduce }}
-        />
-      </div>
-    </StyledProjectBox>
+          <p
+            className="project-introduction"
+            dangerouslySetInnerHTML={{ __html: projectData.introduce }}
+          />
+        </div>
+      </StyledProjectBox>
+    </MouseChanger>
   );
 };
 

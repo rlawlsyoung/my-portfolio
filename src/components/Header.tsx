@@ -1,7 +1,9 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
+
 import Logo from "./Logo";
+import MouseChanger from "./MouseChanger";
 import { deepGray, responsive } from "../styles/theme";
 
 const Header = () => {
@@ -26,21 +28,23 @@ const Header = () => {
         <Link to="Home" spy={true} smooth={true} duration={500}>
           <Logo />
         </Link>
-        <div className="menu-wrapper flex-center">
+        <nav className="menu-wrapper flex-center">
           {menuList.map((menu) => {
             return (
-              <Link
-                to={menu}
-                spy={false}
-                smooth={true}
-                duration={500}
-                key={menu}
-              >
-                <div className="menu-el expansion">{menu}</div>
-              </Link>
+              <div className="menu-el expansion">
+                <Link
+                  to={menu}
+                  spy={false}
+                  smooth={true}
+                  duration={500}
+                  key={menu}
+                >
+                  <MouseChanger>{menu}</MouseChanger>
+                </Link>
+              </div>
             );
           })}
-        </div>
+        </nav>
       </div>
     </StyledHeader>
   );
@@ -69,6 +73,7 @@ const StyledHeader = styled.header<{ scrollPosition: number }>`
 
     .menu-wrapper {
       margin-right: 20px;
+
       .menu-el {
         margin-left: 50px;
         font-size: 16px;

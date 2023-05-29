@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+import MouseChanger from "./MouseChanger";
+
 const Logo: React.FC = () => {
   return (
     <StyledContactList>
-      金辰營 <p className="kr-name">김진영</p>
+      <MouseChanger>
+        金辰營 <p className="kr-name">김진영</p>
+      </MouseChanger>
     </StyledContactList>
   );
 };

@@ -55,7 +55,7 @@ const AboutMe: React.FC = () => {
         <Title text="About Me" />
         <div className="about-me-container">
           <img src={me} alt="김진영 사진" className="my-photo" />
-          <p className="name">김진영 (金辰營)</p>
+          <p className="name">김진영</p>
           <p className="position">Front-End Developer</p>
           <p className="adv">
             <Typewriter
@@ -109,7 +109,7 @@ const StyledAboutMe = styled.div`
     }
 
     .position {
-      margin: 5px 0 30px 0;
+      margin: 10px 0 30px 0;
       font-weight: 700;
     }
 
