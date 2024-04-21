@@ -29,9 +29,9 @@ const SkillBox: React.FC<SkillBoxType> = ({ title, contents }) => {
   const parentRefHeight = parentRef.current?.style.height ?? "0px";
   const buttonIcon =
     parentRefHeight === "0px" ? (
-      <SlArrowDown size={24} />
+      <SlArrowDown size={24} color="black" />
     ) : (
-      <SlArrowUp size={24} />
+      <SlArrowUp size={24} color="black" />
     );
 
   return (
