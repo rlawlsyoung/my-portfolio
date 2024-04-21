@@ -7,7 +7,7 @@ import MouseChanger from "./MouseChanger";
 import { deepGray, responsive } from "../styles/theme";
 
 const Header = () => {
-  const menuList = ["About Me", "Skills", "Projects", "Timeline"];
+  const menuList = ["About Me", "Timeline", "Skills", "Projects"];
 
   const [scrollPosition, setScrollPosition] = useState(0);
 

@@ -16,9 +16,9 @@ const App = () => {
       <GlobalStyle />
       <Home />
       <AboutMe />
+      <Timeline />
       <Skills />
       <Projects />
-      <Timeline />
       <Header />
       <Footer />
       <Mouse />
