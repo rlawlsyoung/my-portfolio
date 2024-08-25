@@ -43,6 +43,10 @@ const StyledHome = styled.div`
       left: calc(50vw - 24px);
     }
   }
+
+  @media ${responsive.mobile} {
+    background-attachment: scroll;
+  }
 `;
 
 export default Home;
