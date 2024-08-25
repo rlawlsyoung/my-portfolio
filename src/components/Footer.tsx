@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <MyLink link={link} key={link.title} />
         ))}
       </div>
-      <p>© 2022. Kim Jin Young. All rights reserved.</p>
+      <p>© {new Date().getFullYear()}. Kim Jin Young. All rights reserved.</p>
     </StyledFooter>
   );
 };
